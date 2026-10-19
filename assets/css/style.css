@@ -379,3 +379,26 @@ details.rezolvare[open] summary { margin-bottom: 6px; }
 
 .katex { font-size: 1.08em; }
 .subsol { text-align: center; margin-top: 40px; }
+
+/* ---------- revizuire (părinte/profesor) ---------- */
+.rev-antet { margin-top: 18px; }
+.rev-antet h1 { margin-bottom: 0.1em; }
+.rev-sectiune { margin-top: 18px; }
+.rev-enunt { margin-bottom: 6px; }
+.rev-raspuns { margin: 8px 0 2px; padding: 8px 12px; border-radius: 10px; background: var(--verde-2); }
+.rev-rezolvare { margin-top: 10px; border-left: 3px solid var(--albastru); padding: 4px 0 4px 14px; }
+.rev-barem { margin-top: 10px; }
+.rev-varianta { margin-top: 12px; padding: 12px 14px; border: 1px dashed var(--linie); border-radius: 12px; }
+.rev-varianta .eticheta { margin-bottom: 6px; }
+.rev-item .item-cap .mic { flex: 1; }
+.subsol-parinte { text-align: center; margin-top: 10px; }
+
+@media print {
+  :root { --hartie: #fff; --hartie-2: #fff; }
+  body { background: #fff; font-size: 12pt; }
+  #antet, .rev-unelte, .retine-flotant { display: none !important; }
+  .foaie, .retine { box-shadow: none; break-inside: auto; }
+  .rev-item, .rev-varianta { break-inside: avoid; }
+  .foaie.cu-margine::before { display: none; }
+  .foaie.cu-margine { padding-left: 22px; }
+}

@@ -86,7 +86,8 @@
       '<div class="rand-butoane"><button class="btn" type="button" id="export">Descarcă copia</button>' +
       '<label class="btn secundar" style="cursor:pointer">Încarcă o copie<input type="file" id="import" accept="application/json,.json" class="ascuns"></label>' +
       '<button class="btn secundar" type="button" id="reset">Șterge tot progresul</button></div>' +
-      '<div id="mesajBackup" style="margin-top:12px" aria-live="polite"></div></section>';
+      '<div id="mesajBackup" style="margin-top:12px" aria-live="polite"></div></section>' +
+      '<p class="subsol-parinte mic">Pentru părinte: <a href="revizuire.html">revizuirea conținutului</a> (teste și lecții cu răspunsuri și barem)</p>';
 
     radacina.addEventListener('click', laClick);
     $('#import').addEventListener('change', laImport);
