@@ -20,9 +20,9 @@ npm run valideaza # verifică tot conținutul: JSON, barem, grile, generatori
 
 ## Publicare pe GitHub Pages
 
-1. Creează un repository pe GitHub și urcă acest folder (`git remote add origin …`, apoi `git push -u origin master`).
-2. În repository: **Settings → Pages → Deploy from a branch → `master` / root**.
-3. După 1–2 minute site-ul e disponibil la `https://<utilizator>.github.io/<repository>/`.
+Site-ul: **https://mihaicbogdan.github.io/ecnh-matematica/**. Repository-ul este https://github.com/mihaicbogdan/ecnh-matematica.
+
+Pages publică ramura `main` (root). Orice `git push` pe `main` actualizează site-ul în 1–2 minute.
 
 ## Cum adaugi o lecție
 
