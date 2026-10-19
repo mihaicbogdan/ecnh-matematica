@@ -5,7 +5,7 @@
   "titlu": "Evaluare inițială — Algebră (clasa a VI-a)",
   "descriere": "Testul trece prin toate capitolele de algebră din manualul de clasa a 6-a: mulțimi, divizibilitate, rapoarte și proporții, numere întregi, numere raționale. Nu e o lucrare pentru catalog. Lucrează liniștit și scrie ce știi.",
   "durataMinute": 50,
-  "revizuit": false,
+  "revizuit": true,
   "subiecte": [
     {
       "id": "I",

@@ -5,7 +5,7 @@
   "titlu": "Evaluare inițială — Geometrie (clasa a VI-a)",
   "descriere": "Testul trece prin toate capitolele de geometrie din manualul de clasa a 6-a: unghiuri, drepte paralele și perpendiculare, cercul, triunghiul (linii importante, congruență, triunghiuri isoscele, echilaterale și dreptunghice). Pregătește rigla, echerul și ciorna.",
   "durataMinute": 50,
-  "revizuit": false,
+  "revizuit": true,
   "subiecte": [
     {
       "id": "I",
