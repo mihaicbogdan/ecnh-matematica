@@ -314,6 +314,10 @@
     "geo-1-4": {
       "titlu": "Dreptunghiul",
       "fisier": "content/clasa7/geometrie/geo-1-4.json"
+    },
+    "geo-1-3": {
+      "titlu": "Linia mijlocie în triunghi. Centrul de greutate",
+      "fisier": "content/clasa7/geometrie/geo-1-3.json"
     }
   },
   "clasa7": {

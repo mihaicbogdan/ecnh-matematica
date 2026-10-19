@@ -1,0 +1,213 @@
+{
+  "id": "geo-1-3",
+  "eticheta": "Geometrie · Cap. 4 · Patrulaterul",
+  "titlu": "Linia mijlocie în triunghi. Centrul de greutate",
+  "introducere": "Două aplicații ale paralelogramului în triunghi: linia mijlocie (jumătate din baza pe care o „privește”) și centrul de greutate (la două treimi pe fiecare mediană).",
+  "revizuit": false,
+  "deRetinut": [
+    "<b>Linia mijlocie</b> a unui triunghi este segmentul care unește mijloacele a două laturi. Orice triunghi are $3$ linii mijlocii.",
+    "<b>Teorema liniei mijlocii:</b> dacă $M$ e mijlocul lui $AB$ și $N$ e mijlocul lui $AC$, atunci $MN \\parallel BC$ și $MN = \\dfrac{BC}{2}$.",
+    "<b>Reciproca:</b> dacă $M$ e mijlocul lui $AB$ și $MN \\parallel BC$, cu $N \\in AC$, atunci $N$ este mijlocul lui $AC$.",
+    "Cele trei linii mijlocii formează un triunghi cu <b>perimetrul pe jumătate</b> din perimetrul triunghiului inițial. Ele împart triunghiul în $4$ triunghiuri congruente.",
+    "<b>Centrul de greutate</b> $G$ este punctul de intersecție al celor trei <b>mediane</b>. O mediană unește un vârf cu mijlocul laturii opuse.",
+    "<b>Poziția lui G:</b> pe fiecare mediană, $G$ este la $\\dfrac{2}{3}$ de vârf și la $\\dfrac{1}{3}$ de mijlocul laturii: $AG = \\dfrac{2}{3}AD$, $GD = \\dfrac{1}{3}AD$, adică $AG = 2 \\cdot GD$.",
+    "<b>Atenție:</b> linia mijlocie e paralelă cu latura pe care <b>nu</b> o atinge. $MN$ (pe $AB$ și $AC$) este paralelă cu $BC$."
+  ],
+  "exemple": [
+    {
+      "titlu": "Linia mijlocie",
+      "enunt": "Triunghiul $ABC$ are $AB = 10$ cm, $AC = 8$ cm, $BC = 12$ cm. $M$ și $N$ sunt mijloacele laturilor $AB$ și $AC$. Află $MN$ și perimetrul triunghiului format de cele trei linii mijlocii.",
+      "figura": "<svg viewBox=\"0 0 320 200\" role=\"img\" aria-label=\"Triunghiul ABC cu linia mijlocie MN paralelă cu BC\"><g stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"><polygon points=\"160,25 40,175 290,175\"/></g><g class=\"acc\" stroke-width=\"2.6\"><line x1=\"100\" y1=\"100\" x2=\"225\" y2=\"100\"/></g><g class=\"acc\" stroke-width=\"2\"><line x1=\"66\" y1=\"134\" x2=\"74\" y2=\"141\"/><line x1=\"126\" y1=\"59\" x2=\"134\" y2=\"66\"/><line x1=\"190\" y1=\"58\" x2=\"186\" y2=\"66\"/><line x1=\"194\" y1=\"60\" x2=\"190\" y2=\"68\"/><line x1=\"258\" y1=\"133\" x2=\"254\" y2=\"141\"/><line x1=\"262\" y1=\"135\" x2=\"258\" y2=\"143\"/></g><circle cx=\"100\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"225\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/><text x=\"155\" y=\"18\" font-size=\"15\">A</text><text x=\"26\" y=\"190\" font-size=\"15\">B</text><text x=\"292\" y=\"190\" font-size=\"15\">C</text><text x=\"82\" y=\"100\" font-size=\"15\">M</text><text x=\"232\" y=\"100\" font-size=\"15\">N</text></svg>",
+      "pasi": [
+        "$MN$ unește mijloacele lui $AB$ și $AC$, deci $MN \\parallel BC$ și $MN = \\dfrac{12}{2} = 6$ cm.",
+        "Celelalte linii mijlocii au $\\dfrac{10}{2} = 5$ cm și $\\dfrac{8}{2} = 4$ cm.",
+        "Perimetrul triunghiului median: $6 + 5 + 4 = 15$ cm, adică jumătate din $P_{ABC} = 30$ cm ✓"
+      ]
+    },
+    {
+      "titlu": "Centrul de greutate",
+      "enunt": "În triunghiul $ABC$, $AD$ este mediană, $AD = 15$ cm, iar $G$ este centrul de greutate. Află $AG$ și $GD$.",
+      "figura": "<svg viewBox=\"0 0 320 200\" role=\"img\" aria-label=\"Triunghiul ABC cu medianele AD, BE, CF concurente în centrul de greutate G\"><g stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"><polygon points=\"160,25 40,175 290,175\"/><line x1=\"160\" y1=\"25\" x2=\"165\" y2=\"175\" stroke-dasharray=\"6 5\"/><line x1=\"40\" y1=\"175\" x2=\"225\" y2=\"100\" stroke-dasharray=\"6 5\"/><line x1=\"290\" y1=\"175\" x2=\"100\" y2=\"100\" stroke-dasharray=\"6 5\"/></g><circle class=\"acc\" cx=\"163.3\" cy=\"125\" r=\"4\" fill=\"currentColor\" stroke=\"none\" style=\"fill:var(--rosu)\"/><text x=\"155\" y=\"18\" font-size=\"15\">A</text><text x=\"26\" y=\"190\" font-size=\"15\">B</text><text x=\"292\" y=\"190\" font-size=\"15\">C</text><text x=\"160\" y=\"194\" font-size=\"15\">D</text><text x=\"232\" y=\"100\" font-size=\"15\">E</text><text x=\"82\" y=\"100\" font-size=\"15\">F</text><text class=\"acc-text\" x=\"170\" y=\"150\" font-size=\"15\">G</text></svg>",
+      "pasi": [
+        "$G$ este la două treimi pe mediană, de la vârf: $AG = \\dfrac{2}{3} \\cdot 15 = 10$ cm.",
+        "$GD = \\dfrac{1}{3} \\cdot 15 = 5$ cm. Verificare: $AG = 2 \\cdot GD$ ✓"
+      ]
+    }
+  ],
+  "exercitii": [
+    {
+      "id": "E1",
+      "nivel": 1,
+      "tip": "numeric",
+      "enunt": "În triunghiul $ABC$, $M$ și $N$ sunt mijloacele laturilor $AB$ și $AC$, iar $BC = {{b}}$ cm. Atunci $MN$ este …",
+      "generator": {
+        "variabile": {
+          "a": {
+            "min": 3,
+            "max": 15
+          }
+        },
+        "calcule": {
+          "b": "2 * a"
+        }
+      },
+      "raspuns": "{{a}}",
+      "unitate": "cm",
+      "indiciu": "Linia mijlocie este jumătate din latura cu care e paralelă.",
+      "rezolvare": "$MN$ este linie mijlocie, deci $MN = \\dfrac{BC}{2} = \\dfrac{{{b}}}{2} = {{a}}$ cm."
+    },
+    {
+      "id": "E2",
+      "nivel": 1,
+      "tip": "adevarat-fals",
+      "enunt": "Adevărat sau fals: linia mijlocie care unește mijloacele laturilor AB și AC este paralelă cu BC.",
+      "corect": true,
+      "rezolvare": "<b>Adevărat:</b> așa spune teorema liniei mijlocii."
+    },
+    {
+      "id": "E3",
+      "nivel": 1,
+      "tip": "numeric",
+      "enunt": "$MN$ este linie mijlocie în triunghiul $ABC$ ($M \\in AB$, $N \\in AC$) și $MN = 9$ cm. Atunci $BC$ este …",
+      "raspuns": "18",
+      "unitate": "cm",
+      "rezolvare": "$BC = 2 \\cdot MN = 18$ cm."
+    },
+    {
+      "id": "E4",
+      "nivel": 2,
+      "tip": "numeric",
+      "enunt": "Un triunghi are laturile de $8$ cm, $10$ cm și $12$ cm. Perimetrul triunghiului format de liniile lui mijlocii este …",
+      "raspuns": "15",
+      "unitate": "cm",
+      "indiciu": "Fiecare linie mijlocie este jumătate dintr-o latură.",
+      "rezolvare": "Liniile mijlocii au $4$, $5$ și $6$ cm, deci perimetrul este $15$ cm (jumătate din $30$ cm)."
+    },
+    {
+      "id": "E5",
+      "nivel": 2,
+      "tip": "numeric",
+      "enunt": "În triunghiul $ABC$, $AD$ este mediană, $G$ este centrul de greutate și $AD = {{m}}$ cm. Atunci $AG$ este …",
+      "generator": {
+        "variabile": {
+          "a": {
+            "min": 2,
+            "max": 10
+          }
+        },
+        "calcule": {
+          "m": "3 * a",
+          "g": "2 * a"
+        }
+      },
+      "raspuns": "{{g}}",
+      "unitate": "cm",
+      "indiciu": "G este la două treimi din mediană, de la vârf.",
+      "rezolvare": "$AG = \\dfrac{2}{3} \\cdot {{m}} = {{g}}$ cm."
+    },
+    {
+      "id": "E6",
+      "nivel": 2,
+      "tip": "numeric",
+      "enunt": "$G$ este centrul de greutate al triunghiului $ABC$, $AD$ este mediană și $GD = 4$ cm. Atunci $AD$ este …",
+      "raspuns": "12",
+      "unitate": "cm",
+      "rezolvare": "$GD = \\dfrac{1}{3}AD$, deci $AD = 3 \\cdot 4 = 12$ cm."
+    },
+    {
+      "id": "E7",
+      "nivel": 2,
+      "tip": "grila",
+      "enunt": "Centrul de greutate al unui triunghi este punctul de intersecție al:",
+      "variante": [
+        "medianelor",
+        "înălțimilor",
+        "bisectoarelor",
+        "mediatoarelor"
+      ],
+      "corect": 0,
+      "rezolvare": "Medianele sunt concurente în centrul de greutate $G$."
+    },
+    {
+      "id": "E8",
+      "nivel": 3,
+      "tip": "numeric",
+      "enunt": "$M$, $N$, $P$ sunt mijloacele laturilor triunghiului $ABC$, iar perimetrul triunghiului $MNP$ este $21$ cm. Perimetrul triunghiului $ABC$ este …",
+      "raspuns": "42",
+      "unitate": "cm",
+      "rezolvare": "Perimetrul triunghiului median este jumătate din perimetrul lui $ABC$: $P_{ABC} = 2 \\cdot 21 = 42$ cm."
+    },
+    {
+      "id": "E9",
+      "nivel": 3,
+      "tip": "numeric",
+      "enunt": "În triunghiul $ABC$, $M$ este mijlocul lui $AB$, iar $N \\in AC$ astfel încât $MN \\parallel BC$. Dacă $AC = 14$ cm, atunci $AN$ este …",
+      "raspuns": "7",
+      "unitate": "cm",
+      "indiciu": "Folosește reciproca teoremei liniei mijlocii.",
+      "rezolvare": "Din reciproca teoremei liniei mijlocii, $N$ este mijlocul lui $AC$: $AN = 7$ cm."
+    },
+    {
+      "id": "E10",
+      "nivel": 3,
+      "tip": "numeric",
+      "enunt": "În triunghiul $ABC$, $BE$ este mediană, $G$ este centrul de greutate și $BG = 8$ cm. Atunci $GE$ este …",
+      "raspuns": "4",
+      "unitate": "cm",
+      "rezolvare": "$BG = 2 \\cdot GE$, deci $GE = 8 : 2 = 4$ cm."
+    }
+  ],
+  "test": {
+    "itemi": [
+      {
+        "id": "T1",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "$M$ și $N$ sunt mijloacele laturilor $AB$ și $AC$ ale triunghiului $ABC$, iar $BC = 20$ cm. Atunci $MN$ este …",
+        "raspuns": "10",
+        "unitate": "cm",
+        "rezolvare": "$MN = \\dfrac{20}{2} = 10$ cm."
+      },
+      {
+        "id": "T2",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "În triunghiul $ABC$, mediana $AD$ are $18$ cm, iar $G$ este centrul de greutate. Atunci $AG$ este …",
+        "raspuns": "12",
+        "unitate": "cm",
+        "rezolvare": "$AG = \\dfrac{2}{3} \\cdot 18 = 12$ cm."
+      },
+      {
+        "id": "T3",
+        "tip": "adevarat-fals",
+        "puncte": 2,
+        "enunt": "Adevărat sau fals: linia mijlocie $MN$ ($M \\in AB$, $N \\in AC$) are aceeași lungime ca latura $BC$.",
+        "corect": false,
+        "rezolvare": "<b>Fals:</b> $MN = \\dfrac{BC}{2}$."
+      },
+      {
+        "id": "T4",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "Un triunghi are laturile de $6$ cm, $9$ cm și $11$ cm. Perimetrul triunghiului format de liniile lui mijlocii este …",
+        "raspuns": "13",
+        "unitate": "cm",
+        "rezolvare": "$\\dfrac{6 + 9 + 11}{2} = 13$ cm."
+      },
+      {
+        "id": "T5",
+        "tip": "grila",
+        "puncte": 2,
+        "enunt": "Centrul de greutate $G$ împarte mediana $AD$ astfel încât:",
+        "variante": [
+          "$AG = GD$",
+          "$AG = 2 \\cdot GD$",
+          "$GD = 2 \\cdot AG$",
+          "$AG = 3 \\cdot GD$"
+        ],
+        "corect": 1,
+        "rezolvare": "$AG = \\dfrac{2}{3}AD$ și $GD = \\dfrac{1}{3}AD$, deci $AG = 2 \\cdot GD$."
+      }
+    ]
+  }
+}
