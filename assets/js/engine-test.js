@@ -10,9 +10,9 @@
 
   async function porneste() {
     App.antet('');
-    testId = App.param('id') || 'diagnostic-cl6';
     try {
       curr = await App.curriculum();
+      testId = App.param('id') || curr.evaluareInitiala[0];
       const intrare = curr.teste[testId];
       if (!intrare) throw new Error('Testul „' + testId + '” nu există în curriculum.');
       T = await App.incarcaJSON(intrare.fisier);
@@ -409,6 +409,14 @@
       .join('');
   }
 
+  // după un test de evaluare, propune următorul test nedat din evaluarea inițială
+  function htmlUrmatorulTest() {
+    const lista = curr.evaluareInitiala || [];
+    if (!lista.includes(testId)) return '';
+    const urm = lista.find((id) => id !== testId && !Progres.ultimRezultat(id));
+    return urm ? '<a class="btn" href="test.html?id=' + encodeURIComponent(urm) + '">Următorul: ' + esc(curr.teste[urm].titlu.replace('Evaluare inițială — ', '')) + '</a>' : '';
+  }
+
   function randeazaRezultat(rez) {
     const prenume = Progres.prenume();
     radacina.innerHTML =
@@ -424,6 +432,7 @@
       '</section>' +
       '<section class="foaie cu-margine" style="margin-top:18px"><h2 style="margin-top:0">Corectura</h2>' + htmlCorectura(rez) + '</section>' +
       '<div class="rand-butoane"><a class="btn" href="index.html">Acasă</a><a class="btn secundar" href="progres.html">Progres</a>' +
+      htmlUrmatorulTest() +
       '<a class="btn secundar" href="test.html?id=' + encodeURIComponent(testId) + '">Dă testul din nou</a></div>';
     App.panouTrimitere($('#trimitere'), App.raportText(rez, prenume), 'Raport ECNH: ' + rez.titlu);
     App.math(radacina);

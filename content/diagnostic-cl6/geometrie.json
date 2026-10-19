@@ -1,0 +1,185 @@
+{
+  "id": "diagnostic-cl6-geo",
+  "tip": "evaluare",
+  "eticheta": "Evaluare inițială · Geometrie",
+  "titlu": "Evaluare inițială — Geometrie (clasa a VI-a)",
+  "descriere": "Testul trece prin toate capitolele de geometrie din manualul de clasa a 6-a: unghiuri, drepte paralele și perpendiculare, cercul, triunghiul (linii importante, congruență, triunghiuri isoscele, echilaterale și dreptunghice). Pregătește rigla, echerul și ciorna.",
+  "durataMinute": 50,
+  "revizuit": false,
+  "subiecte": [
+    {
+      "id": "I",
+      "titlu": "Subiectul I",
+      "scurt": "alegi răspunsul corect",
+      "instructiuni": "Alege litera corespunzătoare singurului răspuns corect.",
+      "itemi": [
+        {
+          "id": "I.1", "tip": "grila", "capitol": "cl6-5.1", "puncte": 5,
+          "enunt": "Complementul unui unghi cu măsura de $35^\\circ$ are măsura:",
+          "variante": ["$145^\\circ$", "$55^\\circ$", "$65^\\circ$", "$45^\\circ$"],
+          "corect": 1,
+          "rezolvare": "Două unghiuri complementare au suma măsurilor $90^\\circ$: $90^\\circ - 35^\\circ = 55^\\circ$. (Varianta $145^\\circ$ este suplementul, unde suma e $180^\\circ$.)"
+        },
+        {
+          "id": "I.2", "tip": "grila", "capitol": "cl6-5.3", "puncte": 5,
+          "enunt": "Punctul $B$ este simetricul punctului $A$ față de dreapta $d$. Distanța de la $A$ la dreapta $d$ este de $4$ cm. Lungimea segmentului $AB$ este:",
+          "variante": ["$2$ cm", "$4$ cm", "$8$ cm", "$16$ cm"],
+          "corect": 2,
+          "rezolvare": "Dreapta $d$ este mediatoarea segmentului $AB$: $AB \\perp d$, iar $A$ și $B$ sunt la aceeași distanță de $d$. Deci $AB = 4 + 4 = 8$ cm."
+        },
+        {
+          "id": "I.3", "tip": "grila", "capitol": "cl6-5.4", "puncte": 5,
+          "enunt": "Un cerc are raza de $5$ cm. Diametrul cercului are lungimea:",
+          "variante": ["$2,5$ cm", "$5$ cm", "$10$ cm", "$25$ cm"],
+          "corect": 2,
+          "rezolvare": "Diametrul este dublul razei: $d = 2 \\cdot r = 2 \\cdot 5 = 10$ cm."
+        },
+        {
+          "id": "I.4", "tip": "grila", "capitol": "cl6-6.1", "puncte": 5,
+          "enunt": "Într-un triunghi, două unghiuri au măsurile $50^\\circ$ și $70^\\circ$. Al treilea unghi are măsura:",
+          "variante": ["$60^\\circ$", "$70^\\circ$", "$80^\\circ$", "$120^\\circ$"],
+          "corect": 0,
+          "rezolvare": "Suma unghiurilor unui triunghi este $180^\\circ$: $180^\\circ - 50^\\circ - 70^\\circ = 60^\\circ$."
+        },
+        {
+          "id": "I.5", "tip": "grila", "capitol": "cl6-6.2", "puncte": 5,
+          "enunt": "Punctul în care se intersectează medianele unui triunghi se numește:",
+          "variante": ["ortocentru", "centrul de greutate", "centrul cercului înscris", "centrul cercului circumscris"],
+          "corect": 1,
+          "rezolvare": "Medianele sunt concurente în <b>centrul de greutate</b> $G$. Pentru comparație: înălțimile se intersectează în ortocentru, bisectoarele în centrul cercului înscris, iar mediatoarele în centrul cercului circumscris."
+        },
+        {
+          "id": "I.6", "tip": "grila", "capitol": "cl6-6.4", "puncte": 5,
+          "enunt": "Un triunghi dreptunghic are catetele de $6$ cm și $8$ cm. Ipotenuza are lungimea:",
+          "variante": ["$7$ cm", "$10$ cm", "$14$ cm", "$48$ cm"],
+          "corect": 1,
+          "rezolvare": "Teorema lui Pitagora: $i^2 = 6^2 + 8^2 = 36 + 64 = 100$, deci $i = 10$ cm."
+        }
+      ]
+    },
+    {
+      "id": "II",
+      "titlu": "Subiectul al II-lea",
+      "scurt": "scrii doar rezultatul",
+      "instructiuni": "Scrie doar rezultatul. Calculele le poți face pe ciornă.",
+      "itemi": [
+        {
+          "id": "II.1", "tip": "numeric", "capitol": "cl6-5.1", "puncte": 5, "unitate": "°",
+          "enunt": "Unghiurile $\\sphericalangle AOB$ și $\\sphericalangle BOC$ sunt adiacente suplementare, iar $m(\\sphericalangle AOB) = 3 \\cdot m(\\sphericalangle BOC)$. Atunci $m(\\sphericalangle BOC)$ este egală cu …",
+          "raspuns": "45",
+          "rezolvare": "Suplementare înseamnă suma $180^\\circ$. Notăm $m(\\sphericalangle BOC) = x$: $3x + x = 180^\\circ$, $4x = 180^\\circ$, $x = 45^\\circ$."
+        },
+        {
+          "id": "II.2", "tip": "numeric", "capitol": "cl6-5.2", "puncte": 5, "unitate": "°",
+          "enunt": "Dreptele paralele $a$ și $b$ sunt tăiate de o secantă. Unul dintre unghiurile <b>interne de aceeași parte a secantei</b> are $110^\\circ$. Celălalt are …",
+          "raspuns": "70",
+          "rezolvare": "Unghiurile interne de aceeași parte a secantei, formate de două drepte paralele, sunt suplementare: $180^\\circ - 110^\\circ = 70^\\circ$."
+        },
+        {
+          "id": "II.3", "tip": "numeric", "capitol": "cl6-5.3", "puncte": 5, "unitate": "cm",
+          "enunt": "Punctul $M$ se află pe mediatoarea segmentului $AB$, iar $MA = 7$ cm. Atunci $MB$ este egal cu …",
+          "raspuns": "7",
+          "rezolvare": "Orice punct de pe mediatoarea unui segment este egal depărtat de capetele segmentului: $MB = MA = 7$ cm."
+        },
+        {
+          "id": "II.4", "tip": "numeric", "capitol": "cl6-5.4", "puncte": 5, "unitate": "°",
+          "enunt": "În cercul de centru $O$, unghiul la centru $\\sphericalangle AOB$ are $70^\\circ$. Măsura arcului mic $AB$ este …",
+          "raspuns": "70",
+          "rezolvare": "Măsura unui arc mic este egală cu măsura unghiului la centru corespunzător: $70^\\circ$."
+        },
+        {
+          "id": "II.5", "tip": "numeric", "capitol": "cl6-6.1", "puncte": 5, "unitate": "°",
+          "enunt": "În triunghiul $ABC$, $m(\\sphericalangle A) = 50^\\circ$ și $m(\\sphericalangle B) = 60^\\circ$. Măsura unghiului exterior din vârful $C$ este …",
+          "raspuns": "110",
+          "rezolvare": "Unghiul exterior este egal cu suma unghiurilor interioare neadiacente lui: $50^\\circ + 60^\\circ = 110^\\circ$. (Sau: $m(\\sphericalangle C) = 70^\\circ$, iar exteriorul e suplementul lui: $180^\\circ - 70^\\circ = 110^\\circ$.)"
+        },
+        {
+          "id": "II.6", "tip": "numeric", "capitol": "cl6-6.2", "puncte": 5, "unitate": "cm",
+          "enunt": "În triunghiul $ABC$, $AD$ este mediană și $BC = 14$ cm. Atunci $BD$ este egal cu …",
+          "raspuns": "7",
+          "rezolvare": "Mediana unește un vârf cu <b>mijlocul</b> laturii opuse, deci $D$ este mijlocul lui $BC$: $BD = 14 : 2 = 7$ cm."
+        }
+      ]
+    },
+    {
+      "id": "III",
+      "titlu": "Subiectul al III-lea",
+      "scurt": "rezolvare completă pe caiet",
+      "instructiuni": "Scrie pe caiet rezolvările complete, cu toți pașii și justificările.",
+      "itemi": [
+        {
+          "id": "III.1", "tip": "rezolvare", "capitol": "cl6-5.2", "puncte": 5,
+          "enunt": "În figură, dreptele $a$ și $b$ sunt paralele, iar $c$ este o secantă. Unghiurile marcate au măsurile $(3x + 10)^\\circ$ și $(5x - 30)^\\circ$. Află $x$ și măsura fiecărui unghi marcat.",
+          "figura": "<svg viewBox=\"0 0 320 200\" role=\"img\" aria-label=\"Două drepte paralele tăiate de o secantă, cu două unghiuri alterne interne marcate\"><g stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"><line x1=\"20\" y1=\"60\" x2=\"295\" y2=\"60\"/><line x1=\"20\" y1=\"150\" x2=\"295\" y2=\"150\"/><line x1=\"152.6\" y1=\"190\" x2=\"214.6\" y2=\"20\"/></g><g class=\"acc\" stroke-width=\"2.2\" fill=\"none\"><path d=\"M178,60 A22,22 0 0 0 192.48,80.67\"/><path d=\"M189.2,150 A22,22 0 0 0 174.72,129.33\"/></g><text x=\"303\" y=\"65\" font-size=\"15\" font-style=\"italic\">a</text><text x=\"303\" y=\"155\" font-size=\"15\" font-style=\"italic\">b</text><text x=\"220\" y=\"28\" font-size=\"15\" font-style=\"italic\">c</text><text class=\"acc-text\" x=\"128\" y=\"92\" font-size=\"13\" text-anchor=\"middle\">(3x + 10)°</text><text class=\"acc-text\" x=\"232\" y=\"128\" font-size=\"13\" text-anchor=\"middle\">(5x − 30)°</text></svg>",
+          "barem": [
+            { "pas": "Am observat că unghiurile sunt <b>alterne interne</b>, deci congruente (pentru că $a \\parallel b$)", "puncte": 2 },
+            { "pas": "Am scris ecuația $3x + 10 = 5x - 30$", "puncte": 1 },
+            { "pas": "Am obținut $x = 20$", "puncte": 1 },
+            { "pas": "Am aflat că fiecare unghi are $70^\\circ$", "puncte": 1 }
+          ],
+          "rezolvare": "Unghiurile marcate sunt de o parte și de alta a secantei, între cele două paralele: sunt <b>alterne interne</b>. Pentru că $a \\parallel b$, ele sunt congruente.<br>$3x + 10 = 5x - 30 \\Rightarrow 40 = 2x \\Rightarrow x = 20$.<br>Măsura fiecărui unghi: $3 \\cdot 20 + 10 = 70^\\circ$ (și $5 \\cdot 20 - 30 = 70^\\circ$ ✓)."
+        },
+        {
+          "id": "III.2", "tip": "rezolvare", "capitol": "cl6-5.1", "puncte": 5,
+          "enunt": "Dreptele $AB$ și $CD$ se intersectează în punctul $O$, ca în figură. Știind că $m(\\sphericalangle AOC) = (2x + 20)^\\circ$ și $m(\\sphericalangle BOD) = (3x - 10)^\\circ$, află $x$ și măsurile celor patru unghiuri formate în jurul punctului $O$.",
+          "figura": "<svg viewBox=\"0 0 320 200\" role=\"img\" aria-label=\"Două drepte AB și CD care se intersectează în O; unghiurile AOC și BOD sunt marcate\"><g stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"><line x1=\"38\" y1=\"144.5\" x2=\"282\" y2=\"55.5\"/><line x1=\"115\" y1=\"22\" x2=\"205\" y2=\"178\"/></g><g class=\"acc\" stroke-width=\"2.2\" fill=\"none\"><path d=\"M149,80.95 A22,22 0 0 0 139.33,107.52\"/><path d=\"M171,119.05 A22,22 0 0 0 180.67,92.48\"/></g><text x=\"26\" y=\"156\" font-size=\"15\">A</text><text x=\"288\" y=\"56\" font-size=\"15\">B</text><text x=\"100\" y=\"22\" font-size=\"15\">C</text><text x=\"210\" y=\"192\" font-size=\"15\">D</text><text x=\"163\" y=\"88\" font-size=\"15\">O</text><text class=\"acc-text\" x=\"104\" y=\"88\" font-size=\"13\" text-anchor=\"middle\">(2x + 20)°</text><text class=\"acc-text\" x=\"222\" y=\"124\" font-size=\"13\" text-anchor=\"middle\">(3x − 10)°</text></svg>",
+          "barem": [
+            { "pas": "Am observat că $\\sphericalangle AOC$ și $\\sphericalangle BOD$ sunt <b>opuse la vârf</b>, deci congruente", "puncte": 2 },
+            { "pas": "Am rezolvat $2x + 20 = 3x - 10$ și am obținut $x = 30$", "puncte": 1 },
+            { "pas": "$m(\\sphericalangle AOC) = m(\\sphericalangle BOD) = 80^\\circ$", "puncte": 1 },
+            { "pas": "$m(\\sphericalangle AOD) = m(\\sphericalangle BOC) = 180^\\circ - 80^\\circ = 100^\\circ$", "puncte": 1 }
+          ],
+          "rezolvare": "$\\sphericalangle AOC$ și $\\sphericalangle BOD$ sunt opuse la vârf, deci congruente: $2x + 20 = 3x - 10 \\Rightarrow x = 30$.<br>$m(\\sphericalangle AOC) = m(\\sphericalangle BOD) = 2 \\cdot 30 + 20 = 80^\\circ$.<br>$\\sphericalangle AOC$ și $\\sphericalangle AOD$ sunt adiacente suplementare, deci $m(\\sphericalangle AOD) = 180^\\circ - 80^\\circ = 100^\\circ$, iar opusul lui la vârf $\\sphericalangle BOC$ are tot $100^\\circ$.<br>Verificare: $80^\\circ + 100^\\circ + 80^\\circ + 100^\\circ = 360^\\circ$ ✓"
+        },
+        {
+          "id": "III.3", "tip": "rezolvare", "capitol": "cl6-5.4", "puncte": 5,
+          "enunt": "Pe cercul de centru $O$ se iau punctele $A$, $B$, $C$, ca în figură, astfel încât $m(\\sphericalangle AOB) = 100^\\circ$ și $m(\\sphericalangle BOC) = 120^\\circ$. <br>a) Află măsura unghiului $\\sphericalangle AOC$ (cel care nu conține punctul $B$). <br>b) Arată că triunghiul $AOB$ este isoscel și află $m(\\sphericalangle OAB)$.",
+          "figura": "<svg viewBox=\"0 0 320 200\" role=\"img\" aria-label=\"Cerc de centru O cu punctele A, B, C pe cerc și razele OA, OB, OC\"><g stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"><circle cx=\"160\" cy=\"105\" r=\"80\"/><line x1=\"160\" y1=\"105\" x2=\"90.7\" y2=\"145\"/><line x1=\"160\" y1=\"105\" x2=\"132.6\" y2=\"29.8\"/><line x1=\"160\" y1=\"105\" x2=\"238.8\" y2=\"118.9\"/><line x1=\"90.7\" y1=\"145\" x2=\"132.6\" y2=\"29.8\" stroke-dasharray=\"6 5\"/></g><g class=\"acc\" stroke-width=\"2.2\" fill=\"none\"><path d=\"M153.84,88.1 A18,18 0 0 0 144.4,114\"/><path d=\"M177.7,108.1 A18,18 0 0 0 153.84,88.1\"/></g><circle cx=\"160\" cy=\"105\" r=\"2.5\" fill=\"currentColor\"/><text x=\"76\" y=\"160\" font-size=\"15\">A</text><text x=\"124\" y=\"22\" font-size=\"15\">B</text><text x=\"244\" y=\"126\" font-size=\"15\">C</text><text x=\"162\" y=\"124\" font-size=\"15\">O</text><text class=\"acc-text\" x=\"118\" y=\"108\" font-size=\"12\" text-anchor=\"middle\">100°</text><text class=\"acc-text\" x=\"198\" y=\"86\" font-size=\"12\" text-anchor=\"middle\">120°</text></svg>",
+          "barem": [
+            { "pas": "Am folosit că unghiurile din jurul punctului $O$ au suma $360^\\circ$", "puncte": 1 },
+            { "pas": "$m(\\sphericalangle AOC) = 360^\\circ - 100^\\circ - 120^\\circ = 140^\\circ$", "puncte": 1 },
+            { "pas": "$OA = OB$ (sunt raze) $\\Rightarrow$ $\\triangle AOB$ este isoscel", "puncte": 1 },
+            { "pas": "$m(\\sphericalangle OAB) = \\dfrac{180^\\circ - 100^\\circ}{2} = 40^\\circ$ (unghiurile de la bază sunt congruente)", "puncte": 2 }
+          ],
+          "rezolvare": "a) Unghiurile $\\sphericalangle AOB$, $\\sphericalangle BOC$ și $\\sphericalangle COA$ sunt în jurul punctului $O$, deci suma lor e $360^\\circ$: $m(\\sphericalangle AOC) = 360^\\circ - 100^\\circ - 120^\\circ = 140^\\circ$.<br>b) $OA$ și $OB$ sunt raze ale aceluiași cerc, deci $OA = OB$ și $\\triangle AOB$ este isoscel cu baza $AB$. Unghiurile de la bază sunt congruente: $m(\\sphericalangle OAB) = m(\\sphericalangle OBA) = \\dfrac{180^\\circ - 100^\\circ}{2} = 40^\\circ$."
+        },
+        {
+          "id": "III.4", "tip": "rezolvare", "capitol": "cl6-6.3", "puncte": 5,
+          "enunt": "Segmentele $AB$ și $CD$ se intersectează în punctul $O$, care este mijlocul fiecăruia dintre ele. Arată că $\\triangle AOC \\equiv \\triangle BOD$ și că $AC \\parallel BD$.",
+          "figura": "<svg viewBox=\"0 0 320 200\" role=\"img\" aria-label=\"Segmentele AB și CD cu mijlocul comun O; triunghiurile AOC și BOD\"><g stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"><line x1=\"40\" y1=\"40\" x2=\"280\" y2=\"160\"/><line x1=\"80\" y1=\"170\" x2=\"240\" y2=\"30\"/><line x1=\"40\" y1=\"40\" x2=\"80\" y2=\"170\"/><line x1=\"240\" y1=\"30\" x2=\"280\" y2=\"160\"/></g><g class=\"acc\" stroke-width=\"2.2\"><line x1=\"97.3\" y1=\"75.4\" x2=\"102.7\" y2=\"64.6\"/><line x1=\"217.3\" y1=\"135.4\" x2=\"222.7\" y2=\"124.6\"/><line x1=\"113.7\" y1=\"132.5\" x2=\"121.6\" y2=\"141.5\"/><line x1=\"118.3\" y1=\"128.5\" x2=\"126.2\" y2=\"137.5\"/><line x1=\"193.7\" y1=\"62.5\" x2=\"201.6\" y2=\"71.5\"/><line x1=\"198.3\" y1=\"58.5\" x2=\"206.2\" y2=\"67.5\"/></g><text x=\"26\" y=\"38\" font-size=\"15\">A</text><text x=\"286\" y=\"172\" font-size=\"15\">B</text><text x=\"66\" y=\"186\" font-size=\"15\">C</text><text x=\"246\" y=\"28\" font-size=\"15\">D</text><text x=\"134\" y=\"108\" font-size=\"15\" text-anchor=\"middle\">O</text></svg>",
+          "barem": [
+            { "pas": "$AO = OB$ și $CO = OD$ ($O$ este mijlocul lui $AB$ și al lui $CD$)", "puncte": 1 },
+            { "pas": "$\\sphericalangle AOC \\equiv \\sphericalangle BOD$ (opuse la vârf)", "puncte": 1 },
+            { "pas": "$\\Rightarrow \\triangle AOC \\equiv \\triangle BOD$ după cazul <b>L.U.L.</b>", "puncte": 1 },
+            { "pas": "Din congruență: $\\sphericalangle OAC \\equiv \\sphericalangle OBD$", "puncte": 1 },
+            { "pas": "Acestea sunt alterne interne pentru dreptele $AC$, $BD$ și secanta $AB$ $\\Rightarrow AC \\parallel BD$", "puncte": 1 }
+          ],
+          "rezolvare": "În triunghiurile $AOC$ și $BOD$:<br>• $AO = OB$ ($O$ mijlocul lui $AB$)<br>• $\\sphericalangle AOC \\equiv \\sphericalangle BOD$ (opuse la vârf)<br>• $CO = OD$ ($O$ mijlocul lui $CD$)<br>$\\Rightarrow \\triangle AOC \\equiv \\triangle BOD$ (cazul L.U.L.).<br>De aici $\\sphericalangle OAC \\equiv \\sphericalangle OBD$. Ele sunt unghiuri alterne interne formate de dreptele $AC$ și $BD$ cu secanta $AB$. Fiind congruente, $AC \\parallel BD$ (criteriul de paralelism)."
+        },
+        {
+          "id": "III.5", "tip": "rezolvare", "capitol": "cl6-6.4", "puncte": 5,
+          "enunt": "Triunghiul $ABC$ este isoscel, cu $AB = AC$, iar $D$ este mijlocul laturii $BC$. Arată că $\\triangle ABD \\equiv \\triangle ACD$ și că $AD \\perp BC$.",
+          "figura": "<svg viewBox=\"0 0 320 210\" role=\"img\" aria-label=\"Triunghi isoscel ABC cu D mijlocul bazei BC\"><g stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"><polygon points=\"160,25 50,180 270,180\"/><line x1=\"160\" y1=\"25\" x2=\"160\" y2=\"180\" stroke-dasharray=\"6 5\"/></g><g class=\"acc\" stroke-width=\"2.2\"><line x1=\"100.1\" y1=\"99\" x2=\"109.9\" y2=\"106\"/><line x1=\"219.9\" y1=\"99\" x2=\"210.1\" y2=\"106\"/><line x1=\"102\" y1=\"174\" x2=\"102\" y2=\"186\"/><line x1=\"108\" y1=\"174\" x2=\"108\" y2=\"186\"/><line x1=\"212\" y1=\"174\" x2=\"212\" y2=\"186\"/><line x1=\"218\" y1=\"174\" x2=\"218\" y2=\"186\"/></g><text x=\"160\" y=\"17\" font-size=\"15\" text-anchor=\"middle\">A</text><text x=\"38\" y=\"194\" font-size=\"15\">B</text><text x=\"272\" y=\"194\" font-size=\"15\">C</text><text x=\"160\" y=\"200\" font-size=\"15\" text-anchor=\"middle\">D</text></svg>",
+          "barem": [
+            { "pas": "Am scris cele trei perechi de laturi congruente: $AB = AC$ (ipoteză), $BD = DC$ ($D$ mijloc), $AD$ latură comună", "puncte": 2 },
+            { "pas": "Am concluzionat $\\triangle ABD \\equiv \\triangle ACD$ după cazul <b>L.L.L.</b>", "puncte": 1 },
+            { "pas": "Am dedus $\\sphericalangle ADB \\equiv \\sphericalangle ADC$ și, pentru că sunt suplementare, fiecare are $90^\\circ$, deci $AD \\perp BC$", "puncte": 2 }
+          ],
+          "rezolvare": "În triunghiurile $ABD$ și $ACD$:<br>• $AB = AC$ (din ipoteză)<br>• $BD = DC$ ($D$ este mijlocul lui $BC$)<br>• $AD$ este latură comună<br>$\\Rightarrow \\triangle ABD \\equiv \\triangle ACD$ (cazul L.L.L.).<br>De aici $\\sphericalangle ADB \\equiv \\sphericalangle ADC$. Cele două unghiuri sunt adiacente suplementare, deci $m(\\sphericalangle ADB) = m(\\sphericalangle ADC) = 180^\\circ : 2 = 90^\\circ$, adică $AD \\perp BC$. (Într-un triunghi isoscel, mediana dusă din vârf pe bază este și înălțime.)"
+        },
+        {
+          "id": "III.6", "tip": "rezolvare", "capitol": "cl6-6.4", "puncte": 5,
+          "enunt": "Triunghiul $ABC$ este dreptunghic în $A$, cu $m(\\sphericalangle B) = 30^\\circ$ și $BC = 12$ cm. Punctul $M$ este mijlocul ipotenuzei $BC$. <br>a) Află lungimea catetei $AC$. <br>b) Arată că triunghiul $AMC$ este echilateral.",
+          "figura": "<svg viewBox=\"0 0 320 200\" role=\"img\" aria-label=\"Triunghi dreptunghic ABC cu unghiul drept în A, unghiul B de 30 de grade și mediana AM\"><g stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"><polygon points=\"60,175 280,175 60,48\"/><line x1=\"60\" y1=\"175\" x2=\"170\" y2=\"111.5\" stroke-dasharray=\"6 5\"/><path d=\"M60,163 L72,163 L72,175\"/></g><g class=\"acc\" stroke-width=\"2.2\" fill=\"none\"><path d=\"M250,175 A30,30 0 0 1 254,160\"/></g><circle cx=\"170\" cy=\"111.5\" r=\"2.5\" fill=\"currentColor\"/><text x=\"46\" y=\"192\" font-size=\"15\">A</text><text x=\"284\" y=\"192\" font-size=\"15\">B</text><text x=\"46\" y=\"46\" font-size=\"15\">C</text><text x=\"176\" y=\"104\" font-size=\"15\">M</text><text class=\"acc-text\" x=\"228\" y=\"166\" font-size=\"12\" text-anchor=\"middle\">30°</text></svg>",
+          "barem": [
+            { "pas": "$AC = \\dfrac{BC}{2} = 6$ cm (cateta opusă unghiului de $30^\\circ$ este jumătate din ipotenuză)", "puncte": 2 },
+            { "pas": "$AM = \\dfrac{BC}{2} = 6$ cm (mediana corespunzătoare ipotenuzei este jumătate din ipotenuză)", "puncte": 1 },
+            { "pas": "$MC = \\dfrac{BC}{2} = 6$ cm ($M$ mijlocul lui $BC$)", "puncte": 1 },
+            { "pas": "$AM = MC = AC = 6$ cm $\\Rightarrow \\triangle AMC$ echilateral", "puncte": 1 }
+          ],
+          "rezolvare": "a) Într-un triunghi dreptunghic, cateta opusă unghiului de $30^\\circ$ are jumătate din lungimea ipotenuzei. $AC$ se opune unghiului $B$, deci $AC = 12 : 2 = 6$ cm.<br>b) $AM$ este mediana corespunzătoare ipotenuzei, deci $AM = \\dfrac{BC}{2} = 6$ cm. $M$ este mijlocul lui $BC$, deci $MC = 6$ cm. Așadar $AM = MC = AC = 6$ cm și $\\triangle AMC$ este echilateral."
+        }
+      ]
+    }
+  ]
+}

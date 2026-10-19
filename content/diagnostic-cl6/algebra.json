@@ -1,0 +1,187 @@
+{
+  "id": "diagnostic-cl6-alg",
+  "tip": "evaluare",
+  "eticheta": "Evaluare inițială · Algebră",
+  "titlu": "Evaluare inițială — Algebră (clasa a VI-a)",
+  "descriere": "Testul trece prin toate capitolele de algebră din manualul de clasa a 6-a: mulțimi, divizibilitate, rapoarte și proporții, numere întregi, numere raționale. Nu e o lucrare pentru catalog. Lucrează liniștit și scrie ce știi.",
+  "durataMinute": 50,
+  "revizuit": false,
+  "subiecte": [
+    {
+      "id": "I",
+      "titlu": "Subiectul I",
+      "scurt": "alegi răspunsul corect",
+      "instructiuni": "Alege litera corespunzătoare singurului răspuns corect.",
+      "itemi": [
+        {
+          "id": "I.1", "tip": "grila", "capitol": "cl6-1.1", "puncte": 5,
+          "enunt": "Fie mulțimile $A = \\{1, 2, 3, 4\\}$ și $B = \\{2, 4\\}$. Care afirmație este adevărată?",
+          "variante": ["$A \\subset B$", "$B \\subset A$", "$3 \\in B$", "$A = B$"],
+          "corect": 1,
+          "rezolvare": "Fiecare element al lui $B$ (adică $2$ și $4$) este și în $A$, deci $B$ este inclusă în $A$: $B \\subset A$. Invers nu e adevărat ($1 \\in A$, dar $1 \\notin B$), iar $3 \\notin B$."
+        },
+        {
+          "id": "I.2", "tip": "grila", "capitol": "cl6-1.3", "puncte": 5,
+          "enunt": "Cel mai mare divizor comun al numerelor $24$ și $36$ este:",
+          "variante": ["$6$", "$12$", "$72$", "$4$"],
+          "corect": 1,
+          "rezolvare": "$24 = 2^3 \\cdot 3$ și $36 = 2^2 \\cdot 3^2$. Luăm factorii comuni la puterea cea mai mică: $(24, 36) = 2^2 \\cdot 3 = 12$."
+        },
+        {
+          "id": "I.3", "tip": "grila", "capitol": "cl6-2.1", "puncte": 5,
+          "enunt": "$20\\%$ din $150$ este:",
+          "variante": ["$15$", "$20$", "$30$", "$75$"],
+          "corect": 2,
+          "rezolvare": "$\\dfrac{20}{100} \\cdot 150 = \\dfrac{3000}{100} = 30$."
+        },
+        {
+          "id": "I.4", "tip": "grila", "capitol": "cl6-3.1", "puncte": 5,
+          "enunt": "Cel mai mic dintre numerele $-5$, $3$, $-8$, $0$ este:",
+          "variante": ["$-5$", "$3$", "$-8$", "$0$"],
+          "corect": 2,
+          "rezolvare": "Pe axa numerelor, $-8$ este cel mai la stânga. Dintre două numere negative, mai mic este cel cu modulul mai mare: $|-8| = 8 > |-5| = 5$, deci $-8 < -5$."
+        },
+        {
+          "id": "I.5", "tip": "grila", "capitol": "cl6-4.2", "puncte": 5,
+          "enunt": "$\\left(\\dfrac{2}{3}\\right)^{-2}$ este egal cu:",
+          "variante": ["$-\\dfrac{4}{9}$", "$\\dfrac{4}{9}$", "$\\dfrac{9}{4}$", "$-\\dfrac{9}{4}$"],
+          "corect": 2,
+          "rezolvare": "Exponentul negativ înseamnă că inversăm fracția: $\\left(\\dfrac{2}{3}\\right)^{-2} = \\left(\\dfrac{3}{2}\\right)^{2} = \\dfrac{9}{4}$. Semnul minus din exponent <b>nu</b> face rezultatul negativ."
+        },
+        {
+          "id": "I.6", "tip": "grila", "capitol": "cl6-2.2", "puncte": 5,
+          "enunt": "Într-o cutie sunt $3$ bile roșii și $5$ bile albastre. Se extrage la întâmplare o bilă. Probabilitatea ca ea să fie roșie este:",
+          "variante": ["$\\dfrac{3}{5}$", "$\\dfrac{3}{8}$", "$\\dfrac{5}{8}$", "$\\dfrac{1}{3}$"],
+          "corect": 1,
+          "rezolvare": "Probabilitatea $= \\dfrac{\\text{cazuri favorabile}}{\\text{cazuri posibile}} = \\dfrac{3}{3 + 5} = \\dfrac{3}{8}$. (Greșeala frecventă: $\\dfrac{3}{5}$, adică roșii împărțit la albastre.)"
+        }
+      ]
+    },
+    {
+      "id": "II",
+      "titlu": "Subiectul al II-lea",
+      "scurt": "scrii doar rezultatul",
+      "instructiuni": "Scrie doar rezultatul. Calculele le poți face pe ciornă.",
+      "itemi": [
+        {
+          "id": "II.1", "tip": "numeric", "capitol": "cl6-1.3", "puncte": 5,
+          "generator": {
+            "variabile": { "a": { "din": [4, 6, 8, 9, 10, 12, 15] }, "b": { "din": [6, 9, 10, 12, 14, 15, 18, 20] } },
+            "conditie": "a < b && cmmdc(a, b) > 1 && b % a !== 0",
+            "calcule": { "r": "cmmmc(a, b)" }
+          },
+          "enunt": "Cel mai mic multiplu comun al numerelor ${{a}}$ și ${{b}}$ este egal cu …",
+          "raspuns": "{{r}}",
+          "rezolvare": "Descompunem în factori primi și luăm factorii comuni și necomuni, fiecare la puterea cea mai mare: $[{{a}}, {{b}}] = {{r}}$. Verificare: ${{r}}$ se împarte exact și la ${{a}}$, și la ${{b}}$."
+        },
+        {
+          "id": "II.2", "tip": "numeric", "capitol": "cl6-1.2", "puncte": 5,
+          "enunt": "Fie mulțimile $A = \\{1, 2, 3, 4, 5\\}$ și $B = \\{4, 5, 6, 7\\}$. Mulțimea $A \\cup B$ are … elemente.",
+          "raspuns": "7",
+          "rezolvare": "$A \\cup B = \\{1, 2, 3, 4, 5, 6, 7\\}$. Elementele comune $4$ și $5$ se scriu o singură dată, deci sunt $7$ elemente."
+        },
+        {
+          "id": "II.3", "tip": "numeric", "capitol": "cl6-2.1", "puncte": 5,
+          "enunt": "Numerele $a$ și $b$ sunt direct proporționale cu $2$ și $3$, iar $a + b = 40$. Atunci $a$ este egal cu …",
+          "raspuns": "16",
+          "rezolvare": "$\\dfrac{a}{2} = \\dfrac{b}{3} = k$, deci $a = 2k$ și $b = 3k$. Atunci $2k + 3k = 40$, adică $5k = 40$ și $k = 8$. Rezultă $a = 16$ (și $b = 24$)."
+        },
+        {
+          "id": "II.4", "tip": "numeric", "capitol": "cl6-3.3", "puncte": 5,
+          "generator": {
+            "variabile": { "a": { "min": 3, "max": 15 }, "b": { "min": -10, "max": 10 } },
+            "conditie": "b < a && b !== 0",
+            "calcule": { "r": "b - a" }
+          },
+          "enunt": "Soluția ecuației $x + {{a}} = {{b}}$, unde $x \\in \\mathbb{Z}$, este $x = $ …",
+          "raspuns": "{{r}}",
+          "rezolvare": "Trecem ${{a}}$ în partea dreaptă, cu semn schimbat: $x = {{b}} - {{a}} = {{r}}$."
+        },
+        {
+          "id": "II.5", "tip": "numeric", "capitol": "cl6-4.3", "puncte": 5,
+          "enunt": "Soluția ecuației $3x - \\dfrac{1}{2} = \\dfrac{5}{2}$ este $x = $ …",
+          "raspuns": "1",
+          "rezolvare": "$3x = \\dfrac{5}{2} + \\dfrac{1}{2} = \\dfrac{6}{2} = 3$, deci $x = 3 : 3 = 1$."
+        },
+        {
+          "id": "II.6", "tip": "numeric", "capitol": "cl6-4.1", "puncte": 5, "ireductibila": true,
+          "enunt": "Numărul $0,(6)$ scris ca fracție ireductibilă este …",
+          "raspuns": "2/3",
+          "raspunsAfisat": "$\\dfrac{2}{3}$",
+          "rezolvare": "Perioada are o cifră, deci la numitor scriem un $9$: $0,(6) = \\dfrac{6}{9} = \\dfrac{2}{3}$."
+        }
+      ]
+    },
+    {
+      "id": "III",
+      "titlu": "Subiectul al III-lea",
+      "scurt": "rezolvare completă pe caiet",
+      "instructiuni": "Scrie pe caiet rezolvările complete, cu toți pașii și justificările.",
+      "itemi": [
+        {
+          "id": "III.1", "tip": "rezolvare", "capitol": "cl6-1.3", "puncte": 5,
+          "enunt": "O florărie are $48$ de trandafiri și $60$ de lalele. Florăreasa vrea să facă <b>cât mai multe buchete identice</b>, folosind toate florile. Câte buchete poate face și câte flori de fiecare fel are un buchet?",
+          "barem": [
+            { "pas": "Am observat că numărul de buchete este cel mai mare divizor comun al numerelor $48$ și $60$", "puncte": 1 },
+            { "pas": "Am descompus corect: $48 = 2^4 \\cdot 3$ și $60 = 2^2 \\cdot 3 \\cdot 5$", "puncte": 2 },
+            { "pas": "Am obținut $(48, 60) = 12$ buchete", "puncte": 1 },
+            { "pas": "Am aflat că un buchet are $4$ trandafiri și $5$ lalele", "puncte": 1 }
+          ],
+          "rezolvare": "Buchetele trebuie să fie identice și să folosească toate florile, deci numărul lor divide și pe $48$, și pe $60$. Cel mai mare număr cu proprietatea asta este c.m.m.d.c.<br>$48 = 2^4 \\cdot 3$, $60 = 2^2 \\cdot 3 \\cdot 5$ $\\Rightarrow (48, 60) = 2^2 \\cdot 3 = 12$.<br>Se pot face $12$ buchete. Fiecare are $48 : 12 = 4$ trandafiri și $60 : 12 = 5$ lalele."
+        },
+        {
+          "id": "III.2", "tip": "rezolvare", "capitol": "cl6-2.1", "puncte": 5,
+          "enunt": "$4$ muncitori termină o lucrare în $9$ zile. În câte zile ar termina aceeași lucrare $6$ muncitori, care lucrează în același ritm?",
+          "barem": [
+            { "pas": "Am observat că numărul de muncitori și numărul de zile sunt mărimi <b>invers proporționale</b>", "puncte": 2 },
+            { "pas": "Am scris relația $4 \\cdot 9 = 6 \\cdot x$ (sau regula de trei simplă inversă)", "puncte": 2 },
+            { "pas": "Am obținut $x = 6$ zile", "puncte": 1 }
+          ],
+          "rezolvare": "Cu cât sunt mai mulți muncitori, cu atât lucrarea se termină în mai puține zile, deci mărimile sunt invers proporționale: produsul lor rămâne constant.<br>$4 \\cdot 9 = 6 \\cdot x \\Rightarrow 36 = 6x \\Rightarrow x = 6$ zile."
+        },
+        {
+          "id": "III.3", "tip": "rezolvare", "capitol": "cl6-3.2", "puncte": 5,
+          "enunt": "Calculează: $(-2)^3 + (-18) : (+3) - 4 \\cdot (-5)$.",
+          "barem": [
+            { "pas": "$(-2)^3 = -8$", "puncte": 1 },
+            { "pas": "$(-18) : (+3) = -6$", "puncte": 1 },
+            { "pas": "$-4 \\cdot (-5) = +20$", "puncte": 1 },
+            { "pas": "$-8 - 6 + 20 = 6$ (ordinea operațiilor respectată)", "puncte": 2 }
+          ],
+          "rezolvare": "Întâi puterea, apoi împărțirea și înmulțirea, la final adunările și scăderile:<br>$(-2)^3 = -8$ (exponent impar, deci semnul rămâne minus)<br>$(-18) : (+3) = -6$<br>$-4 \\cdot (-5) = +20$<br>$-8 + (-6) + 20 = -14 + 20 = 6$."
+        },
+        {
+          "id": "III.4", "tip": "rezolvare", "capitol": "cl6-3.3", "puncte": 5,
+          "enunt": "Determină numerele întregi $x$ pentru care $-3 < 2x + 1 \\le 7$.",
+          "barem": [
+            { "pas": "Am scăzut $1$ din toți membrii: $-4 < 2x \\le 6$", "puncte": 1 },
+            { "pas": "Am împărțit la $2$ (număr pozitiv, sensul rămâne): $-2 < x \\le 3$", "puncte": 2 },
+            { "pas": "Am scris corect mulțimea: $x \\in \\{-1, 0, 1, 2, 3\\}$ ($-2$ nu se ia, $3$ se ia)", "puncte": 2 }
+          ],
+          "rezolvare": "$-3 < 2x + 1 \\le 7 \\;\\big|\\; -1 \\Rightarrow -4 < 2x \\le 6$<br>$\\big|\\; : 2 \\Rightarrow -2 < x \\le 3$<br>Numerele întregi strict mai mari decât $-2$ și cel mult egale cu $3$: $x \\in \\{-1, 0, 1, 2, 3\\}$."
+        },
+        {
+          "id": "III.5", "tip": "rezolvare", "capitol": "cl6-4.2", "puncte": 5,
+          "enunt": "Calculează: $\\left(\\dfrac{1}{2} + \\dfrac{1}{3}\\right) \\cdot \\dfrac{6}{5} - \\left(\\dfrac{1}{2}\\right)^2$.",
+          "barem": [
+            { "pas": "$\\dfrac{1}{2} + \\dfrac{1}{3} = \\dfrac{3}{6} + \\dfrac{2}{6} = \\dfrac{5}{6}$", "puncte": 2 },
+            { "pas": "$\\dfrac{5}{6} \\cdot \\dfrac{6}{5} = 1$", "puncte": 1 },
+            { "pas": "$\\left(\\dfrac{1}{2}\\right)^2 = \\dfrac{1}{4}$", "puncte": 1 },
+            { "pas": "$1 - \\dfrac{1}{4} = \\dfrac{3}{4}$", "puncte": 1 }
+          ],
+          "rezolvare": "Ordinea: paranteza, puterea, înmulțirea, la final scăderea.<br>$\\dfrac{1}{2} + \\dfrac{1}{3} = \\dfrac{5}{6}$; $\\dfrac{5}{6} \\cdot \\dfrac{6}{5} = 1$; $\\left(\\dfrac{1}{2}\\right)^2 = \\dfrac{1}{4}$<br>$1 - \\dfrac{1}{4} = \\dfrac{3}{4}$."
+        },
+        {
+          "id": "III.6", "tip": "rezolvare", "capitol": "cl6-4.3", "puncte": 5,
+          "enunt": "Ana a citit în prima zi $\\dfrac{2}{5}$ dintr-o carte, iar a doua zi $\\dfrac{1}{3}$ din carte. Au mai rămas de citit $48$ de pagini. Câte pagini are cartea?",
+          "barem": [
+            { "pas": "$\\dfrac{2}{5} + \\dfrac{1}{3} = \\dfrac{6}{15} + \\dfrac{5}{15} = \\dfrac{11}{15}$ din carte, citite în două zile", "puncte": 2 },
+            { "pas": "Au rămas $1 - \\dfrac{11}{15} = \\dfrac{4}{15}$ din carte", "puncte": 1 },
+            { "pas": "$\\dfrac{4}{15}$ din carte $= 48$ pagini $\\Rightarrow$ cartea are $180$ de pagini", "puncte": 2 }
+          ],
+          "rezolvare": "În două zile Ana a citit $\\dfrac{2}{5} + \\dfrac{1}{3} = \\dfrac{11}{15}$ din carte, deci au rămas $\\dfrac{4}{15}$.<br>$\\dfrac{4}{15}$ din carte înseamnă $48$ de pagini, deci $\\dfrac{1}{15}$ înseamnă $48 : 4 = 12$ pagini, iar toată cartea are $12 \\cdot 15 = 180$ de pagini.<br>(Cu ecuație: $\\dfrac{4}{15}x = 48 \\Rightarrow x = 180$.) Verificare: $72 + 60 + 48 = 180$ ✓"
+        }
+      ]
+    }
+  ]
+}

@@ -30,7 +30,7 @@
 
   function tabelRezultate(rez) {
     if (!rez.length) {
-      return '<p>Încă nu ai dat niciun test. <a href="test.html?id=diagnostic-cl6">Începe cu evaluarea inițială</a>.</p>';
+      return '<p>Încă nu ai dat niciun test. <a href="index.html">Începe cu evaluarea inițială</a>.</p>';
     }
     return (
       '<div class="tabel-scroll"><table class="tabel-rez"><thead><tr><th>Data</th><th>Test</th><th>Nota</th><th>Durata</th><th></th></tr></thead><tbody>' +

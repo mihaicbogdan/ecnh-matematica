@@ -26,6 +26,8 @@ Format Evaluare Națională: Subiectul I (grilă), Subiectul II (completare / r�
 - **Algebră:** Divizibilitate în ℕ · Rapoarte și proporții (procente, mărimi direct/invers proporționale) · Numere întregi · Numere raționale
 - **Geometrie:** Noțiuni geometrice fundamentale (unghiuri, drepte paralele) · Triunghiul (congruență, triunghiul isoscel, liniile importante)
 
+> **Actualizare 2026-10-19:** evaluarea a fost împărțită în **două teste** (Algebră și Geometrie, câte 18 itemi și 50 de minute). Diagnosticul se face pe cele **19 subcapitole** ale manualului de clasa a 6-a (Grup Editorial, manuale.edu.ro). Fiecare subcapitol are cel puțin un item, iar `npm run valideaza` verifică automat această acoperire.
+
 Pentru fiecare capitol de clasa a 6-a cu scor **sub 70%** se deschide o **mini-lecție de recapitulare** (reguli + 5–8 exerciții). Mini-lecția arată și capitolul de clasa a 7-a care depinde de ea (ex. *Numere raționale → Numere reale*).
 
 ### Clasa a 7-a

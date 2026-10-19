@@ -134,6 +134,20 @@ for (const c of curr.capitoleCl6) {
   if (c.recapitulare && !curr.lectii[c.recapitulare]) err('curriculum', c.id + ' trimite la recapitularea inexistentă ' + c.recapitulare);
 }
 
+// acoperire: fiecare subcapitol din manualul de clasa a 6-a are cel puțin un item în evaluarea inițială
+const acoperire = {};
+for (const id of curr.evaluareInitiala || []) {
+  const T = curr.teste[id] && citeste(curr.teste[id].fisier);
+  if (!T) continue;
+  for (const sub of T.subiecte) for (const it of sub.itemi) (acoperire[it.capitol] = acoperire[it.capitol] || []).push(id.replace('diagnostic-cl6-', '') + ' ' + it.id);
+}
+const idsCl6 = new Set(curr.capitoleCl6.map((c) => c.id));
+for (const c of curr.capitoleCl6) {
+  if (!acoperire[c.id]) err('acoperire', 'subcapitolul ' + c.titlu + ' nu are niciun item în evaluarea inițială');
+}
+for (const cap of Object.keys(acoperire)) if (!idsCl6.has(cap)) err('acoperire', 'capitol necunoscut ' + cap + ' (' + acoperire[cap].join(', ') + ')');
+console.log('Acoperire manual cl. 6:\n  ' + curr.capitoleCl6.map((c) => c.titlu + ' → ' + (acoperire[c.id] || ['—']).join(', ')).join('\n  '));
+
 if (avertismente.length) console.log('Avertismente:\n  ' + avertismente.join('\n  '));
 if (erori.length) {
   console.error('\n✗ ' + erori.length + ' erori:\n  ' + erori.join('\n  '));

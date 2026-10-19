@@ -4,7 +4,6 @@
 
   const { $, esc } = App;
   const radacina = $('#continut');
-  const ID_EVAL = 'diagnostic-cl6';
 
   function htmlSalut() {
     const p = Progres.prenume();
@@ -21,40 +20,45 @@
   }
 
   function htmlEvaluare(curr) {
-    const ult = Progres.ultimRezultat(ID_EVAL);
-    const ciorna = Progres.ciorna(ID_EVAL);
-    const inCurs = ciorna && ciorna.inceput;
-    let corp;
-    if (inCurs) {
-      corp =
-        '<p>Ai început testul și ai salvat ' + Object.keys(ciorna.raspunsuri || {}).length + ' răspunsuri. Continuă de unde ai rămas.</p>' +
-        '<div class="rand-butoane"><a class="btn" href="test.html?id=' + ID_EVAL + '">Continuă testul</a></div>';
-    } else if (ult) {
-      const cat = App.categorie((ult.nota - 1) / 9);
-      corp =
-        '<p>Ultima dată: <b class="text-' + cat + '">nota ' + App.nr(ult.nota) + '</b> · ' + App.data(ult.data) + '</p>' +
-        App.bareCapitole(ult.capitole) +
-        '<div class="rand-butoane"><a class="btn" href="test.html?id=' + ID_EVAL + '&rez=' + ult.id + '">Vezi rezultatul</a>' +
-        '<a class="btn secundar" href="test.html?id=' + ID_EVAL + '">Dă-l din nou</a></div>';
-    } else {
-      corp =
-        '<p>Un test în stilul Evaluării Naționale, cu Subiectele I, II și III, pe toată materia de clasa a 6-a. Durează cam 50 de minute.</p>' +
-        '<div class="rand-butoane"><a class="btn" href="test.html?id=' + ID_EVAL + '">Începe evaluarea</a></div>';
-    }
+    const card = (id) => {
+      const ult = Progres.ultimRezultat(id);
+      const ciorna = Progres.ciorna(id);
+      const url = 'test.html?id=' + encodeURIComponent(id);
+      let corp;
+      if (ciorna && ciorna.inceput) {
+        corp =
+          '<p>Ai început testul și ai ' + Object.keys(ciorna.raspunsuri || {}).length + ' răspunsuri salvate.</p>' +
+          '<div class="rand-butoane"><a class="btn" href="' + url + '">Continuă testul</a></div>';
+      } else if (ult) {
+        const cat = App.categorie((ult.nota - 1) / 9);
+        corp =
+          '<p>Ultima dată: <b class="text-' + cat + '">nota ' + App.nr(ult.nota) + '</b> · ' + App.data(ult.data) + '</p>' +
+          '<div class="rand-butoane"><a class="btn mic" href="' + url + '&rez=' + ult.id + '">Vezi rezultatul</a>' +
+          '<a class="btn secundar mic" href="' + url + '">Dă-l din nou</a></div>';
+      } else {
+        corp = '<p class="mic">18 întrebări · 50 de minute · Subiectele I, II, III</p><div class="rand-butoane"><a class="btn" href="' + url + '">Începe</a></div>';
+      }
+      return '<div class="foaie"><h3>' + esc(curr.teste[id].titlu.replace('Evaluare inițială — ', '')) + '</h3>' + corp + '</div>';
+    };
     return (
       '<section class="foaie cu-margine apare" style="margin-top:22px">' +
-      '<span class="eticheta rosu">Pasul 1</span><h2 style="margin-top:8px">' + esc(curr.teste[ID_EVAL].titlu) + '</h2>' + corp + '</section>'
+      '<span class="eticheta rosu">Pasul 1</span><h2 style="margin-top:8px">Evaluare inițială — materia clasei a VI-a</h2>' +
+      '<p>Două teste în stilul Evaluării Naționale, care trec prin tot manualul de clasa a 6-a. Le poți da în zile diferite.</p>' +
+      '<div class="grila-carduri">' + curr.evaluareInitiala.map(card).join('') + '</div></section>'
     );
   }
 
   function htmlRecapitulare(curr) {
-    const ult = Progres.ultimRezultat(ID_EVAL);
-    if (!ult) return '';
-    const slabe = App.capitoleSlabe(ult.capitole);
+    const capitole = {};
+    for (const id of curr.evaluareInitiala) {
+      const ult = Progres.ultimRezultat(id);
+      if (ult) Object.assign(capitole, ult.capitole);
+    }
+    const slabe = App.capitoleSlabe(capitole);
     if (!slabe.length) return '';
     return (
       '<section class="foaie cu-margine apare" style="margin-top:18px"><span class="eticheta galben">Pasul 2</span>' +
-      '<h2 style="margin-top:8px">Recapitulează lacunele</h2><ul class="lista-recap">' +
+      '<h2 style="margin-top:8px">Recapitulează lacunele</h2><p class="mic">Subcapitolele din manual care au ieșit sub 70%, de la cel mai slab.</p><ul class="lista-recap">' +
       slabe
         .map((c) => {
           const def = curr.capitoleCl6.find((x) => x.id === c.id) || {};
