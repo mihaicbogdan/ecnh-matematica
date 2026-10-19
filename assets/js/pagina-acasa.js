@@ -86,17 +86,9 @@
           (cap) =>
             '<div class="capitol"><h3><span class="nr">' + cap.nr + '.</span>' + esc(cap.titlu) + '</h3><ul class="lectii">' +
             cap.lectii
-              .map((l) => {
-                const intrare = curr.lectii[l.id];
-                const st = Progres.stareLectie(l.id);
-                if (!intrare || !intrare.fisier) {
-                  return '<li class="inactiv"><span>' + esc(l.titlu) + '</span><span class="stare mic">în curând</span></li>';
-                }
-                return (
-                  '<li><a href="lectie.html?id=' + encodeURIComponent(l.id) + '">' + esc(l.titlu) + '</a><span class="stare">' +
-                  (st && st.nota ? '<span class="eticheta ' + App.categorie((st.nota - 1) / 9) + '">' + App.nr(st.nota) + '</span>' : '') +
-                  '</span></li>'
-                );
+              .map((l, i) => {
+                const grupa = l.grupa && l.grupa !== (cap.lectii[i - 1] || {}).grupa ? '<li class="grupa">' + esc(l.grupa) + '</li>' : '';
+                return grupa + randLectie(l);
               })
               .join('') +
             (cap.test ? '<li><a href="test.html?id=' + encodeURIComponent(cap.test) + '"><b>Test de capitol</b></a></li>' : '') +
@@ -105,6 +97,19 @@
         .join('') +
       '</div>'
     );
+
+    function randLectie(l) {
+      const intrare = curr.lectii[l.id];
+      const st = Progres.stareLectie(l.id);
+      if (!intrare || !intrare.fisier) {
+        return '<li class="inactiv"><span>' + esc(l.titlu) + '</span><span class="stare mic">în curând</span></li>';
+      }
+      return (
+        '<li><a href="lectie.html?id=' + encodeURIComponent(l.id) + '">' + esc(l.titlu) + '</a><span class="stare">' +
+        (st && st.nota ? '<span class="eticheta ' + App.categorie((st.nota - 1) / 9) + '">' + App.nr(st.nota) + '</span>' : '') +
+        '</span></li>'
+      );
+    }
   }
 
   async function randeaza() {

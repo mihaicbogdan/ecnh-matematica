@@ -1,0 +1,218 @@
+{
+  "id": "alg-1-1",
+  "eticheta": "Algebră · Cap. 1 · Unitatea 1 · Rădăcina pătrată",
+  "titlu": "Rădăcina pătrată a pătratului unui număr natural",
+  "introducere": "Rădăcina pătrată răspunde la întrebarea: „ce număr pozitiv, înmulțit cu el însuși, dă acest rezultat?”",
+  "revizuit": false,
+  "deRetinut": [
+    "<b>Pătrat perfect:</b> un număr de forma $k^2$: $0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, \\dots$",
+    "<b>Rădăcina pătrată</b> a numărului $a \\ge 0$ este numărul $\\sqrt{a} \\ge 0$ cu $\\left(\\sqrt{a}\\right)^2 = a$. Pentru $a \\ge 0$: $\\sqrt{a^2} = a$, de exemplu $\\sqrt{49} = 7$.",
+    "$\\sqrt{a}$ există doar pentru $a \\ge 0$ și este întotdeauna $\\ge 0$: $\\sqrt{49} = 7$, <b>nu</b> $-7$.",
+    "<b>Ultima cifră</b> a unui pătrat perfect poate fi doar $0, 1, 4, 5, 6$ sau $9$. Un număr terminat în $2, 3, 7$ sau $8$ <b>nu</b> este pătrat perfect.",
+    "<b>Cu descompunerea în factori primi:</b> un număr este pătrat perfect dacă toți exponenții sunt pari, iar la radical se înjumătățesc exponenții: $\\sqrt{2^4 \\cdot 3^2} = 2^2 \\cdot 3 = 12$.",
+    "<b>Fracții:</b> $\\sqrt{\\dfrac{a^2}{b^2}} = \\dfrac{a}{b}$, de exemplu $\\sqrt{\\dfrac{9}{16}} = \\dfrac{3}{4}$.",
+    "<b>Atenție:</b> $\\sqrt{9 + 16} = \\sqrt{25} = 5$, dar $\\sqrt{9} + \\sqrt{16} = 7$. Radicalul unei sume <b>nu</b> este suma radicalilor."
+  ],
+  "exemple": [
+    {
+      "titlu": "Cu descompunere",
+      "enunt": "Calculează $\\sqrt{576}$.",
+      "pasi": [
+        "Descompunem: $576 = 2^6 \\cdot 3^2$.",
+        "Toți exponenții sunt pari, deci $576$ este pătrat perfect.",
+        "Înjumătățim exponenții: $\\sqrt{576} = 2^3 \\cdot 3 = 8 \\cdot 3 = 24$.",
+        "Verificare: $24^2 = 576$ ✓"
+      ]
+    },
+    {
+      "titlu": "Pătrat perfect sau nu?",
+      "enunt": "Este $2023$ pătrat perfect?",
+      "pasi": [
+        "Ultima cifră este $3$.",
+        "Niciun pătrat perfect nu se termină în $3$, deci $2023$ <b>nu</b> este pătrat perfect."
+      ]
+    }
+  ],
+  "exercitii": [
+    {
+      "id": "E1",
+      "nivel": 1,
+      "tip": "numeric",
+      "enunt": "Calculează $\\sqrt{{{n}}}$.",
+      "generator": {
+        "variabile": {
+          "k": {
+            "min": 2,
+            "max": 20
+          }
+        },
+        "calcule": {
+          "n": "k * k"
+        }
+      },
+      "raspuns": "{{k}}",
+      "indiciu": "Caută numărul care, înmulțit cu el însuși, dă ${{n}}$.",
+      "rezolvare": "${{k}}^2 = {{n}}$, deci $\\sqrt{{{n}}} = {{k}}$."
+    },
+    {
+      "id": "E2",
+      "nivel": 1,
+      "tip": "grila",
+      "enunt": "Care dintre numere este pătrat perfect?",
+      "variante": [
+        "$50$",
+        "$63$",
+        "$81$",
+        "$90$"
+      ],
+      "corect": 2,
+      "rezolvare": "$81 = 9^2$. Celelalte nu sunt pătrate perfecte: $7^2 = 49$, $8^2 = 64$, $9^2 = 81$, $10^2 = 100$."
+    },
+    {
+      "id": "E3",
+      "nivel": 1,
+      "tip": "adevarat-fals",
+      "enunt": "Adevărat sau fals: $\\sqrt{49} = -7$.",
+      "corect": false,
+      "rezolvare": "<b>Fals.</b> Rădăcina pătrată este întotdeauna un număr pozitiv (sau zero): $\\sqrt{49} = 7$. Este adevărat că $(-7)^2 = 49$, dar $\\sqrt{49}$ înseamnă doar soluția pozitivă."
+    },
+    {
+      "id": "E4",
+      "nivel": 2,
+      "tip": "numeric",
+      "enunt": "Calculează $\\sqrt{2^4 \\cdot 3^2 \\cdot 5^2}$.",
+      "raspuns": "60",
+      "indiciu": "Împarte fiecare exponent la 2.",
+      "rezolvare": "Înjumătățim exponenții: $2^2 \\cdot 3 \\cdot 5 = 4 \\cdot 3 \\cdot 5 = 60$."
+    },
+    {
+      "id": "E5",
+      "nivel": 2,
+      "tip": "numeric",
+      "enunt": "Calculează $\\sqrt{{{A}}} + \\sqrt{{{B}}}$.",
+      "generator": {
+        "variabile": {
+          "a": {
+            "min": 2,
+            "max": 15
+          },
+          "b": {
+            "min": 2,
+            "max": 15
+          }
+        },
+        "conditie": "a !== b",
+        "calcule": {
+          "A": "a * a",
+          "B": "b * b",
+          "s": "a + b"
+        }
+      },
+      "raspuns": "{{s}}",
+      "rezolvare": "$\\sqrt{{{A}}} = {{a}}$, $\\sqrt{{{B}}} = {{b}}$, deci suma este ${{a}} + {{b}} = {{s}}$."
+    },
+    {
+      "id": "E6",
+      "nivel": 2,
+      "tip": "numeric",
+      "enunt": "Calculează $\\sqrt{\\dfrac{25}{36}}$.",
+      "raspuns": "5/6",
+      "raspunsAfisat": "$\\dfrac{5}{6}$",
+      "indiciu": "Extrage separat radicalul din numărător și din numitor.",
+      "rezolvare": "$\\sqrt{\\dfrac{25}{36}} = \\dfrac{\\sqrt{25}}{\\sqrt{36}} = \\dfrac{5}{6}$."
+    },
+    {
+      "id": "E7",
+      "nivel": 3,
+      "tip": "numeric",
+      "enunt": "Calculează $\\sqrt{1764}$.",
+      "raspuns": "42",
+      "indiciu": "Împarte succesiv la 2, la 3 și la 7.",
+      "rezolvare": "$1764 = 2^2 \\cdot 3^2 \\cdot 7^2$, deci $\\sqrt{1764} = 2 \\cdot 3 \\cdot 7 = 42$. Verificare: $42^2 = 1764$ ✓"
+    },
+    {
+      "id": "E8",
+      "nivel": 3,
+      "tip": "adevarat-fals",
+      "enunt": "Adevărat sau fals: un număr natural care se termină în cifra 7 poate fi pătrat perfect.",
+      "corect": false,
+      "rezolvare": "<b>Fals.</b> Pătratele cifrelor $0, 1, \\dots, 9$ se termină în $0, 1, 4, 9, 6, 5, 6, 9, 4, 1$. Niciunul nu se termină în $7$."
+    },
+    {
+      "id": "E9",
+      "nivel": 3,
+      "tip": "numeric",
+      "enunt": "Calculează $\\sqrt{3^2 + 4^2}$.",
+      "raspuns": "5",
+      "indiciu": "Calculează mai întâi ce e sub radical.",
+      "rezolvare": "Întâi calculăm sub radical: $9 + 16 = 25$, deci $\\sqrt{25} = 5$. (Nu $3 + 4 = 7$!)"
+    }
+  ],
+  "test": {
+    "itemi": [
+      {
+        "id": "T1",
+        "tip": "grila",
+        "puncte": 2,
+        "enunt": "$\\sqrt{144} = $",
+        "variante": [
+          "$12$",
+          "$14$",
+          "$72$",
+          "$11$"
+        ],
+        "corect": 0,
+        "rezolvare": "$12^2 = 144$."
+      },
+      {
+        "id": "T2",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "Calculează $\\sqrt{{{n}}} - \\sqrt{{{m}}}$.",
+        "generator": {
+          "variabile": {
+            "k": {
+              "min": 6,
+              "max": 15
+            },
+            "j": {
+              "min": 2,
+              "max": 5
+            }
+          },
+          "calcule": {
+            "n": "k * k",
+            "m": "j * j",
+            "d": "k - j"
+          }
+        },
+        "raspuns": "{{d}}",
+        "rezolvare": "${{k}} - {{j}} = {{d}}$."
+      },
+      {
+        "id": "T3",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "Calculează $\\sqrt{2^2 \\cdot 7^2}$.",
+        "raspuns": "14",
+        "rezolvare": "$2 \\cdot 7 = 14$."
+      },
+      {
+        "id": "T4",
+        "tip": "adevarat-fals",
+        "puncte": 2,
+        "enunt": "Adevărat sau fals: $\\sqrt{0,09} = 0,3$.",
+        "corect": true,
+        "rezolvare": "<b>Adevărat:</b> $0,3^2 = 0,09$."
+      },
+      {
+        "id": "T5",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "Calculează $\\sqrt{6^2 + 8^2}$.",
+        "raspuns": "10",
+        "rezolvare": "$36 + 64 = 100$, iar $\\sqrt{100} = 10$."
+      }
+    ]
+  }
+}

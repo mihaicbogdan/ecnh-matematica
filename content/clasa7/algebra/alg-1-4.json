@@ -1,0 +1,179 @@
+{
+  "id": "alg-1-4",
+  "eticheta": "Algebră · Cap. 1 · Unitatea 2 · Numere reale",
+  "titlu": "Numere iraționale. Numere reale. $\\mathbb{N} \\subset \\mathbb{Z} \\subset \\mathbb{Q} \\subset \\mathbb{R}$",
+  "introducere": "$\\sqrt{2} = 1,41421356\\dots$ are o infinitate de zecimale care nu se repetă niciodată. Astfel de numere nu se pot scrie ca fracție: sunt <b>iraționale</b>.",
+  "revizuit": false,
+  "deRetinut": [
+    "<b>Număr rațional</b> ($\\mathbb{Q}$): se poate scrie ca fracție $\\dfrac{a}{b}$, cu $a \\in \\mathbb{Z}$, $b \\in \\mathbb{N}^*$. Are scriere zecimală <b>finită</b> sau <b>periodică</b>: $0,5$; $0,(3)$; $-2$.",
+    "<b>Număr irațional</b> ($\\mathbb{R} \\setminus \\mathbb{Q}$): are o infinitate de zecimale <b>fără perioadă</b>. Exemple: $\\sqrt{2}$, $\\sqrt{3}$, $\\pi$.",
+    "<b>Regula radicalului:</b> pentru $n$ natural, $\\sqrt{n}$ este rațional doar dacă $n$ este pătrat perfect. $\\sqrt{16} = 4$ e rațional, $\\sqrt{15}$ e irațional.",
+    "<b>Numere reale:</b> $\\mathbb{R}$ = numerele raționale + numerele iraționale. Incluziunile: $\\mathbb{N} \\subset \\mathbb{Z} \\subset \\mathbb{Q} \\subset \\mathbb{R}$.",
+    "<b>Atenție la forme ascunse:</b> $\\sqrt{\\dfrac{4}{9}} = \\dfrac{2}{3}$, $\\sqrt{0,25} = 0,5$ și $-\\sqrt{9} = -3$ sunt raționale.",
+    "Rațional + irațional = <b>irațional</b> (de exemplu $1 + \\sqrt{2}$). Dar irațional + irațional poate fi rațional: $\\sqrt{2} + (-\\sqrt{2}) = 0$."
+  ],
+  "exemple": [
+    {
+      "titlu": "Clasificare",
+      "enunt": "Încadrează numerele $-3$; $0,(5)$; $\\sqrt{16}$; $\\sqrt{7}$; $\\pi$; $\\dfrac{2}{3}$ în mulțimile $\\mathbb{N}, \\mathbb{Z}, \\mathbb{Q}, \\mathbb{R} \\setminus \\mathbb{Q}$.",
+      "pasi": [
+        "$\\sqrt{16} = 4$: este natural, deci face parte din toate: $\\mathbb{N}, \\mathbb{Z}, \\mathbb{Q}, \\mathbb{R}$.",
+        "$-3 \\in \\mathbb{Z}$ (și $\\mathbb{Q}$, $\\mathbb{R}$), dar nu e natural.",
+        "$0,(5) = \\dfrac{5}{9}$ și $\\dfrac{2}{3}$ sunt raționale, dar nu întregi.",
+        "$\\sqrt{7}$ ($7$ nu e pătrat perfect) și $\\pi$ sunt iraționale."
+      ]
+    },
+    {
+      "titlu": "O formă ascunsă",
+      "enunt": "Este $\\sqrt{0,(1)}$ număr rațional?",
+      "pasi": [
+        "$0,(1) = \\dfrac{1}{9}$.",
+        "$\\sqrt{\\dfrac{1}{9}} = \\dfrac{1}{3}$, deci numărul este <b>rațional</b>."
+      ]
+    }
+  ],
+  "exercitii": [
+    {
+      "id": "E1",
+      "nivel": 1,
+      "tip": "adevarat-fals",
+      "enunt": "Adevărat sau fals: $\\sqrt{9}$ este număr irațional.",
+      "corect": false,
+      "rezolvare": "<b>Fals:</b> $\\sqrt{9} = 3$, număr natural."
+    },
+    {
+      "id": "E2",
+      "nivel": 1,
+      "tip": "grila",
+      "enunt": "Care dintre numere este irațional?",
+      "variante": [
+        "$\\sqrt{25}$",
+        "$\\sqrt{0,04}$",
+        "$\\sqrt{12}$",
+        "$\\dfrac{7}{3}$"
+      ],
+      "corect": 2,
+      "rezolvare": "$\\sqrt{25} = 5$, $\\sqrt{0,04} = 0,2$, $\\dfrac{7}{3} = 2,(3)$ sunt raționale. $12$ nu e pătrat perfect, deci $\\sqrt{12}$ e irațional."
+    },
+    {
+      "id": "E3",
+      "nivel": 1,
+      "tip": "adevarat-fals",
+      "enunt": "Adevărat sau fals: orice număr natural este număr real.",
+      "corect": true,
+      "rezolvare": "<b>Adevărat:</b> $\\mathbb{N} \\subset \\mathbb{Z} \\subset \\mathbb{Q} \\subset \\mathbb{R}$."
+    },
+    {
+      "id": "E4",
+      "nivel": 2,
+      "tip": "numeric",
+      "enunt": "Câte numere iraționale are mulțimea $\\{\\sqrt{1}, \\sqrt{2}, \\sqrt{3}, \\sqrt{4}, \\sqrt{5}, \\sqrt{6}, \\sqrt{7}, \\sqrt{8}, \\sqrt{9}\\}$?",
+      "raspuns": "6",
+      "indiciu": "Care dintre numerele de la 1 la 9 sunt pătrate perfecte?",
+      "rezolvare": "Raționale sunt doar $\\sqrt{1}$, $\\sqrt{4}$, $\\sqrt{9}$ (pătrate perfecte). Rămân $9 - 3 = 6$ iraționale."
+    },
+    {
+      "id": "E5",
+      "nivel": 2,
+      "tip": "grila",
+      "enunt": "Care afirmație este adevărată?",
+      "variante": [
+        "$\\sqrt{2} \\in \\mathbb{Q}$",
+        "$-5 \\in \\mathbb{N}$",
+        "$0,(3) \\in \\mathbb{Q}$",
+        "$\\pi \\in \\mathbb{Q}$"
+      ],
+      "corect": 2,
+      "rezolvare": "$0,(3) = \\dfrac{1}{3}$ este rațional. $\\sqrt{2}$ și $\\pi$ sunt iraționale, iar $-5$ nu este natural."
+    },
+    {
+      "id": "E6",
+      "nivel": 2,
+      "tip": "adevarat-fals",
+      "enunt": "Adevărat sau fals: $\\sqrt{0,25}$ este număr rațional.",
+      "corect": true,
+      "rezolvare": "<b>Adevărat:</b> $\\sqrt{0,25} = 0,5 = \\dfrac{1}{2}$."
+    },
+    {
+      "id": "E7",
+      "nivel": 3,
+      "tip": "numeric",
+      "enunt": "Câte numere naturale $n$, cu $1 \\le n \\le 50$, au $\\sqrt{n}$ număr rațional?",
+      "raspuns": "7",
+      "rezolvare": "$\\sqrt{n}$ e rațional doar pentru pătrate perfecte: $1, 4, 9, 16, 25, 36, 49$, adică $7$ numere."
+    },
+    {
+      "id": "E8",
+      "nivel": 3,
+      "tip": "adevarat-fals",
+      "enunt": "Adevărat sau fals: suma $\\sqrt{2} + (-\\sqrt{2})$ este număr irațional.",
+      "corect": false,
+      "rezolvare": "<b>Fals:</b> suma este $0$, număr rațional. Suma a două iraționale poate fi rațională."
+    },
+    {
+      "id": "E9",
+      "nivel": 3,
+      "tip": "grila",
+      "enunt": "Pentru ce cifră $a$ numărul $\\sqrt{\\overline{1a}}$ este natural?",
+      "variante": [
+        "$2$",
+        "$4$",
+        "$6$",
+        "$9$"
+      ],
+      "corect": 2,
+      "indiciu": "Ce pătrate perfecte sunt între 10 și 19?",
+      "rezolvare": "Singurul pătrat perfect de forma $\\overline{1a}$ este $16$, deci $a = 6$ și $\\sqrt{16} = 4$."
+    }
+  ],
+  "test": {
+    "itemi": [
+      {
+        "id": "T1",
+        "tip": "grila",
+        "puncte": 2,
+        "enunt": "Care dintre numere este irațional?",
+        "variante": [
+          "$\\sqrt{36}$",
+          "$\\sqrt{0,09}$",
+          "$\\sqrt{18}$",
+          "$-\\dfrac{4}{5}$"
+        ],
+        "corect": 2,
+        "rezolvare": "$18$ nu este pătrat perfect, deci $\\sqrt{18} = 3\\sqrt{2}$ e irațional."
+      },
+      {
+        "id": "T2",
+        "tip": "adevarat-fals",
+        "puncte": 2,
+        "enunt": "Adevărat sau fals: $-7 \\in \\mathbb{Q}$.",
+        "corect": true,
+        "rezolvare": "<b>Adevărat:</b> $-7 = \\dfrac{-7}{1}$."
+      },
+      {
+        "id": "T3",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "Câte elemente iraționale are mulțimea $\\{-3;\\ 1,5;\\ \\sqrt{5};\\ \\sqrt{49};\\ \\pi;\\ 0,(2)\\}$?",
+        "raspuns": "2",
+        "rezolvare": "Iraționale: $\\sqrt{5}$ și $\\pi$. Celelalte sunt raționale ($\\sqrt{49} = 7$, $0,(2) = \\dfrac{2}{9}$)."
+      },
+      {
+        "id": "T4",
+        "tip": "adevarat-fals",
+        "puncte": 2,
+        "enunt": "Adevărat sau fals: $\\sqrt{1,21}$ este număr irațional.",
+        "corect": false,
+        "rezolvare": "<b>Fals:</b> $\\sqrt{1,21} = 1,1$."
+      },
+      {
+        "id": "T5",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "Câte numere naturale $n$, cu $1 \\le n \\le 30$, au $\\sqrt{n}$ număr natural?",
+        "raspuns": "5",
+        "rezolvare": "Pătratele perfecte: $1, 4, 9, 16, 25$."
+      }
+    ]
+  }
+}

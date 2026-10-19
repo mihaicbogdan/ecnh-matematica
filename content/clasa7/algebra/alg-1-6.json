@@ -1,0 +1,188 @@
+{
+  "id": "alg-1-6",
+  "eticheta": "Algebră · Cap. 1 · Unitatea 2 · Numere reale",
+  "titlu": "Compararea și ordonarea numerelor reale",
+  "introducere": "Ca să compari numere cu radicali, transformă-le în aceeași formă: toate sub radical.",
+  "revizuit": false,
+  "deRetinut": [
+    "Pentru $a, b \\ge 0$: $a < b \\iff a^2 < b^2 \\iff \\sqrt{a} < \\sqrt{b}$.",
+    "<b>Metoda de bază:</b> introduci factorii sub radical și compari numerele de sub radical: $3\\sqrt{2} = \\sqrt{18}$ și $2\\sqrt{5} = \\sqrt{20}$, deci $3\\sqrt{2} < 2\\sqrt{5}$.",
+    "<b>Număr natural cu radical:</b> scrie numărul ca radical, $4 = \\sqrt{16}$, deci $\\sqrt{15} < 4$.",
+    "<b>Numere negative:</b> ordinea se inversează. $\\sqrt{5} > 2$, deci $-\\sqrt{5} < -2$.",
+    "<b>Aproximările</b> ($\\sqrt{2} \\approx 1,41$; $\\sqrt{3} \\approx 1,73$) te ajută să verifici rapid, dar justificarea se face prin pătrate.",
+    "<b>Ordonare:</b> transformă toate numerele în $\\sqrt{\\ \\ }$, apoi ordonezi numerele de sub radical."
+  ],
+  "exemple": [
+    {
+      "titlu": "Ordonare crescătoare",
+      "enunt": "Ordonează crescător: $2\\sqrt{3}$, $3\\sqrt{2}$, $4$.",
+      "pasi": [
+        "$2\\sqrt{3} = \\sqrt{12}$; $3\\sqrt{2} = \\sqrt{18}$; $4 = \\sqrt{16}$.",
+        "$12 < 16 < 18$, deci $2\\sqrt{3} < 4 < 3\\sqrt{2}$."
+      ]
+    },
+    {
+      "titlu": "Numere negative",
+      "enunt": "Compară $-2\\sqrt{2}$ și $-3$.",
+      "pasi": [
+        "Comparăm întâi numerele pozitive: $2\\sqrt{2} = \\sqrt{8} < \\sqrt{9} = 3$.",
+        "La numere negative ordinea se inversează: $-2\\sqrt{2} > -3$."
+      ]
+    }
+  ],
+  "exercitii": [
+    {
+      "id": "E1",
+      "nivel": 1,
+      "tip": "grila",
+      "enunt": "Compară $\\sqrt{11}$ cu $3$:",
+      "variante": [
+        "$\\sqrt{11} < 3$",
+        "$\\sqrt{11} = 3$",
+        "$\\sqrt{11} > 3$"
+      ],
+      "corect": 2,
+      "rezolvare": "$3 = \\sqrt{9}$ și $11 > 9$, deci $\\sqrt{11} > 3$."
+    },
+    {
+      "id": "E2",
+      "nivel": 1,
+      "tip": "adevarat-fals",
+      "enunt": "Adevărat sau fals: $2\\sqrt{3} < 3\\sqrt{2}$.",
+      "corect": true,
+      "rezolvare": "<b>Adevărat:</b> $\\sqrt{12} < \\sqrt{18}$."
+    },
+    {
+      "id": "E3",
+      "nivel": 1,
+      "tip": "grila",
+      "enunt": "Cel mai mic dintre numere este:",
+      "variante": [
+        "$-\\sqrt{3}$",
+        "$-2$",
+        "$-1$",
+        "$0$"
+      ],
+      "corect": 1,
+      "indiciu": "La numere negative, mai mic este cel mai depărtat de 0.",
+      "rezolvare": "$\\sqrt{3} < 2$, deci $-\\sqrt{3} > -2$. Cel mai mic este $-2$."
+    },
+    {
+      "id": "E4",
+      "nivel": 2,
+      "tip": "numeric",
+      "enunt": "Câte numere naturale sunt cuprinse <b>strict</b> între $2\\sqrt{3}$ și $3\\sqrt{5}$?",
+      "raspuns": "3",
+      "indiciu": "Încadrează fiecare număr între două numere naturale consecutive.",
+      "rezolvare": "$2\\sqrt{3} = \\sqrt{12}$, cu $3 < \\sqrt{12} < 4$; $3\\sqrt{5} = \\sqrt{45}$, cu $6 < \\sqrt{45} < 7$. Numerele naturale dintre ele sunt $4, 5, 6$: $3$ numere."
+    },
+    {
+      "id": "E5",
+      "nivel": 2,
+      "tip": "grila",
+      "enunt": "Ordinea crescătoare a numerelor $3\\sqrt{2}$, $2\\sqrt{5}$, $4$ este:",
+      "variante": [
+        "$4 < 3\\sqrt{2} < 2\\sqrt{5}$",
+        "$3\\sqrt{2} < 4 < 2\\sqrt{5}$",
+        "$2\\sqrt{5} < 3\\sqrt{2} < 4$",
+        "$4 < 2\\sqrt{5} < 3\\sqrt{2}$"
+      ],
+      "corect": 0,
+      "rezolvare": "$4 = \\sqrt{16}$, $3\\sqrt{2} = \\sqrt{18}$, $2\\sqrt{5} = \\sqrt{20}$."
+    },
+    {
+      "id": "E6",
+      "nivel": 2,
+      "tip": "adevarat-fals",
+      "enunt": "Adevărat sau fals: $-\\sqrt{10} > -3$.",
+      "corect": false,
+      "rezolvare": "<b>Fals:</b> $\\sqrt{10} > \\sqrt{9} = 3$, iar la numere negative ordinea se inversează: $-\\sqrt{10} < -3$."
+    },
+    {
+      "id": "E7",
+      "nivel": 3,
+      "tip": "numeric",
+      "enunt": "Care este cel mai mare număr întreg mai mic decât $-\\sqrt{17}$?",
+      "raspuns": "-5",
+      "indiciu": "Încadrează întâi $\\sqrt{17}$, apoi pune semnul minus.",
+      "rezolvare": "$4 < \\sqrt{17} < 5$, deci $-5 < -\\sqrt{17} < -4$. Cel mai mare întreg mai mic decât $-\\sqrt{17}$ este $-5$."
+    },
+    {
+      "id": "E8",
+      "nivel": 3,
+      "tip": "grila",
+      "enunt": "Cel mai mare dintre numere este:",
+      "variante": [
+        "$5\\sqrt{2}$",
+        "$4\\sqrt{3}$",
+        "$3\\sqrt{6}$",
+        "$7$"
+      ],
+      "corect": 2,
+      "rezolvare": "$5\\sqrt{2} = \\sqrt{50}$, $4\\sqrt{3} = \\sqrt{48}$, $3\\sqrt{6} = \\sqrt{54}$, $7 = \\sqrt{49}$. Cel mai mare este $\\sqrt{54} = 3\\sqrt{6}$."
+    },
+    {
+      "id": "E9",
+      "nivel": 3,
+      "tip": "numeric",
+      "enunt": "Câte numere întregi $x$ verifică $-\\sqrt{8} < x < \\sqrt{8}$?",
+      "raspuns": "5",
+      "rezolvare": "$2 < \\sqrt{8} < 3$, deci $x \\in \\{-2, -1, 0, 1, 2\\}$: $5$ numere."
+    }
+  ],
+  "test": {
+    "itemi": [
+      {
+        "id": "T1",
+        "tip": "grila",
+        "puncte": 2,
+        "enunt": "Compară $2\\sqrt{7}$ cu $5$:",
+        "variante": [
+          "$2\\sqrt{7} < 5$",
+          "$2\\sqrt{7} = 5$",
+          "$2\\sqrt{7} > 5$"
+        ],
+        "corect": 2,
+        "rezolvare": "$2\\sqrt{7} = \\sqrt{28} > \\sqrt{25} = 5$."
+      },
+      {
+        "id": "T2",
+        "tip": "adevarat-fals",
+        "puncte": 2,
+        "enunt": "Adevărat sau fals: $-3\\sqrt{2} < -4$.",
+        "corect": true,
+        "rezolvare": "<b>Adevărat:</b> $3\\sqrt{2} = \\sqrt{18} > \\sqrt{16} = 4$, deci $-3\\sqrt{2} < -4$."
+      },
+      {
+        "id": "T3",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "Câte numere naturale sunt strict între $\\sqrt{5}$ și $\\sqrt{50}$?",
+        "raspuns": "5",
+        "rezolvare": "$2 < \\sqrt{5} < 3$ și $7 < \\sqrt{50} < 8$: numerele $3, 4, 5, 6, 7$."
+      },
+      {
+        "id": "T4",
+        "tip": "grila",
+        "puncte": 2,
+        "enunt": "Cel mai mic dintre numere este:",
+        "variante": [
+          "$\\sqrt{20}$",
+          "$2\\sqrt{6}$",
+          "$4,5$",
+          "$3\\sqrt{2}$"
+        ],
+        "corect": 3,
+        "rezolvare": "$\\sqrt{20}$; $2\\sqrt{6} = \\sqrt{24}$; $4,5 = \\sqrt{20,25}$; $3\\sqrt{2} = \\sqrt{18}$. Cel mai mic: $\\sqrt{18} = 3\\sqrt{2}$."
+      },
+      {
+        "id": "T5",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "Cel mai mic număr natural mai mare decât $2\\sqrt{10}$ este …",
+        "raspuns": "7",
+        "rezolvare": "$2\\sqrt{10} = \\sqrt{40}$, iar $6 < \\sqrt{40} < 7$."
+      }
+    ]
+  }
+}

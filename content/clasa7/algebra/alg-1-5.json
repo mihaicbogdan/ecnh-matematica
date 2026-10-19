@@ -1,0 +1,183 @@
+{
+  "id": "alg-1-5",
+  "eticheta": "Algebră · Cap. 1 · Unitatea 2 · Numere reale",
+  "titlu": "Modulul unui număr real",
+  "introducere": "Modulul îți spune cât de departe este un număr de 0 pe axă, fără să conteze în ce parte.",
+  "revizuit": false,
+  "deRetinut": [
+    "<b>Definiție:</b> $|x| = x$ dacă $x \\ge 0$ și $|x| = -x$ dacă $x < 0$. Exemple: $|5| = 5$, $|-5| = 5$, $|0| = 0$.",
+    "$|x| \\ge 0$ întotdeauna. $|x|$ este distanța de la $x$ la $0$ pe axa numerelor.",
+    "$|-x| = |x|$ și $|x \\cdot y| = |x| \\cdot |y|$.",
+    "<b>Cu radicali:</b> întâi stabilești semnul expresiei din modul. $\\sqrt{2} > 1$, deci $|\\sqrt{2} - 1| = \\sqrt{2} - 1$. $\\sqrt{3} < 2$, deci $|\\sqrt{3} - 2| = 2 - \\sqrt{3}$.",
+    "<b>Ecuații:</b> $|x| = a$, cu $a > 0$, are soluțiile $x = a$ și $x = -a$. $|x| = 0$ are soluția $x = 0$. $|x| = a$ cu $a < 0$ nu are soluții.",
+    "<b>Inecuații:</b> $|x| \\le a \\iff -a \\le x \\le a$."
+  ],
+  "exemple": [
+    {
+      "titlu": "Modul cu radical",
+      "enunt": "Calculează $|2 - \\sqrt{5}|$.",
+      "pasi": [
+        "Comparăm: $2 = \\sqrt{4} < \\sqrt{5}$, deci $2 - \\sqrt{5} < 0$.",
+        "Modulul unui număr negativ este opusul lui: $|2 - \\sqrt{5}| = -(2 - \\sqrt{5}) = \\sqrt{5} - 2$."
+      ]
+    },
+    {
+      "titlu": "Ecuație cu modul",
+      "enunt": "Rezolvă ecuația $|x - 3| = 5$.",
+      "pasi": [
+        "Expresia din modul este $5$ sau $-5$.",
+        "$x - 3 = 5 \\Rightarrow x = 8$.",
+        "$x - 3 = -5 \\Rightarrow x = -2$.",
+        "Soluțiile sunt $x \\in \\{-2, 8\\}$."
+      ]
+    }
+  ],
+  "exercitii": [
+    {
+      "id": "E1",
+      "nivel": 1,
+      "tip": "numeric",
+      "enunt": "Calculează $|{{a}} - {{b}}|$.",
+      "generator": {
+        "variabile": {
+          "a": {
+            "min": 1,
+            "max": 10
+          },
+          "b": {
+            "min": 11,
+            "max": 20
+          }
+        },
+        "calcule": {
+          "d": "b - a"
+        }
+      },
+      "raspuns": "{{d}}",
+      "rezolvare": "${{a}} - {{b}} = -{{d}} < 0$, deci $|{{a}} - {{b}}| = {{d}}$."
+    },
+    {
+      "id": "E2",
+      "nivel": 1,
+      "tip": "numeric",
+      "enunt": "Calculează $|-3,5|$.",
+      "raspuns": "3,5",
+      "rezolvare": "Modulul unui număr negativ este opusul lui: $3,5$."
+    },
+    {
+      "id": "E3",
+      "nivel": 1,
+      "tip": "adevarat-fals",
+      "enunt": "Adevărat sau fals: $|-\\sqrt{3}| = -\\sqrt{3}$.",
+      "corect": false,
+      "rezolvare": "<b>Fals:</b> modulul nu este niciodată negativ. $|-\\sqrt{3}| = \\sqrt{3}$."
+    },
+    {
+      "id": "E4",
+      "nivel": 2,
+      "tip": "grila",
+      "enunt": "$|1 - \\sqrt{2}| = $",
+      "variante": [
+        "$1 - \\sqrt{2}$",
+        "$\\sqrt{2} - 1$",
+        "$1 + \\sqrt{2}$",
+        "$-1 - \\sqrt{2}$"
+      ],
+      "corect": 1,
+      "indiciu": "Stabilește întâi semnul lui $1 - \\sqrt{2}$.",
+      "rezolvare": "$\\sqrt{2} \\approx 1,41 > 1$, deci $1 - \\sqrt{2} < 0$ și $|1 - \\sqrt{2}| = \\sqrt{2} - 1$."
+    },
+    {
+      "id": "E5",
+      "nivel": 2,
+      "tip": "numeric",
+      "enunt": "Calculează $|\\sqrt{3} - 2| + \\sqrt{3}$.",
+      "raspuns": "2",
+      "rezolvare": "$\\sqrt{3} < 2$, deci $|\\sqrt{3} - 2| = 2 - \\sqrt{3}$. Atunci $2 - \\sqrt{3} + \\sqrt{3} = 2$."
+    },
+    {
+      "id": "E6",
+      "nivel": 2,
+      "tip": "numeric",
+      "enunt": "Ecuația $|x - 2| = 7$ are o soluție negativă. Care este?",
+      "raspuns": "-5",
+      "indiciu": "Expresia din modul poate fi $7$ sau $-7$.",
+      "rezolvare": "$x - 2 = 7 \\Rightarrow x = 9$ sau $x - 2 = -7 \\Rightarrow x = -5$. Soluția negativă este $-5$."
+    },
+    {
+      "id": "E7",
+      "nivel": 3,
+      "tip": "numeric",
+      "enunt": "Calculează $|3 - \\sqrt{10}| + |\\sqrt{10} - 4|$.",
+      "raspuns": "1",
+      "indiciu": "Încadrează $\\sqrt{10}$ între două numere naturale.",
+      "rezolvare": "$3 = \\sqrt{9} < \\sqrt{10} < \\sqrt{16} = 4$. Deci $|3 - \\sqrt{10}| = \\sqrt{10} - 3$ și $|\\sqrt{10} - 4| = 4 - \\sqrt{10}$. Suma: $\\sqrt{10} - 3 + 4 - \\sqrt{10} = 1$."
+    },
+    {
+      "id": "E8",
+      "nivel": 3,
+      "tip": "numeric",
+      "enunt": "Câte numere întregi $x$ verifică $|x| \\le 3$?",
+      "raspuns": "7",
+      "rezolvare": "$-3 \\le x \\le 3$: $x \\in \\{-3, -2, -1, 0, 1, 2, 3\\}$, adică $7$ numere."
+    },
+    {
+      "id": "E9",
+      "nivel": 3,
+      "tip": "adevarat-fals",
+      "enunt": "Adevărat sau fals: $|2\\sqrt{2} - 3| = 3 - 2\\sqrt{2}$.",
+      "corect": true,
+      "rezolvare": "<b>Adevărat:</b> $2\\sqrt{2} = \\sqrt{8} < \\sqrt{9} = 3$, deci $2\\sqrt{2} - 3 < 0$ și modulul este $3 - 2\\sqrt{2}$."
+    }
+  ],
+  "test": {
+    "itemi": [
+      {
+        "id": "T1",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "Calculează $|-12| + |5|$.",
+        "raspuns": "17",
+        "rezolvare": "$12 + 5 = 17$."
+      },
+      {
+        "id": "T2",
+        "tip": "grila",
+        "puncte": 2,
+        "enunt": "$|\\sqrt{5} - 3| = $",
+        "variante": [
+          "$\\sqrt{5} - 3$",
+          "$3 - \\sqrt{5}$",
+          "$3 + \\sqrt{5}$",
+          "$-3 - \\sqrt{5}$"
+        ],
+        "corect": 1,
+        "rezolvare": "$\\sqrt{5} < \\sqrt{9} = 3$, deci modulul este $3 - \\sqrt{5}$."
+      },
+      {
+        "id": "T3",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "Soluția pozitivă a ecuației $|x + 1| = 6$ este …",
+        "raspuns": "5",
+        "rezolvare": "$x + 1 = 6 \\Rightarrow x = 5$ (cealaltă soluție este $-7$)."
+      },
+      {
+        "id": "T4",
+        "tip": "adevarat-fals",
+        "puncte": 2,
+        "enunt": "Adevărat sau fals: $|-x| = |x|$ pentru orice număr real $x$.",
+        "corect": true,
+        "rezolvare": "<b>Adevărat:</b> $x$ și $-x$ sunt la aceeași distanță de $0$."
+      },
+      {
+        "id": "T5",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "Calculează $|\\sqrt{2} - 2| + |\\sqrt{2} - 1|$.",
+        "raspuns": "1",
+        "rezolvare": "$1 < \\sqrt{2} < 2$: $(2 - \\sqrt{2}) + (\\sqrt{2} - 1) = 1$."
+      }
+    ]
+  }
+}

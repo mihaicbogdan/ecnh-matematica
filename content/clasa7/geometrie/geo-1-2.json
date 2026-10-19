@@ -1,0 +1,176 @@
+{
+  "id": "geo-1-2",
+  "eticheta": "Geometrie · Cap. 4 · Patrulaterul",
+  "titlu": "Paralelogramul. Definiție și proprietăți",
+  "introducere": "Paralelogramul apare peste tot în geometria de clasa a 7-a. Dreptunghiul, rombul și pătratul sunt paralelograme speciale.",
+  "revizuit": false,
+  "deRetinut": [
+    "<b>Definiție:</b> paralelogramul este patrulaterul cu laturile opuse paralele: $AB \\parallel CD$ și $AD \\parallel BC$.",
+    "<b>Proprietăți:</b> laturile opuse sunt congruente ($AB = CD$, $AD = BC$); unghiurile opuse sunt congruente ($\\hat{A} = \\hat{C}$, $\\hat{B} = \\hat{D}$); unghiurile alăturate unei laturi sunt <b>suplementare</b> ($\\hat{A} + \\hat{B} = 180^\\circ$).",
+    "<b>Diagonalele se înjumătățesc:</b> punctul lor de intersecție $O$ este mijlocul fiecăreia: $AO = OC$, $BO = OD$.",
+    "<b>Un patrulater convex este paralelogram dacă</b> are: laturile opuse congruente două câte două, <b>sau</b> o pereche de laturi opuse paralele și congruente, <b>sau</b> diagonalele care se înjumătățesc, <b>sau</b> unghiurile opuse congruente.",
+    "<b>Perimetrul:</b> $P = 2(AB + BC)$.",
+    "<b>Capcană:</b> „$AB \\parallel CD$ și $AD = BC$” <b>nu</b> garantează un paralelogram, pentru că poate fi un trapez isoscel."
+  ],
+  "exemple": [
+    {
+      "titlu": "Unghiuri",
+      "enunt": "$ABCD$ este paralelogram și $m(\\sphericalangle A) = 65^\\circ$. Află celelalte unghiuri.",
+      "figura": "<svg viewBox=\"0 0 320 200\" role=\"img\" aria-label=\"Paralelogram ABCD cu diagonalele care se intersectează în O\"><g stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"><polygon points=\"40,160 230,160 290,50 100,50\"/><line x1=\"40\" y1=\"160\" x2=\"290\" y2=\"50\" stroke-dasharray=\"6 5\"/><line x1=\"230\" y1=\"160\" x2=\"100\" y2=\"50\" stroke-dasharray=\"6 5\"/></g><circle cx=\"165\" cy=\"105\" r=\"2.5\" fill=\"currentColor\"/><text x=\"24\" y=\"176\" font-size=\"15\">A</text><text x=\"232\" y=\"178\" font-size=\"15\">B</text><text x=\"294\" y=\"46\" font-size=\"15\">C</text><text x=\"88\" y=\"44\" font-size=\"15\">D</text><text x=\"160\" y=\"128\" font-size=\"15\">O</text></svg>",
+      "pasi": [
+        "Unghiurile opuse sunt congruente: $m(\\sphericalangle C) = 65^\\circ$.",
+        "Unghiurile alăturate sunt suplementare: $m(\\sphericalangle B) = 180^\\circ - 65^\\circ = 115^\\circ$, la fel și $m(\\sphericalangle D) = 115^\\circ$."
+      ]
+    },
+    {
+      "titlu": "Diagonale",
+      "enunt": "În paralelogramul $ABCD$, $AC = 16$ cm, $BD = 10$ cm, iar $O$ este intersecția diagonalelor. Află $AO$ și $OD$.",
+      "pasi": [
+        "Diagonalele se înjumătățesc: $AO = 16 : 2 = 8$ cm.",
+        "$OD = 10 : 2 = 5$ cm."
+      ]
+    }
+  ],
+  "exercitii": [
+    {
+      "id": "E1",
+      "nivel": 1,
+      "tip": "numeric",
+      "enunt": "În paralelogramul $ABCD$, $m(\\sphericalangle A) = {{a}}^\\circ$. Atunci $m(\\sphericalangle B)$ este …",
+      "generator": {
+        "variabile": {
+          "a": {
+            "min": 40,
+            "max": 80,
+            "pas": 5
+          }
+        },
+        "calcule": {
+          "b": "180 - a"
+        }
+      },
+      "raspuns": "{{b}}",
+      "unitate": "°",
+      "indiciu": "Unghiurile A și B sunt alăturate laturii AB.",
+      "rezolvare": "Unghiurile alăturate sunt suplementare: $180^\\circ - {{a}}^\\circ = {{b}}^\\circ$."
+    },
+    {
+      "id": "E2",
+      "nivel": 1,
+      "tip": "numeric",
+      "enunt": "Paralelogramul $ABCD$ are $AB = 7$ cm și $BC = 4$ cm. Perimetrul este …",
+      "raspuns": "22",
+      "unitate": "cm",
+      "rezolvare": "$P = 2(7 + 4) = 22$ cm."
+    },
+    {
+      "id": "E3",
+      "nivel": 1,
+      "tip": "adevarat-fals",
+      "enunt": "Adevărat sau fals: diagonalele unui paralelogram se înjumătățesc.",
+      "corect": true,
+      "rezolvare": "<b>Adevărat:</b> intersecția lor este mijlocul fiecăreia."
+    },
+    {
+      "id": "E4",
+      "nivel": 2,
+      "tip": "numeric",
+      "enunt": "În paralelogramul $ABCD$, $m(\\sphericalangle A) - m(\\sphericalangle B) = 40^\\circ$. Atunci $m(\\sphericalangle A)$ este …",
+      "raspuns": "110",
+      "unitate": "°",
+      "indiciu": "A și B sunt suplementare.",
+      "rezolvare": "$A + B = 180^\\circ$ și $A - B = 40^\\circ$. Adunând: $2A = 220^\\circ$, deci $A = 110^\\circ$."
+    },
+    {
+      "id": "E5",
+      "nivel": 2,
+      "tip": "numeric",
+      "enunt": "Paralelogramul $ABCD$ are perimetrul $30$ cm și $AB = 2 \\cdot BC$. Atunci $AB$ este …",
+      "raspuns": "10",
+      "unitate": "cm",
+      "rezolvare": "$2(2x + x) = 30 \\Rightarrow 6x = 30 \\Rightarrow x = 5$. $AB = 2 \\cdot 5 = 10$ cm."
+    },
+    {
+      "id": "E6",
+      "nivel": 2,
+      "tip": "grila",
+      "enunt": "Care condiție <b>nu</b> garantează că patrulaterul convex $ABCD$ este paralelogram?",
+      "variante": [
+        "$AB \\parallel CD$ și $AD \\parallel BC$",
+        "$AB = CD$ și $AD = BC$",
+        "$AB \\parallel CD$ și $AD = BC$",
+        "diagonalele se înjumătățesc"
+      ],
+      "corect": 2,
+      "rezolvare": "Un trapez isoscel are $AB \\parallel CD$ și $AD = BC$, dar nu este paralelogram."
+    },
+    {
+      "id": "E7",
+      "nivel": 3,
+      "tip": "numeric",
+      "enunt": "În paralelogramul $ABCD$, $AC = 18$ cm, $BD = 12$ cm, iar $O$ este intersecția diagonalelor. Perimetrul triunghiului $AOB$ este $22$ cm. Atunci $AB$ este …",
+      "raspuns": "7",
+      "unitate": "cm",
+      "indiciu": "Află întâi AO și BO.",
+      "rezolvare": "$AO = 9$ cm, $BO = 6$ cm, deci $AB = 22 - 9 - 6 = 7$ cm."
+    },
+    {
+      "id": "E8",
+      "nivel": 3,
+      "tip": "numeric",
+      "enunt": "În paralelogramul $ABCD$, $AB = 10$ cm și $AD = 6$ cm. Bisectoarea unghiului $A$ intersectează latura $CD$ în $E$. Atunci $CE$ este …",
+      "raspuns": "4",
+      "unitate": "cm",
+      "indiciu": "Caută un triunghi isoscel: compară unghiurile DAE și AED.",
+      "rezolvare": "$\\sphericalangle DAE \\equiv \\sphericalangle EAB$ (bisectoare) și $\\sphericalangle EAB \\equiv \\sphericalangle AED$ (alterne interne, $AB \\parallel CD$). Deci $\\triangle ADE$ este isoscel: $DE = AD = 6$ cm. $CE = CD - DE = 10 - 6 = 4$ cm."
+    }
+  ],
+  "test": {
+    "itemi": [
+      {
+        "id": "T1",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "În paralelogramul $ABCD$, $m(\\sphericalangle A) = 72^\\circ$. Atunci $m(\\sphericalangle C)$ este …",
+        "raspuns": "72",
+        "unitate": "°",
+        "rezolvare": "Unghiurile opuse sunt congruente."
+      },
+      {
+        "id": "T2",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "În același paralelogram ($m(\\sphericalangle A) = 72^\\circ$), $m(\\sphericalangle B)$ este …",
+        "raspuns": "108",
+        "unitate": "°",
+        "rezolvare": "$180^\\circ - 72^\\circ = 108^\\circ$."
+      },
+      {
+        "id": "T3",
+        "tip": "adevarat-fals",
+        "puncte": 2,
+        "enunt": "Adevărat sau fals: diagonalele oricărui paralelogram sunt congruente.",
+        "corect": false,
+        "rezolvare": "<b>Fals:</b> doar la dreptunghi (și pătrat) diagonalele sunt congruente."
+      },
+      {
+        "id": "T4",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "În paralelogramul $ABCD$, $O$ este intersecția diagonalelor și $AO = 7$ cm. Atunci $AC$ este …",
+        "raspuns": "14",
+        "unitate": "cm",
+        "rezolvare": "$AC = 2 \\cdot AO = 14$ cm."
+      },
+      {
+        "id": "T5",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "Paralelogramul $ABCD$ are perimetrul $40$ cm și $AB - BC = 4$ cm. Atunci $AB$ este …",
+        "raspuns": "12",
+        "unitate": "cm",
+        "rezolvare": "$AB + BC = 20$ și $AB - BC = 4 \\Rightarrow 2 \\cdot AB = 24 \\Rightarrow AB = 12$ cm."
+      }
+    ]
+  }
+}

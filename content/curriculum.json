@@ -2,6 +2,7 @@
   "versiune": 1,
   "programa": "Programa școlară MEN 2017 (OM 3393/2017)",
   "manualCl6": "Matematică clasa a VI-a, Grup Editorial (manuale.edu.ro)",
+  "manualCl7": "Matematică clasa a VII-a, Editura Paralela 45 (manuale.edu.ro)",
   "capitoleCl6": [
     {
       "id": "cl6-1.1",
@@ -277,6 +278,42 @@
     "recap-cl6-6.4": {
       "titlu": "Recapitulare: Triunghi isoscel, echilateral, dreptunghic. Pitagora",
       "fisier": null
+    },
+    "alg-1-1": {
+      "titlu": "Rădăcina pătrată a pătratului unui număr natural",
+      "fisier": "content/clasa7/algebra/alg-1-1.json"
+    },
+    "alg-1-2": {
+      "titlu": "Estimarea rădăcinii pătrate dintr-un număr rațional",
+      "fisier": "content/clasa7/algebra/alg-1-2.json"
+    },
+    "alg-1-3": {
+      "titlu": "Scoaterea și introducerea factorilor sub radical",
+      "fisier": "content/clasa7/algebra/alg-1-3.json"
+    },
+    "alg-1-4": {
+      "titlu": "Numere iraționale. Numere reale. ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ",
+      "fisier": "content/clasa7/algebra/alg-1-4.json"
+    },
+    "alg-1-5": {
+      "titlu": "Modulul unui număr real",
+      "fisier": "content/clasa7/algebra/alg-1-5.json"
+    },
+    "alg-1-6": {
+      "titlu": "Compararea și ordonarea numerelor reale",
+      "fisier": "content/clasa7/algebra/alg-1-6.json"
+    },
+    "geo-1-1": {
+      "titlu": "Patrulaterul convex. Suma unghiurilor",
+      "fisier": "content/clasa7/geometrie/geo-1-1.json"
+    },
+    "geo-1-2": {
+      "titlu": "Paralelogramul. Definiție și proprietăți",
+      "fisier": "content/clasa7/geometrie/geo-1-2.json"
+    },
+    "geo-1-4": {
+      "titlu": "Dreptunghiul",
+      "fisier": "content/clasa7/geometrie/geo-1-4.json"
     }
   },
   "clasa7": {
@@ -289,35 +326,78 @@
         "lectii": [
           {
             "id": "alg-1-1",
-            "titlu": "Rădăcina pătrată a unui pătrat perfect"
+            "titlu": "Rădăcina pătrată a pătratului unui număr natural",
+            "grupa": "Unitatea 1 · Rădăcina pătrată"
           },
           {
             "id": "alg-1-2",
-            "titlu": "Extragerea rădăcinii pătrate. Aproximări"
+            "titlu": "Estimarea rădăcinii pătrate dintr-un număr rațional",
+            "grupa": "Unitatea 1 · Rădăcina pătrată"
           },
           {
             "id": "alg-1-3",
-            "titlu": "Numere iraționale. Mulțimea numerelor reale"
+            "titlu": "Scoaterea și introducerea factorilor sub radical",
+            "grupa": "Unitatea 1 · Rădăcina pătrată"
           },
           {
             "id": "alg-1-4",
-            "titlu": "Scoaterea și introducerea factorilor sub radical"
+            "titlu": "Numere iraționale. Numere reale. ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ",
+            "grupa": "Unitatea 2 · Numere reale"
           },
           {
             "id": "alg-1-5",
-            "titlu": "Modulul. Compararea și ordonarea numerelor reale"
+            "titlu": "Modulul unui număr real",
+            "grupa": "Unitatea 2 · Numere reale"
           },
           {
             "id": "alg-1-6",
-            "titlu": "Operații cu numere reale"
+            "titlu": "Compararea și ordonarea numerelor reale",
+            "grupa": "Unitatea 2 · Numere reale"
           },
           {
             "id": "alg-1-7",
-            "titlu": "Raționalizarea numitorului"
+            "titlu": "Reprezentarea numerelor reale pe axă prin aproximări",
+            "grupa": "Unitatea 2 · Numere reale"
           },
           {
             "id": "alg-1-8",
-            "titlu": "Media aritmetică ponderată și media geometrică"
+            "titlu": "Produs și cât de radicali. Raționalizare",
+            "grupa": "Unitatea 3 · Operații cu numere reale"
+          },
+          {
+            "id": "alg-1-9",
+            "titlu": "Adunarea și scăderea numerelor reale",
+            "grupa": "Unitatea 3 · Operații cu numere reale"
+          },
+          {
+            "id": "alg-1-10",
+            "titlu": "Înmulțirea și împărțirea numerelor reale",
+            "grupa": "Unitatea 3 · Operații cu numere reale"
+          },
+          {
+            "id": "alg-1-11",
+            "titlu": "Puteri cu exponent întreg. Ordinea operațiilor",
+            "grupa": "Unitatea 3 · Operații cu numere reale"
+          },
+          {
+            "id": "alg-1-12",
+            "titlu": "Media aritmetică ponderată",
+            "grupa": "Unitatea 4 · Situații practice"
+          },
+          {
+            "id": "alg-1-13",
+            "titlu": "Media geometrică a două numere reale pozitive",
+            "grupa": "Unitatea 4 · Situații practice"
+          },
+          {
+            "id": "alg-1-14",
+            "titlu": "Ecuații de forma x² = a",
+            "grupa": "Unitatea 4 · Situații practice"
+          },
+          {
+            "id": "alg-1-15",
+            "titlu": "Activități practice din viața cotidiană",
+            "grupa": "Unitatea 4 · Situații practice"
           }
         ]
       },
@@ -329,19 +409,23 @@
         "lectii": [
           {
             "id": "alg-2-1",
-            "titlu": "Ecuații de forma ax + b = 0, a, b ∈ ℝ"
+            "titlu": "Egalități echivalente. Identități"
           },
           {
             "id": "alg-2-2",
-            "titlu": "Sisteme de două ecuații liniare — metoda substituției"
+            "titlu": "Ecuații de forma ax + b = 0. Ecuații echivalente"
           },
           {
             "id": "alg-2-3",
-            "titlu": "Sisteme de două ecuații liniare — metoda reducerii"
+            "titlu": "Sisteme de ecuații liniare cu două necunoscute"
           },
           {
             "id": "alg-2-4",
-            "titlu": "Probleme rezolvate cu ecuații și sisteme"
+            "titlu": "Metoda substituției și metoda reducerii"
+          },
+          {
+            "id": "alg-2-5",
+            "titlu": "Probleme rezolvate cu ecuații sau sisteme"
           }
         ]
       },
@@ -353,23 +437,23 @@
         "lectii": [
           {
             "id": "alg-3-1",
-            "titlu": "Produsul cartezian a două mulțimi"
+            "titlu": "Produsul cartezian a două mulțimi nevide"
           },
           {
             "id": "alg-3-2",
-            "titlu": "Reprezentarea punctelor într-un sistem de axe ortogonale"
+            "titlu": "Perechi de numere reale într-un sistem de axe ortogonale"
           },
           {
             "id": "alg-3-3",
-            "titlu": "Distanța dintre două puncte în plan"
+            "titlu": "Reprezentarea punctelor într-un sistem de axe ortogonale"
           },
           {
             "id": "alg-3-4",
-            "titlu": "Dependențe funcționale: tabele, diagrame, grafice"
+            "titlu": "Distanța dintre două puncte din plan"
           },
           {
             "id": "alg-3-5",
-            "titlu": "Poligonul frecvențelor"
+            "titlu": "Dependențe funcționale: tabele, diagrame, grafice. Poligonul frecvențelor"
           }
         ]
       }
@@ -377,8 +461,8 @@
     "geometrie": [
       {
         "id": "geo-1",
-        "nr": 1,
-        "titlu": "Patrulatere",
+        "nr": 4,
+        "titlu": "Patrulaterul",
         "test": null,
         "lectii": [
           {
@@ -387,47 +471,59 @@
           },
           {
             "id": "geo-1-2",
-            "titlu": "Paralelogramul"
+            "titlu": "Paralelogramul. Definiție și proprietăți"
           },
           {
             "id": "geo-1-3",
-            "titlu": "Dreptunghiul, rombul, pătratul"
+            "titlu": "Linia mijlocie în triunghi. Centrul de greutate"
           },
           {
             "id": "geo-1-4",
-            "titlu": "Trapezul. Trapezul isoscel"
+            "titlu": "Dreptunghiul"
           },
           {
             "id": "geo-1-5",
-            "titlu": "Linia mijlocie în triunghi și în trapez"
+            "titlu": "Rombul"
           },
           {
             "id": "geo-1-6",
-            "titlu": "Arii: triunghi, paralelogram, romb, trapez"
+            "titlu": "Pătratul"
+          },
+          {
+            "id": "geo-1-7",
+            "titlu": "Trapezul. Linia mijlocie a trapezului"
+          },
+          {
+            "id": "geo-1-8",
+            "titlu": "Trapezul isoscel"
+          },
+          {
+            "id": "geo-1-9",
+            "titlu": "Perimetre și arii"
           }
         ]
       },
       {
         "id": "geo-2",
-        "nr": 2,
+        "nr": 5,
         "titlu": "Cercul",
         "test": null,
         "lectii": [
           {
             "id": "geo-2-1",
-            "titlu": "Coarde și arce. Unghi la centru"
-          },
-          {
-            "id": "geo-2-2",
             "titlu": "Unghi înscris în cerc"
           },
           {
+            "id": "geo-2-2",
+            "titlu": "Coarde și arce în cerc. Proprietăți"
+          },
+          {
             "id": "geo-2-3",
-            "titlu": "Tangente la cerc"
+            "titlu": "Tangente dintr-un punct exterior la un cerc"
           },
           {
             "id": "geo-2-4",
-            "titlu": "Poligoane regulate înscrise în cerc"
+            "titlu": "Poligoane regulate înscrise într-un cerc"
           },
           {
             "id": "geo-2-5",
@@ -437,7 +533,7 @@
       },
       {
         "id": "geo-3",
-        "nr": 3,
+        "nr": 6,
         "titlu": "Asemănarea triunghiurilor",
         "test": null,
         "lectii": [
@@ -447,7 +543,7 @@
           },
           {
             "id": "geo-3-2",
-            "titlu": "Teorema lui Thales și reciproca ei"
+            "titlu": "Teorema lui Thales și reciproca. Împărțirea unui segment"
           },
           {
             "id": "geo-3-3",
@@ -459,39 +555,39 @@
           },
           {
             "id": "geo-3-5",
-            "titlu": "Aplicații ale asemănării"
+            "titlu": "Aplicații: raportul ariilor, distanțe în practică"
           }
         ]
       },
       {
         "id": "geo-4",
-        "nr": 4,
+        "nr": 7,
         "titlu": "Relații metrice în triunghiul dreptunghic",
         "test": null,
         "lectii": [
           {
             "id": "geo-4-1",
-            "titlu": "Proiecții ortogonale pe o dreaptă"
+            "titlu": "Proiecții ortogonale. Teorema înălțimii. Teorema catetei"
           },
           {
             "id": "geo-4-2",
-            "titlu": "Teorema înălțimii"
+            "titlu": "Teorema lui Pitagora și reciproca"
           },
           {
             "id": "geo-4-3",
-            "titlu": "Teorema catetei"
+            "titlu": "Noțiuni de trigonometrie în triunghiul dreptunghic"
           },
           {
             "id": "geo-4-4",
-            "titlu": "Teorema lui Pitagora și reciproca ei"
+            "titlu": "Rezolvarea triunghiului dreptunghic"
           },
           {
             "id": "geo-4-5",
-            "titlu": "Sinus, cosinus, tangentă, cotangentă"
+            "titlu": "Triunghiul echilateral, pătratul, hexagonul regulat"
           },
           {
             "id": "geo-4-6",
-            "titlu": "Rezolvarea triunghiului dreptunghic"
+            "titlu": "Distanțe în situații practice folosind relații metrice"
           }
         ]
       }

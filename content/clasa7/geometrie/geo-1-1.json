@@ -1,0 +1,190 @@
+{
+  "id": "geo-1-1",
+  "eticheta": "Geometrie · Cap. 4 · Patrulaterul",
+  "titlu": "Patrulaterul convex. Suma măsurilor unghiurilor",
+  "introducere": "Orice patrulater convex se poate tăia cu o diagonală în două triunghiuri. De aici vine suma unghiurilor lui.",
+  "revizuit": false,
+  "deRetinut": [
+    "<b>Patrulaterul</b> $ABCD$ are $4$ vârfuri, $4$ laturi ($AB, BC, CD, DA$) și $2$ diagonale ($AC$ și $BD$).",
+    "<b>Convex:</b> pentru fiecare latură, celelalte două vârfuri sunt de aceeași parte a dreptei care conține latura. Diagonalele se intersectează în interiorul patrulaterului.",
+    "<b>Suma măsurilor unghiurilor</b> unui patrulater convex este $360^\\circ$, pentru că diagonala $AC$ îl împarte în două triunghiuri: $2 \\cdot 180^\\circ = 360^\\circ$.",
+    "Un patrulater convex <b>nu</b> poate avea $4$ unghiuri obtuze (suma ar depăși $360^\\circ$), dar poate avea cel mult $3$ unghiuri ascuțite.",
+    "<b>Perimetrul</b> este suma laturilor: $P = AB + BC + CD + DA$.",
+    "<b>Unghiuri proporționale:</b> dacă unghiurile sunt proporționale cu $a, b, c, d$, scrii $ak + bk + ck + dk = 360^\\circ$ și afli $k$."
+  ],
+  "exemple": [
+    {
+      "titlu": "Al patrulea unghi",
+      "enunt": "Un patrulater convex are trei unghiuri de $80^\\circ$, $95^\\circ$ și $110^\\circ$. Află al patrulea unghi.",
+      "figura": "<svg viewBox=\"0 0 320 200\" role=\"img\" aria-label=\"Patrulater convex ABCD cu diagonala AC\"><g stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"><polygon points=\"40,160 270,170 240,40 90,55\"/><line x1=\"40\" y1=\"160\" x2=\"240\" y2=\"40\" stroke-dasharray=\"6 5\"/></g><text x=\"24\" y=\"175\" font-size=\"15\">A</text><text x=\"276\" y=\"184\" font-size=\"15\">B</text><text x=\"246\" y=\"36\" font-size=\"15\">C</text><text x=\"78\" y=\"50\" font-size=\"15\">D</text></svg>",
+      "pasi": [
+        "Suma celor trei unghiuri: $80^\\circ + 95^\\circ + 110^\\circ = 285^\\circ$.",
+        "Al patrulea: $360^\\circ - 285^\\circ = 75^\\circ$."
+      ]
+    },
+    {
+      "titlu": "Unghiuri proporționale",
+      "enunt": "Unghiurile unui patrulater convex sunt proporționale cu $2, 3, 3, 4$. Află măsurile lor.",
+      "pasi": [
+        "Notăm unghiurile $2k, 3k, 3k, 4k$.",
+        "$2k + 3k + 3k + 4k = 360^\\circ \\Rightarrow 12k = 360^\\circ \\Rightarrow k = 30^\\circ$.",
+        "Unghiurile: $60^\\circ, 90^\\circ, 90^\\circ, 120^\\circ$. Verificare: suma $= 360^\\circ$ ✓"
+      ]
+    }
+  ],
+  "exercitii": [
+    {
+      "id": "E1",
+      "nivel": 1,
+      "tip": "numeric",
+      "enunt": "Un patrulater convex are trei unghiuri de ${{a}}^\\circ$, ${{b}}^\\circ$ și ${{c}}^\\circ$. Al patrulea unghi are …",
+      "generator": {
+        "variabile": {
+          "a": {
+            "min": 60,
+            "max": 130,
+            "pas": 5
+          },
+          "b": {
+            "min": 60,
+            "max": 130,
+            "pas": 5
+          },
+          "c": {
+            "min": 60,
+            "max": 130,
+            "pas": 5
+          }
+        },
+        "conditie": "360 - a - b - c >= 40 && 360 - a - b - c <= 160",
+        "calcule": {
+          "d": "360 - a - b - c"
+        }
+      },
+      "raspuns": "{{d}}",
+      "unitate": "°",
+      "indiciu": "Suma unghiurilor unui patrulater convex este 360°.",
+      "rezolvare": "$360^\\circ - {{a}}^\\circ - {{b}}^\\circ - {{c}}^\\circ = {{d}}^\\circ$."
+    },
+    {
+      "id": "E2",
+      "nivel": 1,
+      "tip": "adevarat-fals",
+      "enunt": "Adevărat sau fals: un patrulater convex poate avea toate cele patru unghiuri obtuze.",
+      "corect": false,
+      "rezolvare": "<b>Fals:</b> patru unghiuri mai mari de $90^\\circ$ ar avea suma mai mare de $360^\\circ$."
+    },
+    {
+      "id": "E3",
+      "nivel": 1,
+      "tip": "numeric",
+      "enunt": "Câte diagonale are un patrulater?",
+      "raspuns": "2",
+      "rezolvare": "Două: $AC$ și $BD$ (unesc vârfurile opuse)."
+    },
+    {
+      "id": "E4",
+      "nivel": 2,
+      "tip": "numeric",
+      "enunt": "Unghiurile unui patrulater convex sunt proporționale cu $1, 2, 3, 4$. Cel mai mare unghi are …",
+      "raspuns": "144",
+      "unitate": "°",
+      "indiciu": "Notează unghiurile k, 2k, 3k, 4k.",
+      "rezolvare": "$k + 2k + 3k + 4k = 10k = 360^\\circ \\Rightarrow k = 36^\\circ$. Cel mai mare: $4k = 144^\\circ$."
+    },
+    {
+      "id": "E5",
+      "nivel": 2,
+      "tip": "numeric",
+      "enunt": "În patrulaterul convex $ABCD$, unghiurile $A$ și $B$ sunt drepte, iar $m(\\sphericalangle C) = 3 \\cdot m(\\sphericalangle D)$. Atunci $m(\\sphericalangle D)$ este …",
+      "raspuns": "45",
+      "unitate": "°",
+      "rezolvare": "$90^\\circ + 90^\\circ + 3x + x = 360^\\circ \\Rightarrow 4x = 180^\\circ \\Rightarrow x = 45^\\circ$."
+    },
+    {
+      "id": "E6",
+      "nivel": 2,
+      "tip": "grila",
+      "enunt": "Câte unghiuri ascuțite poate avea, cel mult, un patrulater convex?",
+      "variante": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ],
+      "corect": 2,
+      "rezolvare": "Trei pot fi ascuțite (de exemplu $80^\\circ, 80^\\circ, 80^\\circ$ și $120^\\circ$). Patru nu se poate: suma ar fi sub $360^\\circ$."
+    },
+    {
+      "id": "E7",
+      "nivel": 3,
+      "tip": "numeric",
+      "enunt": "Perimetrul patrulaterului $ABCD$ este $38$ cm, $AB = 8$ cm, $BC = 10$ cm și $CD = AB + 2$ cm. Atunci $DA$ este …",
+      "raspuns": "10",
+      "unitate": "cm",
+      "rezolvare": "$CD = 10$ cm, deci $DA = 38 - 8 - 10 - 10 = 10$ cm."
+    },
+    {
+      "id": "E8",
+      "nivel": 3,
+      "tip": "numeric",
+      "enunt": "Unghiurile unui patrulater convex au măsurile $x$, $x + 20^\\circ$, $x + 40^\\circ$ și $x + 60^\\circ$. Cel mai mare unghi are …",
+      "raspuns": "120",
+      "unitate": "°",
+      "rezolvare": "$4x + 120^\\circ = 360^\\circ \\Rightarrow x = 60^\\circ$. Cel mai mare: $60^\\circ + 60^\\circ = 120^\\circ$."
+    }
+  ],
+  "test": {
+    "itemi": [
+      {
+        "id": "T1",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "Un patrulater convex are unghiurile de $70^\\circ$, $100^\\circ$ și $120^\\circ$. Al patrulea unghi are …",
+        "raspuns": "70",
+        "unitate": "°",
+        "rezolvare": "$360^\\circ - 290^\\circ = 70^\\circ$."
+      },
+      {
+        "id": "T2",
+        "tip": "adevarat-fals",
+        "puncte": 2,
+        "enunt": "Adevărat sau fals: suma unghiurilor unui patrulater convex este $180^\\circ$.",
+        "corect": false,
+        "rezolvare": "<b>Fals:</b> este $360^\\circ$."
+      },
+      {
+        "id": "T3",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "Unghiurile unui patrulater convex sunt proporționale cu $2, 3, 4, 6$. Cel mai mic unghi are …",
+        "raspuns": "48",
+        "unitate": "°",
+        "rezolvare": "$15k = 360^\\circ \\Rightarrow k = 24^\\circ$. Cel mai mic: $2k = 48^\\circ$."
+      },
+      {
+        "id": "T4",
+        "tip": "grila",
+        "puncte": 2,
+        "enunt": "Un patrulater convex are trei unghiuri de $90^\\circ$. Al patrulea are:",
+        "variante": [
+          "$60^\\circ$",
+          "$90^\\circ$",
+          "$180^\\circ$",
+          "$270^\\circ$"
+        ],
+        "corect": 1,
+        "rezolvare": "$360^\\circ - 270^\\circ = 90^\\circ$."
+      },
+      {
+        "id": "T5",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "În patrulaterul convex $ABCD$: $m(\\sphericalangle A) = 2x$, $m(\\sphericalangle B) = 3x$, $m(\\sphericalangle C) = 4x$ și $m(\\sphericalangle D) = 90^\\circ$. Atunci $x$ este …",
+        "raspuns": "30",
+        "unitate": "°",
+        "rezolvare": "$9x + 90^\\circ = 360^\\circ \\Rightarrow 9x = 270^\\circ \\Rightarrow x = 30^\\circ$."
+      }
+    ]
+  }
+}

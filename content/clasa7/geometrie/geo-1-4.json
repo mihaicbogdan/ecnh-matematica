@@ -1,0 +1,161 @@
+{
+  "id": "geo-1-4",
+  "eticheta": "Geometrie · Cap. 4 · Patrulaterul",
+  "titlu": "Dreptunghiul. Definiție și proprietăți",
+  "introducere": "Dreptunghiul este un paralelogram cu un unghi drept. Are toate proprietățile paralelogramului, plus una în plus.",
+  "revizuit": false,
+  "deRetinut": [
+    "<b>Definiție:</b> dreptunghiul este paralelogramul care are un unghi drept. Atunci <b>toate</b> unghiurile sunt drepte.",
+    "<b>Proprietăți:</b> toate proprietățile paralelogramului, plus <b>diagonalele congruente</b>: $AC = BD$.",
+    "Intersecția diagonalelor: $OA = OB = OC = OD = \\dfrac{AC}{2}$. Triunghiurile $AOB$, $BOC$, … sunt isoscele.",
+    "<b>Un patrulater este dreptunghi dacă:</b> e paralelogram cu un unghi drept, <b>sau</b> paralelogram cu diagonalele congruente, <b>sau</b> patrulater cu trei unghiuri drepte.",
+    "Perimetrul: $P = 2(L + l)$. Aria: $\\mathcal{A} = L \\cdot l$.",
+    "<b>Truc frecvent:</b> dacă $m(\\sphericalangle AOB) = 60^\\circ$, triunghiul $AOB$ (isoscel cu unghi de $60^\\circ$) este echilateral, deci $AB = OA = \\dfrac{AC}{2}$."
+  ],
+  "exemple": [
+    {
+      "titlu": "Unghiul dintre diagonale",
+      "enunt": "În dreptunghiul $ABCD$, $AC = 10$ cm și $m(\\sphericalangle AOB) = 60^\\circ$, unde $O$ este intersecția diagonalelor. Află $AB$.",
+      "figura": "<svg viewBox=\"0 0 320 200\" role=\"img\" aria-label=\"Dreptunghi ABCD cu diagonalele egale care se intersectează în O\"><g stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"><rect x=\"40\" y=\"40\" width=\"240\" height=\"120\"/><line x1=\"40\" y1=\"160\" x2=\"280\" y2=\"40\" stroke-dasharray=\"6 5\"/><line x1=\"280\" y1=\"160\" x2=\"40\" y2=\"40\" stroke-dasharray=\"6 5\"/><path d=\"M40,148 L52,148 L52,160\"/></g><g class=\"acc\" stroke-width=\"2.2\"><line x1=\"97\" y1=\"125\" x2=\"103\" y2=\"137\"/><line x1=\"217\" y1=\"63\" x2=\"223\" y2=\"75\"/><line x1=\"97\" y1=\"75\" x2=\"103\" y2=\"63\"/><line x1=\"217\" y1=\"137\" x2=\"223\" y2=\"125\"/></g><circle cx=\"160\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/><text x=\"24\" y=\"176\" font-size=\"15\">A</text><text x=\"284\" y=\"176\" font-size=\"15\">B</text><text x=\"284\" y=\"36\" font-size=\"15\">C</text><text x=\"24\" y=\"36\" font-size=\"15\">D</text><text x=\"155\" y=\"124\" font-size=\"15\">O</text></svg>",
+      "pasi": [
+        "Diagonalele sunt congruente și se înjumătățesc: $OA = OB = 5$ cm.",
+        "$\\triangle AOB$ este isoscel și are un unghi de $60^\\circ$, deci este echilateral.",
+        "$AB = OA = 5$ cm."
+      ]
+    },
+    {
+      "titlu": "Ecuație cu diagonale",
+      "enunt": "În dreptunghiul $ABCD$, $AC = 2x + 3$ și $BD = 15$ (în cm). Află $x$.",
+      "pasi": [
+        "Diagonalele dreptunghiului sunt congruente: $2x + 3 = 15$.",
+        "$2x = 12 \\Rightarrow x = 6$."
+      ]
+    }
+  ],
+  "exercitii": [
+    {
+      "id": "E1",
+      "nivel": 1,
+      "tip": "numeric",
+      "enunt": "Dreptunghiul $ABCD$ are diagonala $BD = 14$ cm, iar $O$ este intersecția diagonalelor. Atunci $OA$ este …",
+      "raspuns": "7",
+      "unitate": "cm",
+      "rezolvare": "$OA = \\dfrac{AC}{2} = \\dfrac{BD}{2} = 7$ cm (diagonalele sunt congruente)."
+    },
+    {
+      "id": "E2",
+      "nivel": 1,
+      "tip": "adevarat-fals",
+      "enunt": "Adevărat sau fals: orice dreptunghi este paralelogram.",
+      "corect": true,
+      "rezolvare": "<b>Adevărat:</b> așa este definit dreptunghiul."
+    },
+    {
+      "id": "E3",
+      "nivel": 1,
+      "tip": "numeric",
+      "enunt": "Un dreptunghi are lungimea $8$ cm și lățimea $5$ cm. Perimetrul este …",
+      "raspuns": "26",
+      "unitate": "cm",
+      "rezolvare": "$2(8 + 5) = 26$ cm."
+    },
+    {
+      "id": "E4",
+      "nivel": 2,
+      "tip": "numeric",
+      "enunt": "În dreptunghiul $ABCD$, $AC = 3x - 2$ și $BD = x + 10$ (în cm). Atunci $x$ este …",
+      "raspuns": "6",
+      "indiciu": "Diagonalele dreptunghiului sunt congruente.",
+      "rezolvare": "$3x - 2 = x + 10 \\Rightarrow 2x = 12 \\Rightarrow x = 6$."
+    },
+    {
+      "id": "E5",
+      "nivel": 2,
+      "tip": "numeric",
+      "enunt": "În dreptunghiul $ABCD$, $m(\\sphericalangle AOB) = 60^\\circ$ și $AC = 12$ cm. Atunci $AB$ este …",
+      "raspuns": "6",
+      "unitate": "cm",
+      "rezolvare": "$OA = OB = 6$ cm și $\\triangle AOB$ este echilateral, deci $AB = 6$ cm."
+    },
+    {
+      "id": "E6",
+      "nivel": 2,
+      "tip": "grila",
+      "enunt": "Un paralelogram cu diagonalele congruente este:",
+      "variante": [
+        "romb",
+        "dreptunghi",
+        "trapez",
+        "orice paralelogram"
+      ],
+      "corect": 1,
+      "rezolvare": "Este o proprietate de recunoaștere a dreptunghiului."
+    },
+    {
+      "id": "E7",
+      "nivel": 3,
+      "tip": "numeric",
+      "enunt": "În dreptunghiul $ABCD$, $O$ este intersecția diagonalelor și $m(\\sphericalangle AOB) = 80^\\circ$. Atunci $m(\\sphericalangle OAB)$ este …",
+      "raspuns": "50",
+      "unitate": "°",
+      "indiciu": "Ce fel de triunghi este AOB?",
+      "rezolvare": "$OA = OB$, deci $\\triangle AOB$ este isoscel: $m(\\sphericalangle OAB) = \\dfrac{180^\\circ - 80^\\circ}{2} = 50^\\circ$."
+    },
+    {
+      "id": "E8",
+      "nivel": 3,
+      "tip": "numeric",
+      "enunt": "Un dreptunghi are perimetrul $28$ cm, iar lungimea este cu $4$ cm mai mare decât lățimea. Aria lui este … (cm²)",
+      "raspuns": "45",
+      "rezolvare": "$2(l + 4 + l) = 28 \\Rightarrow 2l + 4 = 14 \\Rightarrow l = 5$, $L = 9$. Aria: $9 \\cdot 5 = 45$ cm²."
+    }
+  ],
+  "test": {
+    "itemi": [
+      {
+        "id": "T1",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "Dreptunghiul $ABCD$ are $AC = 20$ cm. Dacă $O$ este intersecția diagonalelor, $OB$ este …",
+        "raspuns": "10",
+        "unitate": "cm",
+        "rezolvare": "$OB = \\dfrac{BD}{2} = \\dfrac{AC}{2} = 10$ cm."
+      },
+      {
+        "id": "T2",
+        "tip": "adevarat-fals",
+        "puncte": 2,
+        "enunt": "Adevărat sau fals: diagonalele oricărui dreptunghi sunt perpendiculare.",
+        "corect": false,
+        "rezolvare": "<b>Fals:</b> sunt congruente, dar perpendiculare doar la pătrat."
+      },
+      {
+        "id": "T3",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "Un dreptunghi are dimensiunile $11$ cm și $4$ cm. Perimetrul este …",
+        "raspuns": "30",
+        "unitate": "cm",
+        "rezolvare": "$2(11 + 4) = 30$ cm."
+      },
+      {
+        "id": "T4",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "În dreptunghiul $ABCD$, $m(\\sphericalangle AOB) = 60^\\circ$ și $BD = 18$ cm. Atunci $AB$ este …",
+        "raspuns": "9",
+        "unitate": "cm",
+        "rezolvare": "$\\triangle AOB$ este echilateral cu latura $OA = 9$ cm."
+      },
+      {
+        "id": "T5",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "În dreptunghiul $ABCD$, $m(\\sphericalangle AOB) = 70^\\circ$. Atunci $m(\\sphericalangle OAB)$ este …",
+        "raspuns": "55",
+        "unitate": "°",
+        "rezolvare": "$\\dfrac{180^\\circ - 70^\\circ}{2} = 55^\\circ$."
+      }
+    ]
+  }
+}

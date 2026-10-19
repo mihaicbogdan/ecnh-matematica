@@ -1,0 +1,247 @@
+{
+  "id": "alg-1-3",
+  "eticheta": "Algebră · Cap. 1 · Unitatea 1 · Rădăcina pătrată",
+  "titlu": "Scoaterea și introducerea factorilor sub radical",
+  "introducere": "Când numărul de sub radical nu e pătrat perfect, „scoatem afară” partea care este: $\\sqrt{72} = 6\\sqrt{2}$.",
+  "revizuit": false,
+  "deRetinut": [
+    "<b>Produs:</b> $\\sqrt{a \\cdot b} = \\sqrt{a} \\cdot \\sqrt{b}$, pentru $a, b \\ge 0$.",
+    "<b>Scoaterea factorilor:</b> $\\sqrt{a^2 \\cdot b} = a\\sqrt{b}$ ($a \\ge 0$). Caută <b>cel mai mare</b> pătrat perfect care divide numărul: $\\sqrt{72} = \\sqrt{36 \\cdot 2} = 6\\sqrt{2}$.",
+    "<b>Cu descompunere:</b> perechile de factori ies afară: $\\sqrt{2^3 \\cdot 3^2} = \\sqrt{2^2 \\cdot 3^2 \\cdot 2} = 2 \\cdot 3\\sqrt{2} = 6\\sqrt{2}$.",
+    "<b>Introducerea factorilor:</b> $a\\sqrt{b} = \\sqrt{a^2 \\cdot b}$ ($a \\ge 0$): $3\\sqrt{2} = \\sqrt{9 \\cdot 2} = \\sqrt{18}$. Pentru un factor negativ, minusul rămâne afară: $-3\\sqrt{2} = -\\sqrt{18}$.",
+    "<b>Forma finală:</b> sub radical nu mai rămâne niciun pătrat perfect mai mare decât $1$. $\\sqrt{72} = 2\\sqrt{18}$ este corect, dar <b>nu</b> e terminat.",
+    "<b>Utile:</b> $\\sqrt{8} = 2\\sqrt{2}$, $\\sqrt{12} = 2\\sqrt{3}$, $\\sqrt{18} = 3\\sqrt{2}$, $\\sqrt{20} = 2\\sqrt{5}$, $\\sqrt{27} = 3\\sqrt{3}$, $\\sqrt{32} = 4\\sqrt{2}$, $\\sqrt{45} = 3\\sqrt{5}$, $\\sqrt{48} = 4\\sqrt{3}$, $\\sqrt{50} = 5\\sqrt{2}$, $\\sqrt{75} = 5\\sqrt{3}$.",
+    "<b>Comparare:</b> introduci factorii sub radical și compari numerele de sub radical: $3\\sqrt{5} = \\sqrt{45} > \\sqrt{44} = 2\\sqrt{11}$."
+  ],
+  "exemple": [
+    {
+      "titlu": "Scoaterea factorilor",
+      "enunt": "Scrie $\\sqrt{180}$ în forma cea mai simplă.",
+      "pasi": [
+        "Descompunem: $180 = 2^2 \\cdot 3^2 \\cdot 5$.",
+        "Perechile $2^2$ și $3^2$ ies de sub radical ca $2$ și $3$; $5$ rămâne sub radical.",
+        "$\\sqrt{180} = 2 \\cdot 3\\sqrt{5} = 6\\sqrt{5}$."
+      ]
+    },
+    {
+      "titlu": "Comparare",
+      "enunt": "Compară $3\\sqrt{5}$ și $2\\sqrt{11}$.",
+      "pasi": [
+        "Introducem factorii: $3\\sqrt{5} = \\sqrt{9 \\cdot 5} = \\sqrt{45}$ și $2\\sqrt{11} = \\sqrt{4 \\cdot 11} = \\sqrt{44}$.",
+        "$45 > 44$, deci $3\\sqrt{5} > 2\\sqrt{11}$."
+      ]
+    }
+  ],
+  "exercitii": [
+    {
+      "id": "E1",
+      "nivel": 1,
+      "tip": "numeric",
+      "enunt": "Scoate factorii de sub radical: $\\sqrt{{{n}}}$.",
+      "generator": {
+        "variabile": {
+          "k": {
+            "min": 2,
+            "max": 9
+          },
+          "m": {
+            "din": [
+              2,
+              3,
+              5,
+              6,
+              7
+            ]
+          }
+        },
+        "calcule": {
+          "q": "k * k",
+          "n": "k * k * m"
+        }
+      },
+      "raspuns": "{{k}}√{{m}}",
+      "raspunsAfisat": "${{k}}\\sqrt{{{m}}}$",
+      "formaSimplificata": true,
+      "indiciu": "Caută cel mai mare pătrat perfect care îl divide pe ${{n}}$. Scrie răspunsul ca de exemplu 3√2.",
+      "rezolvare": "$\\sqrt{{{n}}} = \\sqrt{{{q}} \\cdot {{m}}} = {{k}}\\sqrt{{{m}}}$."
+    },
+    {
+      "id": "E2",
+      "nivel": 1,
+      "tip": "grila",
+      "enunt": "$\\sqrt{12}$ este egal cu:",
+      "variante": [
+        "$2\\sqrt{3}$",
+        "$3\\sqrt{2}$",
+        "$4\\sqrt{3}$",
+        "$6\\sqrt{2}$"
+      ],
+      "corect": 0,
+      "rezolvare": "$\\sqrt{12} = \\sqrt{4 \\cdot 3} = 2\\sqrt{3}$."
+    },
+    {
+      "id": "E3",
+      "nivel": 1,
+      "tip": "numeric",
+      "enunt": "Introdu factorul sub radical: $3\\sqrt{2} = \\sqrt{x}$. Află $x$.",
+      "raspuns": "18",
+      "rezolvare": "$3\\sqrt{2} = \\sqrt{3^2 \\cdot 2} = \\sqrt{18}$, deci $x = 18$."
+    },
+    {
+      "id": "E4",
+      "nivel": 2,
+      "tip": "numeric",
+      "enunt": "${{a}}\\sqrt{{{b}}} = \\sqrt{x}$. Află $x$.",
+      "generator": {
+        "variabile": {
+          "a": {
+            "min": 2,
+            "max": 7
+          },
+          "b": {
+            "din": [
+              2,
+              3,
+              5,
+              6,
+              7
+            ]
+          }
+        },
+        "calcule": {
+          "x": "a * a * b"
+        }
+      },
+      "raspuns": "{{x}}",
+      "indiciu": "Ridică factorul din fața radicalului la pătrat și înmulțește.",
+      "rezolvare": "${{a}}\\sqrt{{{b}}} = \\sqrt{{{a}}^2 \\cdot {{b}}} = \\sqrt{{{x}}}$."
+    },
+    {
+      "id": "E5",
+      "nivel": 2,
+      "tip": "numeric",
+      "enunt": "Scrie în forma cea mai simplă: $\\sqrt{2^3 \\cdot 3^3}$.",
+      "raspuns": "6√6",
+      "raspunsAfisat": "$6\\sqrt{6}$",
+      "formaSimplificata": true,
+      "indiciu": "Scoate câte o pereche din fiecare factor.",
+      "rezolvare": "$2^3 \\cdot 3^3 = 2^2 \\cdot 3^2 \\cdot 2 \\cdot 3$, deci $\\sqrt{2^3 \\cdot 3^3} = 2 \\cdot 3\\sqrt{6} = 6\\sqrt{6}$."
+    },
+    {
+      "id": "E6",
+      "nivel": 2,
+      "tip": "adevarat-fals",
+      "enunt": "Adevărat sau fals: $2\\sqrt{7} < 3\\sqrt{3}$.",
+      "corect": false,
+      "rezolvare": "<b>Fals.</b> $2\\sqrt{7} = \\sqrt{28}$ și $3\\sqrt{3} = \\sqrt{27}$. Cum $28 > 27$, $2\\sqrt{7} > 3\\sqrt{3}$."
+    },
+    {
+      "id": "E7",
+      "nivel": 3,
+      "tip": "numeric",
+      "enunt": "Scrie în forma cea mai simplă: $\\sqrt{300}$.",
+      "raspuns": "10√3",
+      "raspunsAfisat": "$10\\sqrt{3}$",
+      "formaSimplificata": true,
+      "rezolvare": "$\\sqrt{300} = \\sqrt{100 \\cdot 3} = 10\\sqrt{3}$."
+    },
+    {
+      "id": "E8",
+      "nivel": 3,
+      "tip": "grila",
+      "enunt": "Cel mai mare dintre numere este:",
+      "variante": [
+        "$4\\sqrt{2}$",
+        "$3\\sqrt{3}$",
+        "$2\\sqrt{5}$",
+        "$\\sqrt{30}$"
+      ],
+      "corect": 0,
+      "indiciu": "Introdu toți factorii sub radical.",
+      "rezolvare": "Le scriem sub radical: $4\\sqrt{2} = \\sqrt{32}$, $3\\sqrt{3} = \\sqrt{27}$, $2\\sqrt{5} = \\sqrt{20}$, $\\sqrt{30}$. Cel mai mare este $\\sqrt{32} = 4\\sqrt{2}$."
+    },
+    {
+      "id": "E9",
+      "nivel": 3,
+      "tip": "numeric",
+      "enunt": "$-2\\sqrt{5} = -\\sqrt{x}$. Află $x$.",
+      "raspuns": "20",
+      "rezolvare": "Minusul rămâne în față: $-2\\sqrt{5} = -\\sqrt{4 \\cdot 5} = -\\sqrt{20}$, deci $x = 20$."
+    }
+  ],
+  "test": {
+    "itemi": [
+      {
+        "id": "T1",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "Scoate factorii de sub radical: $\\sqrt{{{n}}}$.",
+        "generator": {
+          "variabile": {
+            "k": {
+              "min": 2,
+              "max": 9
+            },
+            "m": {
+              "din": [
+                2,
+                3,
+                5,
+                6,
+                7
+              ]
+            }
+          },
+          "calcule": {
+            "q": "k * k",
+            "n": "k * k * m"
+          }
+        },
+        "raspuns": "{{k}}√{{m}}",
+        "raspunsAfisat": "${{k}}\\sqrt{{{m}}}$",
+        "formaSimplificata": true,
+        "rezolvare": "$\\sqrt{{{n}}} = \\sqrt{{{q}} \\cdot {{m}}} = {{k}}\\sqrt{{{m}}}$."
+      },
+      {
+        "id": "T2",
+        "tip": "grila",
+        "puncte": 2,
+        "enunt": "$\\sqrt{48}$, cu factorii scoși complet de sub radical, este:",
+        "variante": [
+          "$4\\sqrt{3}$",
+          "$2\\sqrt{12}$",
+          "$3\\sqrt{5}$",
+          "$6\\sqrt{2}$"
+        ],
+        "corect": 0,
+        "rezolvare": "$\\sqrt{48} = \\sqrt{16 \\cdot 3} = 4\\sqrt{3}$. Și $2\\sqrt{12}$ are aceeași valoare, dar sub radical a rămas $12 = 4 \\cdot 3$."
+      },
+      {
+        "id": "T3",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "$5\\sqrt{2} = \\sqrt{x}$. Află $x$.",
+        "raspuns": "50",
+        "rezolvare": "$25 \\cdot 2 = 50$."
+      },
+      {
+        "id": "T4",
+        "tip": "adevarat-fals",
+        "puncte": 2,
+        "enunt": "Adevărat sau fals: $3\\sqrt{5} > 2\\sqrt{11}$.",
+        "corect": true,
+        "rezolvare": "<b>Adevărat:</b> $\\sqrt{45} > \\sqrt{44}$."
+      },
+      {
+        "id": "T5",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "Scrie în forma cea mai simplă: $\\sqrt{2^4 \\cdot 5}$.",
+        "raspuns": "4√5",
+        "raspunsAfisat": "$4\\sqrt{5}$",
+        "formaSimplificata": true,
+        "rezolvare": "$\\sqrt{2^4 \\cdot 5} = 2^2\\sqrt{5} = 4\\sqrt{5}$."
+      }
+    ]
+  }
+}

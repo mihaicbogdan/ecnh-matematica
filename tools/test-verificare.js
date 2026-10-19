@@ -71,6 +71,12 @@ stare(it, '', 'gol');
 stare({ tip: 'numeric', raspuns: '1/6', ireductibila: true }, '2/12', 'gresit');
 stare({ tip: 'numeric', raspuns: '1/6', ireductibila: true }, '1/6', 'corect');
 stare({ tip: 'numeric', raspuns: ['45', '45.0'] }, '45', 'corect');
+const rad = { tip: 'numeric', raspuns: '3√2', formaSimplificata: true };
+stare(rad, '3√2', 'corect');
+stare(rad, '3sqrt(2)', 'corect');
+stare(rad, '√18', 'gresit');
+stare({ tip: 'numeric', raspuns: '6√6', formaSimplificata: true }, '2√54', 'gresit');
+stare({ tip: 'numeric', raspuns: '6√6', formaSimplificata: true }, '6√6', 'corect');
 // grilă / A-F / completare
 stare({ tip: 'grila', corect: 1 }, '1', 'corect');
 stare({ tip: 'grila', corect: 1 }, '2', 'gresit');

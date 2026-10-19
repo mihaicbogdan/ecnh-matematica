@@ -174,6 +174,17 @@
             return { stare: 'gresit', mesaj: 'Valoarea e corectă, dar fracția se mai poate simplifica.' };
           }
         }
+        if (ok && item.formaSimplificata) {
+          // sub radical nu trebuie să rămână un pătrat perfect > 1 (√18 → 3√2)
+          for (const m of normalizeaza(raspuns).matchAll(/r\(?(\d+)\)?/g)) {
+            const n = Number(m[1]);
+            for (let k = 2; k * k <= n; k++) {
+              if (n % (k * k) === 0) {
+                return { stare: 'gresit', mesaj: 'Valoarea e corectă, dar mai poți scoate factori de sub radical.' };
+              }
+            }
+          }
+        }
         return { stare: ok ? 'corect' : 'gresit' };
       }
       case 'completare': {

@@ -402,3 +402,4 @@ details.rezolvare[open] summary { margin-bottom: 6px; }
   .foaie.cu-margine::before { display: none; }
   .foaie.cu-margine { padding-left: 22px; }
 }
+.lectii li.grupa { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--albastru); border-bottom: 0; padding-top: 12px; }
