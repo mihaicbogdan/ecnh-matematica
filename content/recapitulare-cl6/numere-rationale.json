@@ -1,0 +1,176 @@
+{
+  "id": "recap-cl6-q",
+  "eticheta": "Recapitulare clasa a 6-a",
+  "titlu": "Numere raționale",
+  "introducere": "Fracțiile și numerele raționale apar peste tot în clasa a 7-a: la radicali, la ecuații, la asemănare. Merită să le stăpânești bine.",
+  "revizuit": false,
+  "deRetinut": [
+    "<b>Amplificare și simplificare:</b> $\\dfrac{a}{b} = \\dfrac{a \\cdot k}{b \\cdot k}$. O fracție e <b>ireductibilă</b> când numărătorul și numitorul nu mai au divizori comuni în afară de $1$. Simplifici dintr-o dată împărțind la c.m.m.d.c.",
+    "<b>Adunare și scădere:</b> aduci fracțiile la același numitor (c.m.m.m.c. al numitorilor), apoi aduni numărătorii: $\\dfrac{a}{n} + \\dfrac{b}{n} = \\dfrac{a + b}{n}$.",
+    "<b>Înmulțire:</b> $\\dfrac{a}{b} \\cdot \\dfrac{c}{d} = \\dfrac{a \\cdot c}{b \\cdot d}$. Simplifică înainte de a înmulți, chiar și pe diagonală.",
+    "<b>Împărțire:</b> înmulțești cu inversa celei de-a doua fracții: $\\dfrac{a}{b} : \\dfrac{c}{d} = \\dfrac{a}{b} \\cdot \\dfrac{d}{c}$.",
+    "<b>Semne:</b> ca la numerele întregi: $(+) \\cdot (-) = (-)$ și $(-) \\cdot (-) = (+)$.",
+    "<b>Puteri:</b> $\\left(\\dfrac{a}{b}\\right)^n = \\dfrac{a^n}{b^n}$; $x^0 = 1$ pentru $x \\neq 0$; un număr negativ ridicat la o putere pară dă un rezultat pozitiv.",
+    "<b>Ordinea operațiilor:</b> paranteze → puteri → înmulțiri și împărțiri → adunări și scăderi.",
+    "<b>Fracții periodice:</b> $0,(3) = \\dfrac{3}{9} = \\dfrac{1}{3}$ și $0,1(6) = \\dfrac{16 - 1}{90} = \\dfrac{1}{6}$. La numitor scrii un $9$ pentru fiecare cifră din perioadă și un $0$ pentru fiecare cifră dintre virgulă și perioadă.",
+    "<b>Comparare:</b> dintre două numere negative, mai mare este cel mai apropiat de $0$: $-\\dfrac{1}{2} > -\\dfrac{3}{4}$."
+  ],
+  "exemple": [
+    {
+      "titlu": "Ordinea operațiilor",
+      "enunt": "Calculează $\\dfrac{3}{4} - \\dfrac{1}{6} \\cdot \\dfrac{3}{2}$.",
+      "pasi": [
+        "Înmulțirea se face înaintea scăderii: $\\dfrac{1}{6} \\cdot \\dfrac{3}{2} = \\dfrac{3}{12} = \\dfrac{1}{4}$.",
+        "Acum scăderea, cu același numitor: $\\dfrac{3}{4} - \\dfrac{1}{4} = \\dfrac{2}{4}$.",
+        "Simplificăm prin $2$: $\\dfrac{2}{4} = \\dfrac{1}{2}$."
+      ]
+    },
+    {
+      "titlu": "O ecuație cu fracții",
+      "enunt": "Rezolvă ecuația $\\dfrac{x}{2} + \\dfrac{1}{3} = \\dfrac{5}{6}$.",
+      "pasi": [
+        "Izolăm termenul cu $x$: $\\dfrac{x}{2} = \\dfrac{5}{6} - \\dfrac{1}{3}$.",
+        "Aducem la numitorul $6$: $\\dfrac{5}{6} - \\dfrac{2}{6} = \\dfrac{3}{6} = \\dfrac{1}{2}$.",
+        "Deci $\\dfrac{x}{2} = \\dfrac{1}{2}$, de unde $x = 1$.",
+        "Verificare: $\\dfrac{1}{2} + \\dfrac{1}{3} = \\dfrac{3}{6} + \\dfrac{2}{6} = \\dfrac{5}{6}$ ✓"
+      ]
+    }
+  ],
+  "exercitii": [
+    {
+      "id": "E1", "nivel": 1, "tip": "grila",
+      "enunt": "Care fracție este egală cu $\\dfrac{2}{3}$?",
+      "variante": ["$\\dfrac{4}{9}$", "$\\dfrac{6}{9}$", "$\\dfrac{3}{2}$", "$\\dfrac{2}{6}$"],
+      "corect": 1,
+      "indiciu": "Amplifică $\\dfrac{2}{3}$ cu $3$.",
+      "rezolvare": "$\\dfrac{2}{3} = \\dfrac{2 \\cdot 3}{3 \\cdot 3} = \\dfrac{6}{9}$."
+    },
+    {
+      "id": "E2", "nivel": 1, "tip": "numeric", "ireductibila": true,
+      "generator": {
+        "variabile": { "n": { "min": 1, "max": 7 }, "d": { "min": 2, "max": 9 }, "k": { "min": 2, "max": 6 } },
+        "conditie": "n < d && cmmdc(n, d) === 1",
+        "calcule": { "A": "k * n", "B": "k * d", "R": "fr(n, d)", "T": "frTex(n, d)" }
+      },
+      "enunt": "Simplifică fracția $\\dfrac{{{A}}}{{{B}}}$ până devine ireductibilă.",
+      "raspuns": "{{R}}",
+      "raspunsAfisat": "${{T}}$",
+      "indiciu": "Caută cel mai mare număr care îi divide și pe ${{A}}$, și pe ${{B}}$.",
+      "rezolvare": "$({{A}}, {{B}}) = {{k}}$, deci $\\dfrac{{{A}}}{{{B}}} = {{T}}$."
+    },
+    {
+      "id": "E3", "nivel": 1, "tip": "numeric",
+      "generator": {
+        "variabile": { "n": { "min": 5, "max": 12 }, "a": { "min": 1, "max": 10 }, "b": { "min": 1, "max": 10 } },
+        "conditie": "a + b < n",
+        "calcule": { "s": "a + b", "R": "fr(a + b, n)", "T": "frTex(a + b, n)" }
+      },
+      "enunt": "Calculează $\\dfrac{{{a}}}{{{n}}} + \\dfrac{{{b}}}{{{n}}}$.",
+      "raspuns": "{{R}}",
+      "raspunsAfisat": "${{T}}$",
+      "indiciu": "Numitorii sunt egali, deci aduni doar numărătorii.",
+      "rezolvare": "$\\dfrac{{{a}} + {{b}}}{{{n}}} = \\dfrac{{{s}}}{{{n}}} = {{T}}$."
+    },
+    {
+      "id": "E4", "nivel": 2, "tip": "numeric",
+      "generator": {
+        "variabile": { "m": { "din": [2, 3, 4, 5, 6] }, "n": { "din": [2, 3, 4, 5, 6] }, "a": { "min": 1, "max": 5 }, "b": { "min": 1, "max": 5 } },
+        "conditie": "m !== n && a < m && b < n",
+        "calcule": { "L": "cmmmc(m, n)", "A2": "a * cmmmc(m, n) / m", "B2": "b * cmmmc(m, n) / n", "S": "a * cmmmc(m, n) / m + b * cmmmc(m, n) / n", "R": "fr(a * n + b * m, m * n)", "T": "frTex(a * n + b * m, m * n)" }
+      },
+      "enunt": "Calculează $\\dfrac{{{a}}}{{{m}}} + \\dfrac{{{b}}}{{{n}}}$.",
+      "raspuns": "{{R}}",
+      "raspunsAfisat": "${{T}}$",
+      "indiciu": "Numitorul comun este $[{{m}}, {{n}}] = {{L}}$.",
+      "rezolvare": "$\\dfrac{{{a}}}{{{m}}} + \\dfrac{{{b}}}{{{n}}} = \\dfrac{{{A2}}}{{{L}}} + \\dfrac{{{B2}}}{{{L}}} = \\dfrac{{{S}}}{{{L}}} = {{T}}$."
+    },
+    {
+      "id": "E5", "nivel": 2, "tip": "numeric",
+      "enunt": "Calculează $\\dfrac{3}{4} : \\dfrac{9}{8}$.",
+      "raspuns": "2/3",
+      "raspunsAfisat": "$\\dfrac{2}{3}$",
+      "indiciu": "Împărțirea devine înmulțire cu inversa: $\\dfrac{9}{8} \\to \\dfrac{8}{9}$.",
+      "rezolvare": "$\\dfrac{3}{4} \\cdot \\dfrac{8}{9} = \\dfrac{24}{36} = \\dfrac{2}{3}$."
+    },
+    {
+      "id": "E6", "nivel": 2, "tip": "numeric",
+      "enunt": "Calculează $-\\dfrac{1}{2} + \\dfrac{3}{4}$.",
+      "raspuns": "1/4",
+      "raspunsAfisat": "$\\dfrac{1}{4}$",
+      "indiciu": "Scrie $-\\dfrac{1}{2}$ ca $-\\dfrac{2}{4}$.",
+      "rezolvare": "$-\\dfrac{2}{4} + \\dfrac{3}{4} = \\dfrac{1}{4}$."
+    },
+    {
+      "id": "E7", "nivel": 2, "tip": "adevarat-fals",
+      "enunt": "Adevărat sau fals: $0,(3) = \\dfrac{1}{3}$.",
+      "corect": true,
+      "indiciu": "Perioada are o cifră, deci la numitor scrii un singur $9$.",
+      "rezolvare": "$0,(3) = \\dfrac{3}{9} = \\dfrac{1}{3}$, deci afirmația este <b>adevărată</b>."
+    },
+    {
+      "id": "E8", "nivel": 3, "tip": "numeric",
+      "enunt": "Calculează $\\left(\\dfrac{1}{2}\\right)^2 + \\dfrac{3}{4} \\cdot \\dfrac{2}{3}$.",
+      "raspuns": "3/4",
+      "raspunsAfisat": "$\\dfrac{3}{4}$",
+      "indiciu": "Întâi puterea, apoi înmulțirea, la final adunarea.",
+      "rezolvare": "$\\left(\\dfrac{1}{2}\\right)^2 = \\dfrac{1}{4}$, $\\dfrac{3}{4} \\cdot \\dfrac{2}{3} = \\dfrac{6}{12} = \\dfrac{1}{2}$, deci $\\dfrac{1}{4} + \\dfrac{2}{4} = \\dfrac{3}{4}$."
+    },
+    {
+      "id": "E9", "nivel": 3, "tip": "numeric",
+      "enunt": "Rezolvă ecuația $\\dfrac{2}{3}x - \\dfrac{1}{2} = \\dfrac{5}{6}$. Scrie $x$ = …",
+      "raspuns": "2",
+      "indiciu": "Mută $-\\dfrac{1}{2}$ în dreapta, apoi împarte la $\\dfrac{2}{3}$.",
+      "rezolvare": "$\\dfrac{2}{3}x = \\dfrac{5}{6} + \\dfrac{3}{6} = \\dfrac{8}{6} = \\dfrac{4}{3}$, deci $x = \\dfrac{4}{3} : \\dfrac{2}{3} = \\dfrac{4}{3} \\cdot \\dfrac{3}{2} = 2$."
+    },
+    {
+      "id": "E10", "nivel": 3, "tip": "numeric", "ireductibila": true,
+      "enunt": "Scrie numărul $0,1(6)$ ca fracție ireductibilă.",
+      "raspuns": "1/6",
+      "raspunsAfisat": "$\\dfrac{1}{6}$",
+      "indiciu": "Perioada are o cifră, iar între virgulă și perioadă e o cifră, deci numitorul este $90$.",
+      "rezolvare": "$0,1(6) = \\dfrac{16 - 1}{90} = \\dfrac{15}{90} = \\dfrac{1}{6}$."
+    }
+  ],
+  "test": {
+    "itemi": [
+      {
+        "id": "T1", "tip": "grila", "puncte": 2,
+        "enunt": "$\\dfrac{5}{6} - \\dfrac{1}{4} = $",
+        "variante": ["$\\dfrac{4}{2}$", "$\\dfrac{7}{12}$", "$\\dfrac{1}{2}$", "$\\dfrac{4}{10}$"],
+        "corect": 1,
+        "rezolvare": "$\\dfrac{10}{12} - \\dfrac{3}{12} = \\dfrac{7}{12}$."
+      },
+      {
+        "id": "T2", "tip": "numeric", "puncte": 2,
+        "generator": {
+          "variabile": { "a": { "min": 1, "max": 8 }, "b": { "min": 2, "max": 9 }, "c": { "min": 1, "max": 8 }, "d": { "min": 2, "max": 9 } },
+          "conditie": "a < b && c < d && cmmdc(a * c, b * d) > 1",
+          "calcule": { "R": "fr(a * c, b * d)", "T": "frTex(a * c, b * d)", "P": "a * c", "Q": "b * d" }
+        },
+        "enunt": "Calculează $\\dfrac{{{a}}}{{{b}}} \\cdot \\dfrac{{{c}}}{{{d}}}$.",
+        "raspuns": "{{R}}",
+        "raspunsAfisat": "${{T}}$",
+        "rezolvare": "$\\dfrac{{{a}} \\cdot {{c}}}{{{b}} \\cdot {{d}}} = \\dfrac{{{P}}}{{{Q}}} = {{T}}$."
+      },
+      {
+        "id": "T3", "tip": "numeric", "puncte": 2,
+        "enunt": "Calculează $\\left(-\\dfrac{2}{3}\\right)^2$.",
+        "raspuns": "4/9",
+        "raspunsAfisat": "$\\dfrac{4}{9}$",
+        "rezolvare": "Putere pară, deci rezultat pozitiv: $\\dfrac{2^2}{3^2} = \\dfrac{4}{9}$."
+      },
+      {
+        "id": "T4", "tip": "adevarat-fals", "puncte": 2,
+        "enunt": "Adevărat sau fals: $-\\dfrac{3}{4} < -\\dfrac{2}{3}$.",
+        "corect": true,
+        "rezolvare": "$-\\dfrac{3}{4} = -\\dfrac{9}{12}$ și $-\\dfrac{2}{3} = -\\dfrac{8}{12}$. $-\\dfrac{8}{12}$ e mai aproape de $0$, deci e mai mare. Afirmația este <b>adevărată</b>."
+      },
+      {
+        "id": "T5", "tip": "numeric", "puncte": 2,
+        "enunt": "Calculează $1 - \\dfrac{3}{5} : \\dfrac{3}{10}$.",
+        "raspuns": "-1",
+        "rezolvare": "Împărțirea se face prima: $\\dfrac{3}{5} \\cdot \\dfrac{10}{3} = 2$. Apoi $1 - 2 = -1$."
+      }
+    ]
+  }
+}

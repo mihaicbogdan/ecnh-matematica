@@ -1,0 +1,381 @@
+/* ============================================================
+   ECNH · Matematică — temă „caiet de matematică”
+   Luminos: hârtie cu pătrățele, cerneală albastră, pix roșu.
+   Întunecat: tablă verde, cretă.
+   ============================================================ */
+
+:root {
+  --hartie: #fbf8f1;
+  --hartie-2: #fffdf8;
+  --grila: rgba(47, 91, 211, 0.085);
+  --cerneala: #1d2b4f;
+  --cerneala-2: #4a5677;
+  --albastru: #2f5bd3;
+  --albastru-2: #e6ecfb;
+  --rosu: #d6453d;
+  --rosu-2: #fbe7e5;
+  --galben: #ffe36e;
+  --galben-2: #fff6c7;
+  --verde: #2e8b57;
+  --verde-2: #e1f3e8;
+  --portocaliu: #c97a00;
+  --portocaliu-2: #fbefd6;
+  --linie: rgba(29, 43, 79, 0.14);
+  --umbra: 0 1px 0 rgba(29, 43, 79, 0.06), 0 10px 30px -14px rgba(29, 43, 79, 0.28);
+  --raza: 14px;
+  --f-titlu: "Fraunces", Georgia, serif;
+  --f-text: "Atkinson Hyperlegible", "Segoe UI", sans-serif;
+  --f-mana: "Caveat", "Comic Sans MS", cursive;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --hartie: #1b2723;
+    --hartie-2: #22312c;
+    --grila: rgba(236, 240, 230, 0.05);
+    --cerneala: #ecf0e6;
+    --cerneala-2: #b4c0b5;
+    --albastru: #8fb4ff;
+    --albastru-2: #24364a;
+    --rosu: #ff8a7a;
+    --rosu-2: #3d2a28;
+    --galben: #f4d35e;
+    --galben-2: #3a3a22;
+    --verde: #7fd6a0;
+    --verde-2: #213a2d;
+    --portocaliu: #f2b45a;
+    --portocaliu-2: #3b3020;
+    --linie: rgba(236, 240, 230, 0.16);
+    --umbra: 0 1px 0 rgba(0, 0, 0, 0.25), 0 12px 30px -14px rgba(0, 0, 0, 0.6);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --hartie: #1b2723;
+  --hartie-2: #22312c;
+  --grila: rgba(236, 240, 230, 0.05);
+  --cerneala: #ecf0e6;
+  --cerneala-2: #b4c0b5;
+  --albastru: #8fb4ff;
+  --albastru-2: #24364a;
+  --rosu: #ff8a7a;
+  --rosu-2: #3d2a28;
+  --galben: #f4d35e;
+  --galben-2: #3a3a22;
+  --verde: #7fd6a0;
+  --verde-2: #213a2d;
+  --portocaliu: #f2b45a;
+  --portocaliu-2: #3b3020;
+  --linie: rgba(236, 240, 230, 0.16);
+  --umbra: 0 1px 0 rgba(0, 0, 0, 0.25), 0 12px 30px -14px rgba(0, 0, 0, 0.6);
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--f-text);
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--cerneala);
+  background-color: var(--hartie);
+  background-image:
+    linear-gradient(var(--grila) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grila) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-attachment: fixed;
+}
+img, svg { max-width: 100%; }
+a { color: var(--albastru); text-underline-offset: 3px; }
+h1, h2, h3 { font-family: var(--f-titlu); line-height: 1.15; font-weight: 700; letter-spacing: -0.01em; }
+h1 { font-size: clamp(2rem, 5vw, 3rem); margin: 0.2em 0 0.3em; }
+h2 { font-size: clamp(1.4rem, 3.4vw, 1.9rem); margin: 1.6em 0 0.6em; }
+h3 { font-size: 1.2rem; margin: 0 0 0.4em; }
+p { margin: 0 0 0.8em; }
+.mana { font-family: var(--f-mana); font-weight: 600; }
+.mic { font-size: 0.88rem; color: var(--cerneala-2); }
+.ascuns { display: none !important; }
+
+/* ---------- layout ---------- */
+.pagina { width: min(1040px, 100% - 32px); margin: 0 auto; padding-bottom: 80px; }
+.antet {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  width: min(1040px, 100% - 32px); margin: 0 auto; padding: 18px 0 8px;
+}
+.marca { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--cerneala); }
+.marca-semn {
+  display: grid; place-items: center; width: 40px; height: 40px; border-radius: 10px;
+  background: var(--albastru); color: var(--hartie); font-family: var(--f-titlu); font-weight: 800; font-size: 1.3rem;
+  transform: rotate(-4deg); box-shadow: 3px 3px 0 var(--galben);
+}
+.marca-text { font-family: var(--f-titlu); font-weight: 700; font-size: 1.15rem; }
+.marca-text small { display: block; font-family: var(--f-text); font-weight: 400; font-size: 0.78rem; color: var(--cerneala-2); }
+.nav { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+@media (max-width: 520px) {
+  .marca-text { font-size: 1rem; white-space: nowrap; }
+  .marca-text small { display: none; }
+  .marca-semn { width: 34px; height: 34px; font-size: 1.1rem; }
+  .nav { flex-wrap: nowrap; gap: 2px; }
+  .nav a { padding: 6px 9px; }
+  .nav a[href="index.html"] { display: none; } /* logo-ul duce deja acasă */
+  .btn-tema { width: 34px; height: 34px; }
+}
+.nav a {
+  text-decoration: none; color: var(--cerneala-2); padding: 6px 12px; border-radius: 999px; font-size: 0.95rem;
+}
+.nav a:hover { background: var(--albastru-2); color: var(--cerneala); }
+.nav a[aria-current="page"] { background: var(--cerneala); color: var(--hartie); }
+.btn-tema {
+  border: 1px solid var(--linie); background: var(--hartie-2); color: var(--cerneala); border-radius: 999px;
+  width: 38px; height: 38px; cursor: pointer; font-size: 1.05rem;
+}
+
+/* ---------- foaie / card ---------- */
+.foaie {
+  position: relative;
+  background: var(--hartie-2);
+  border: 1px solid var(--linie);
+  border-radius: var(--raza);
+  box-shadow: var(--umbra);
+  padding: 22px 22px 22px 22px;
+}
+@media (min-width: 720px) {
+  .foaie.cu-margine { padding-left: 64px; }
+  .foaie.cu-margine::before {
+    content: ""; position: absolute; top: 0; bottom: 0; left: 44px; width: 2px;
+    background: var(--rosu); opacity: 0.45;
+  }
+}
+.grila-carduri { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+
+/* ---------- butoane ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  font: inherit; font-weight: 700; font-size: 1rem;
+  padding: 11px 20px; border-radius: 999px; cursor: pointer; text-decoration: none;
+  border: 2px solid var(--cerneala); background: var(--cerneala); color: var(--hartie);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  box-shadow: 3px 3px 0 var(--galben);
+}
+.btn:hover { transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--galben); }
+.btn:active { transform: translate(2px, 2px); box-shadow: 0 0 0 var(--galben); }
+.btn.secundar { background: transparent; color: var(--cerneala); box-shadow: none; }
+.btn.secundar:hover { background: var(--albastru-2); }
+.btn.mic { padding: 6px 14px; font-size: 0.9rem; }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
+.btn:focus-visible, .nav a:focus-visible, input:focus-visible, .optiune:focus-within {
+  outline: 3px solid var(--albastru); outline-offset: 2px;
+}
+.rand-butoane { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 14px; }
+
+/* ---------- etichete ---------- */
+.eticheta {
+  display: inline-block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+  padding: 3px 9px; border-radius: 6px; background: var(--albastru-2); color: var(--albastru);
+}
+.eticheta.rosu { background: var(--rosu-2); color: var(--rosu); }
+.eticheta.verde { background: var(--verde-2); color: var(--verde); }
+.eticheta.galben { background: var(--galben-2); color: var(--portocaliu); }
+
+/* ---------- hero ---------- */
+.hero { padding: 28px 0 8px; }
+.hero .salut { font-family: var(--f-mana); font-size: clamp(2rem, 6vw, 2.8rem); color: var(--albastru); line-height: 1; margin: 0; }
+.hero h1 { max-width: 18ch; }
+.hero h1 em { font-style: normal; background: linear-gradient(transparent 58%, var(--galben) 58%, var(--galben) 92%, transparent 92%); padding: 0 4px; }
+:root[data-theme="dark"] .hero h1 em { color: #1b2723; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .hero h1 em { color: #1b2723; } }
+.form-prenume { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+.form-prenume input { flex: 1 1 200px; }
+
+/* ---------- input ---------- */
+input[type="text"] {
+  font: inherit; font-size: 1.1rem; color: var(--cerneala);
+  padding: 10px 14px; border-radius: 10px; border: 2px solid var(--linie); background: var(--hartie);
+  min-width: 0; width: 100%; max-width: 320px;
+}
+input[type="text"]:focus { border-color: var(--albastru); }
+input.invalid { border-color: var(--portocaliu); }
+.interpretare { font-size: 0.88rem; margin-top: 4px; min-height: 1.3em; color: var(--cerneala-2); }
+.interpretare.avertisment { color: var(--portocaliu); }
+
+/* ---------- itemi ---------- */
+.item { padding: 18px 0; border-top: 1px dashed var(--linie); }
+.item:first-of-type { border-top: 0; }
+.item-cap { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
+.item-nr { font-family: var(--f-titlu); font-weight: 800; color: var(--albastru); min-width: 2.6em; }
+.item-puncte { margin-left: auto; font-family: var(--f-mana); font-size: 1.25rem; color: var(--rosu); white-space: nowrap; }
+.item-enunt { flex: 1; }
+.item-corp { padding-left: 0; }
+@media (min-width: 720px) { .item-corp { padding-left: calc(2.6em + 10px); } }
+.figura { margin: 10px 0; color: var(--cerneala); }
+.figura svg { display: block; width: 100%; max-width: 340px; height: auto; }
+.figura .acc { stroke: var(--rosu); }
+.figura .acc-text { fill: var(--rosu); }
+.figura text { font-family: var(--f-text); fill: currentColor; }
+
+.optiuni { display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); margin-top: 8px; }
+.optiune {
+  position: relative; display: flex; align-items: center; gap: 10px; cursor: pointer;
+  padding: 10px 12px; border-radius: 12px; border: 2px solid var(--linie); background: var(--hartie);
+}
+.optiune input { position: absolute; opacity: 0; pointer-events: none; }
+.optiune .litera {
+  display: grid; place-items: center; flex: none; width: 30px; height: 30px; border-radius: 50%;
+  border: 2px solid var(--cerneala-2); font-weight: 700; font-size: 0.95rem;
+}
+.optiune:hover { border-color: var(--albastru); }
+.optiune:has(input:checked) { border-color: var(--albastru); background: var(--albastru-2); }
+.optiune:has(input:checked) .litera { border-color: var(--rosu); color: var(--rosu); box-shadow: 0 0 0 3px var(--rosu-2); }
+.optiune.corect { border-color: var(--verde); background: var(--verde-2); }
+.optiune.gresit { border-color: var(--rosu); background: var(--rosu-2); }
+.optiuni.blocat .optiune { cursor: default; }
+
+.nota-caiet {
+  margin-top: 8px; padding: 10px 14px; border-radius: 10px; background: var(--albastru-2); font-size: 0.95rem;
+}
+
+.feedback { margin-top: 10px; padding: 10px 14px; border-radius: 10px; font-weight: 700; }
+.feedback.corect { background: var(--verde-2); color: var(--verde); }
+.feedback.gresit { background: var(--rosu-2); color: var(--rosu); }
+.feedback.invalid { background: var(--portocaliu-2); color: var(--portocaliu); }
+
+details.rezolvare { margin-top: 10px; border-left: 3px solid var(--albastru); padding: 4px 0 4px 14px; }
+details.rezolvare summary { cursor: pointer; font-weight: 700; color: var(--albastru); }
+details.rezolvare[open] summary { margin-bottom: 6px; }
+.indiciu { margin-top: 8px; padding: 8px 12px; border-radius: 10px; background: var(--galben-2); }
+
+/* ---------- subiecte ---------- */
+.subiect { margin-top: 26px; }
+.subiect-cap { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.subiect-cap h2 { margin: 0; }
+.subiect-instr { color: var(--cerneala-2); margin: 4px 0 10px; font-style: italic; }
+
+/* ---------- bara test (sticky) ---------- */
+.bara-test {
+  position: sticky; top: 0; z-index: 20;
+  display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  margin: 0 -4px; padding: 10px 14px; border-radius: 0 0 14px 14px;
+  background: color-mix(in srgb, var(--hartie-2) 92%, transparent);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--linie); border-top: 0;
+}
+.cronometru { font-variant-numeric: tabular-nums; font-weight: 700; }
+.cronometru.depasit { color: var(--portocaliu); }
+.progres-mini { flex: 1 1 140px; height: 8px; border-radius: 99px; background: var(--linie); overflow: hidden; }
+.progres-mini > span { display: block; height: 100%; background: var(--albastru); transition: width 0.3s; }
+
+/* ---------- barem ---------- */
+.barem { list-style: none; padding: 0; margin: 10px 0 0; display: grid; gap: 8px; }
+.barem label {
+  display: flex; gap: 12px; align-items: flex-start; cursor: pointer;
+  padding: 10px 12px; border-radius: 10px; border: 2px solid var(--linie); background: var(--hartie);
+}
+.barem input { width: 22px; height: 22px; margin-top: 2px; accent-color: var(--verde); flex: none; }
+.barem label:has(input:checked) { border-color: var(--verde); background: var(--verde-2); }
+.barem .pct { margin-left: auto; font-family: var(--f-mana); font-size: 1.25rem; color: var(--rosu); white-space: nowrap; }
+
+/* ---------- rezultat ---------- */
+.rezultat-cap { display: grid; gap: 20px; grid-template-columns: auto 1fr; align-items: center; }
+@media (max-width: 560px) { .rezultat-cap { grid-template-columns: 1fr; justify-items: start; } }
+.nota-mare {
+  position: relative; display: grid; place-items: center; width: 150px; height: 150px;
+  font-family: var(--f-mana); font-size: 3.6rem; font-weight: 700; color: var(--rosu); line-height: 1;
+}
+.nota-mare::before {
+  content: ""; position: absolute; inset: 8px; border: 3px solid var(--rosu); border-radius: 48% 52% 46% 54% / 55% 45% 55% 45%;
+  transform: rotate(-8deg);
+}
+.nota-mare small { display: block; font-size: 1.1rem; text-align: center; }
+.capitole-bare { display: grid; gap: 12px; margin-top: 8px; }
+.cap-bara-rand { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 12px; align-items: center; }
+.cap-bara-rand .val { font-variant-numeric: tabular-nums; font-weight: 700; }
+.cap-bara { grid-column: 1 / -1; height: 12px; border-radius: 99px; background: var(--linie); overflow: hidden; }
+.cap-bara > span { display: block; height: 100%; border-radius: 99px; }
+.verde-bg { background: var(--verde); }
+.galben-bg { background: var(--portocaliu); }
+.rosu-bg { background: var(--rosu); }
+.text-verde { color: var(--verde); }
+.text-galben { color: var(--portocaliu); }
+.text-rosu { color: var(--rosu); }
+
+.lista-recap { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.lista-recap li {
+  display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap;
+  padding: 12px 14px; border-radius: 12px; background: var(--hartie); border: 1px solid var(--linie);
+}
+
+/* ---------- caseta „De reținut” ---------- */
+.retine {
+  position: relative; margin: 18px 0 8px; padding: 22px 22px 18px;
+  background: var(--galben-2); border: 2px solid var(--galben); border-radius: 6px 18px 6px 18px;
+  box-shadow: var(--umbra);
+}
+.retine::before {
+  content: "📌"; position: absolute; top: -16px; left: 18px; font-size: 1.6rem; transform: rotate(-12deg);
+}
+.retine h2 { margin: 0 0 8px; font-family: var(--f-mana); font-size: 2rem; color: var(--rosu); }
+.retine ul { margin: 0; padding-left: 1.2em; display: grid; gap: 8px; }
+.retine li::marker { color: var(--rosu); }
+.retine-flotant {
+  position: fixed; right: 16px; bottom: 16px; z-index: 40;
+}
+.sertar {
+  position: fixed; inset: auto 0 0 0; z-index: 50; max-height: 75vh; overflow: auto;
+  padding: 8px 16px 24px; background: var(--hartie); border-top: 2px solid var(--galben);
+  box-shadow: 0 -20px 40px -20px rgba(0, 0, 0, 0.4);
+  transform: translateY(105%); transition: transform 0.25s ease;
+}
+.sertar.deschis { transform: none; }
+.sertar .retine { margin-top: 26px; }
+
+/* ---------- lecție ---------- */
+.pasi { margin: 8px 0 0; padding-left: 1.3em; display: grid; gap: 6px; }
+.nivel-cap { display: flex; align-items: center; gap: 10px; margin: 28px 0 4px; }
+.nivel-cap h3 { margin: 0; }
+.puncte-nivel { display: inline-flex; gap: 3px; }
+.puncte-nivel i { width: 10px; height: 10px; border-radius: 50%; background: var(--linie); }
+.puncte-nivel i.plin { background: var(--rosu); }
+.verifica-rand { display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-start; margin-top: 8px; }
+.verifica-rand > div { flex: 1 1 200px; }
+
+/* ---------- hartă capitole ---------- */
+.coloane-7 { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.capitol { margin-top: 14px; }
+.capitol h3 { display: flex; gap: 10px; align-items: baseline; }
+.capitol h3 .nr { font-family: var(--f-mana); font-size: 1.6rem; color: var(--rosu); }
+.lectii { list-style: none; padding: 0; margin: 6px 0 0; }
+.lectii li { display: flex; gap: 10px; align-items: center; padding: 6px 0; border-bottom: 1px dashed var(--linie); font-size: 0.97rem; }
+.lectii li .stare { margin-left: auto; white-space: nowrap; }
+.lectii a { text-decoration: none; }
+.lectii a:hover { text-decoration: underline; }
+.lectii .inactiv { color: var(--cerneala-2); }
+
+/* ---------- progres ---------- */
+.tabel-rez { width: 100%; border-collapse: collapse; font-size: 0.97rem; }
+.tabel-rez th, .tabel-rez td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--linie); vertical-align: top; }
+.tabel-rez th { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--cerneala-2); }
+.tabel-scroll { overflow-x: auto; }
+.grafic-note svg { width: 100%; height: auto; display: block; }
+.grafic-note .axa { stroke: var(--linie); }
+.grafic-note .linie { stroke: var(--albastru); fill: none; stroke-width: 2.5; }
+.grafic-note .punct { fill: var(--hartie-2); stroke: var(--albastru); stroke-width: 2.5; }
+.grafic-note text { fill: var(--cerneala-2); font-size: 11px; font-family: var(--f-text); }
+
+.alerta { padding: 12px 16px; border-radius: 12px; background: var(--portocaliu-2); color: var(--cerneala); border-left: 4px solid var(--portocaliu); }
+.alerta.info { background: var(--albastru-2); border-left-color: var(--albastru); }
+.eroare { padding: 18px; border-radius: 12px; background: var(--rosu-2); border-left: 4px solid var(--rosu); }
+
+/* ---------- animații ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .apare { animation: apare 0.5s ease both; }
+  .apare:nth-child(2) { animation-delay: 0.07s; }
+  .apare:nth-child(3) { animation-delay: 0.14s; }
+  .apare:nth-child(4) { animation-delay: 0.21s; }
+  @keyframes apare { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+}
+
+.katex { font-size: 1.08em; }
+.subsol { text-align: center; margin-top: 40px; }

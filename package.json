@@ -1,0 +1,10 @@
+{
+  "name": "ecnh-matematica",
+  "private": true,
+  "description": "Site de învățare matematică clasa a 7-a",
+  "scripts": {
+    "test": "node tools/test-verificare.js",
+    "valideaza": "node tools/valideaza.js",
+    "start": "python -m http.server 8765"
+  }
+}
