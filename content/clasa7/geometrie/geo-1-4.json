@@ -114,47 +114,92 @@
     "itemi": [
       {
         "id": "T1",
-        "tip": "numeric",
-        "puncte": 2,
-        "enunt": "Dreptunghiul $ABCD$ are $AC = 20$ cm. Dacă $O$ este intersecția diagonalelor, $OB$ este …",
-        "raspuns": "10",
-        "unitate": "cm",
-        "rezolvare": "$OB = \\dfrac{BD}{2} = \\dfrac{AC}{2} = 10$ cm."
+        "tip": "adevarat-fals",
+        "puncte": 1,
+        "enunt": "Adevărat sau fals: un paralelogram care are un unghi drept are diagonalele congruente.",
+        "corect": true,
+        "rezolvare": "<b>Adevărat:</b> e dreptunghi, iar diagonalele dreptunghiului sunt congruente."
       },
       {
         "id": "T2",
-        "tip": "adevarat-fals",
-        "puncte": 2,
-        "enunt": "Adevărat sau fals: diagonalele oricărui dreptunghi sunt perpendiculare.",
-        "corect": false,
-        "rezolvare": "<b>Fals:</b> sunt congruente, dar perpendiculare doar la pătrat."
+        "tip": "numeric",
+        "puncte": 1,
+        "enunt": "În dreptunghiul $ABCD$, $AC = 3x + 1$ și $BD = 5x - 7$ (în cm), iar $O$ este intersecția diagonalelor. Atunci $OA$ este …",
+        "raspuns": "13/2",
+        "raspunsAfisat": "6,5",
+        "unitate": "cm",
+        "rezolvare": "$3x + 1 = 5x - 7 \\Rightarrow x = 4$, deci $AC = 13$ cm și $OA = 13 : 2 = 6{,}5$ cm."
       },
       {
         "id": "T3",
         "tip": "numeric",
         "puncte": 2,
-        "enunt": "Un dreptunghi are dimensiunile $11$ cm și $4$ cm. Perimetrul este …",
-        "raspuns": "30",
+        "enunt": "În dreptunghiul $ABCD$, $O$ este intersecția diagonalelor, $m(\\sphericalangle AOD) = 120^\\circ$ și $AB = 8$ cm. Atunci $AC$ este …",
+        "raspuns": "16",
         "unitate": "cm",
-        "rezolvare": "$2(11 + 4) = 30$ cm."
+        "rezolvare": "$m(\\sphericalangle AOB) = 180^\\circ - 120^\\circ = 60^\\circ$. $\\triangle AOB$ este isoscel ($OA = OB$) cu un unghi de $60^\\circ$, deci echilateral: $OA = AB = 8$ cm. $AC = 2 \\cdot 8 = 16$ cm."
       },
       {
         "id": "T4",
         "tip": "numeric",
         "puncte": 2,
-        "enunt": "În dreptunghiul $ABCD$, $m(\\sphericalangle AOB) = 60^\\circ$ și $BD = 18$ cm. Atunci $AB$ este …",
-        "raspuns": "9",
-        "unitate": "cm",
-        "rezolvare": "$\\triangle AOB$ este echilateral cu latura $OA = 9$ cm."
+        "enunt": "În dreptunghiul $ABCD$, $O$ este intersecția diagonalelor și $m(\\sphericalangle BDC) = {{a}}^\\circ$. Atunci $m(\\sphericalangle AOD)$ este …",
+        "generator": {
+          "variabile": {
+            "a": {
+              "min": 20,
+              "max": 70,
+              "pas": 5
+            }
+          },
+          "conditie": "a != 45",
+          "calcule": {
+            "c": "180 - 2 * a",
+            "r": "2 * a"
+          }
+        },
+        "raspuns": "{{r}}",
+        "unitate": "°",
+        "indiciu": "Triunghiul DOC este isoscel.",
+        "rezolvare": "$OC = OD$, deci $\\triangle DOC$ este isoscel: $m(\\sphericalangle OCD) = {{a}}^\\circ$ și $m(\\sphericalangle DOC) = 180^\\circ - 2 \\cdot {{a}}^\\circ = {{c}}^\\circ$. Unghiurile $AOD$ și $DOC$ sunt suplementare: $m(\\sphericalangle AOD) = 180^\\circ - {{c}}^\\circ = {{r}}^\\circ$."
       },
       {
         "id": "T5",
         "tip": "numeric",
         "puncte": 2,
-        "enunt": "În dreptunghiul $ABCD$, $m(\\sphericalangle AOB) = 70^\\circ$. Atunci $m(\\sphericalangle OAB)$ este …",
-        "raspuns": "55",
-        "unitate": "°",
-        "rezolvare": "$\\dfrac{180^\\circ - 70^\\circ}{2} = 55^\\circ$."
+        "enunt": "Un dreptunghi are lungimea de ${{k}}$ ori mai mare decât lățimea și perimetrul de ${{p}}$ cm. Aria lui este … (cm²)",
+        "generator": {
+          "variabile": {
+            "l": {
+              "min": 2,
+              "max": 9
+            },
+            "k": {
+              "din": [
+                2,
+                3,
+                4
+              ]
+            }
+          },
+          "calcule": {
+            "L": "k * l",
+            "p": "2 * (k + 1) * l",
+            "a": "k * l * l"
+          }
+        },
+        "raspuns": "{{a}}",
+        "rezolvare": "$2(l + {{k}}l) = {{p}} \\Rightarrow l = {{l}}$ cm, $L = {{L}}$ cm. Aria: ${{L}} \\cdot {{l}} = {{a}}$ cm²."
+      },
+      {
+        "id": "T6",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "În dreptunghiul $ABCD$, $M$ este mijlocul laturii $AB$, iar $DM$ este bisectoarea unghiului $ADC$. Perimetrul dreptunghiului este $36$ cm. Atunci $AB$ este …",
+        "raspuns": "12",
+        "unitate": "cm",
+        "indiciu": "Bisectoarea unghiului drept face 45°. Ce triunghi isoscel apare?",
+        "rezolvare": "$m(\\sphericalangle ADM) = 45^\\circ$ și $m(\\sphericalangle A) = 90^\\circ$, deci $m(\\sphericalangle AMD) = 45^\\circ$ și $\\triangle ADM$ este isoscel: $AM = AD$. Atunci $AB = 2 \\cdot AD$, iar $2(2 \\cdot AD + AD) = 36 \\Rightarrow AD = 6$ cm, $AB = 12$ cm."
       }
     ]
   }

@@ -130,46 +130,81 @@
       {
         "id": "T1",
         "tip": "numeric",
-        "puncte": 2,
-        "enunt": "În paralelogramul $ABCD$, $m(\\sphericalangle A) = 72^\\circ$. Atunci $m(\\sphericalangle C)$ este …",
-        "raspuns": "72",
+        "puncte": 1,
+        "enunt": "În paralelogramul $ABCD$, $m(\\sphericalangle A) = 3 \\cdot m(\\sphericalangle B)$. Atunci $m(\\sphericalangle A)$ este …",
+        "raspuns": "135",
         "unitate": "°",
-        "rezolvare": "Unghiurile opuse sunt congruente."
+        "rezolvare": "$m(\\sphericalangle A) + m(\\sphericalangle B) = 180^\\circ \\Rightarrow 4 \\cdot m(\\sphericalangle B) = 180^\\circ \\Rightarrow m(\\sphericalangle B) = 45^\\circ$, deci $m(\\sphericalangle A) = 135^\\circ$."
       },
       {
         "id": "T2",
-        "tip": "numeric",
-        "puncte": 2,
-        "enunt": "În același paralelogram ($m(\\sphericalangle A) = 72^\\circ$), $m(\\sphericalangle B)$ este …",
-        "raspuns": "108",
-        "unitate": "°",
-        "rezolvare": "$180^\\circ - 72^\\circ = 108^\\circ$."
+        "tip": "grila",
+        "puncte": 1,
+        "enunt": "Care condiție garantează că patrulaterul convex $ABCD$ este paralelogram?",
+        "variante": [
+          "$AB \\parallel CD$ și $AD = BC$",
+          "$AB \\parallel CD$ și $AB = CD$",
+          "$AC \\perp BD$",
+          "$AB = BC$ și $CD = DA$"
+        ],
+        "corect": 1,
+        "rezolvare": "O pereche de laturi opuse paralele <b>și</b> congruente garantează paralelogramul. Prima variantă poate fi un trapez isoscel, ultima poate fi un „zmeu”."
       },
       {
         "id": "T3",
-        "tip": "adevarat-fals",
+        "tip": "numeric",
         "puncte": 2,
-        "enunt": "Adevărat sau fals: diagonalele oricărui paralelogram sunt congruente.",
-        "corect": false,
-        "rezolvare": "<b>Fals:</b> doar la dreptunghi (și pătrat) diagonalele sunt congruente."
+        "enunt": "Paralelogramul $ABCD$ are $AB = 12$ cm și perimetrul $34$ cm. Bisectoarea unghiului $A$ intersectează latura $CD$ în $E$. Atunci $CE$ este …",
+        "raspuns": "7",
+        "unitate": "cm",
+        "indiciu": "Află AD, apoi caută un triunghi isoscel.",
+        "rezolvare": "$AD = 34 : 2 - 12 = 5$ cm. $\\sphericalangle DAE \\equiv \\sphericalangle EAB \\equiv \\sphericalangle AED$ (bisectoare, apoi alterne interne), deci $\\triangle ADE$ este isoscel: $DE = AD = 5$ cm. $CE = 12 - 5 = 7$ cm."
       },
       {
         "id": "T4",
         "tip": "numeric",
         "puncte": 2,
-        "enunt": "În paralelogramul $ABCD$, $O$ este intersecția diagonalelor și $AO = 7$ cm. Atunci $AC$ este …",
-        "raspuns": "14",
+        "enunt": "În paralelogramul $ABCD$, $O$ este intersecția diagonalelor. Perimetrul triunghiului $AOB$ este cu ${{d}}$ cm mai mare decât perimetrul triunghiului $BOC$, iar perimetrul paralelogramului este ${{p}}$ cm. Atunci $AB$ este …",
+        "generator": {
+          "variabile": {
+            "bc": {
+              "min": 3,
+              "max": 9
+            },
+            "d": {
+              "min": 2,
+              "max": 6
+            }
+          },
+          "calcule": {
+            "ab": "bc + d",
+            "s": "2 * bc + d",
+            "p": "2 * (2 * bc + d)"
+          }
+        },
+        "raspuns": "{{ab}}",
         "unitate": "cm",
-        "rezolvare": "$AC = 2 \\cdot AO = 14$ cm."
+        "indiciu": "Diagonalele se înjumătățesc: AO = OC.",
+        "rezolvare": "$P_{AOB} - P_{BOC} = (AO + OB + AB) - (BO + OC + BC) = AB - BC$, pentru că $AO = OC$. Deci $AB - BC = {{d}}$ și $AB + BC = {{s}}$, de unde $AB = ({{s}} + {{d}}) : 2 = {{ab}}$ cm."
       },
       {
         "id": "T5",
         "tip": "numeric",
         "puncte": 2,
-        "enunt": "Paralelogramul $ABCD$ are perimetrul $40$ cm și $AB - BC = 4$ cm. Atunci $AB$ este …",
-        "raspuns": "12",
-        "unitate": "cm",
-        "rezolvare": "$AB + BC = 20$ și $AB - BC = 4 \\Rightarrow 2 \\cdot AB = 24 \\Rightarrow AB = 12$ cm."
+        "enunt": "În paralelogramul $ABCD$, $m(\\sphericalangle A) = 70^\\circ$. Bisectoarea unghiului $ADC$ intersectează latura $AB$ în $E$. Atunci $m(\\sphericalangle DEB)$ este …",
+        "raspuns": "125",
+        "unitate": "°",
+        "rezolvare": "$m(\\sphericalangle ADC) = 180^\\circ - 70^\\circ = 110^\\circ$, deci $m(\\sphericalangle EDC) = 55^\\circ$. $\\sphericalangle AED \\equiv \\sphericalangle EDC$ (alterne interne, $AB \\parallel CD$), deci $m(\\sphericalangle AED) = 55^\\circ$ și $m(\\sphericalangle DEB) = 180^\\circ - 55^\\circ = 125^\\circ$."
+      },
+      {
+        "id": "T6",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "În paralelogramul $ABCD$, $AB = 2 \\cdot AD$, iar $M$ este mijlocul laturii $CD$. Atunci $m(\\sphericalangle AMB)$ este …",
+        "raspuns": "90",
+        "unitate": "°",
+        "indiciu": "Compară DM cu AD și MC cu BC.",
+        "rezolvare": "$DM = MC = \\dfrac{AB}{2} = AD = BC$. $\\triangle ADM$ este isoscel: $m(\\sphericalangle DMA) = (180^\\circ - m(\\sphericalangle D)) : 2$. $\\triangle BCM$ este isoscel: $m(\\sphericalangle CMB) = (180^\\circ - m(\\sphericalangle C)) : 2$. Cum $m(\\sphericalangle C) + m(\\sphericalangle D) = 180^\\circ$, suma lor este $(360^\\circ - 180^\\circ) : 2 = 90^\\circ$, deci $m(\\sphericalangle AMB) = 180^\\circ - 90^\\circ = 90^\\circ$."
       }
     ]
   }

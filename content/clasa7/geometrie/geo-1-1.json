@@ -138,52 +138,72 @@
     "itemi": [
       {
         "id": "T1",
-        "tip": "numeric",
-        "puncte": 2,
-        "enunt": "Un patrulater convex are unghiurile de $70^\\circ$, $100^\\circ$ și $120^\\circ$. Al patrulea unghi are …",
-        "raspuns": "70",
-        "unitate": "°",
-        "rezolvare": "$360^\\circ - 290^\\circ = 70^\\circ$."
+        "tip": "adevarat-fals",
+        "puncte": 1,
+        "enunt": "Adevărat sau fals: un patrulater convex poate avea trei unghiuri drepte, iar al patrulea obtuz.",
+        "corect": false,
+        "rezolvare": "<b>Fals:</b> al patrulea ar fi $360^\\circ - 3 \\cdot 90^\\circ = 90^\\circ$, deci tot drept."
       },
       {
         "id": "T2",
-        "tip": "adevarat-fals",
-        "puncte": 2,
-        "enunt": "Adevărat sau fals: suma unghiurilor unui patrulater convex este $180^\\circ$.",
-        "corect": false,
-        "rezolvare": "<b>Fals:</b> este $360^\\circ$."
+        "tip": "numeric",
+        "puncte": 1,
+        "enunt": "În patrulaterul convex $ABCD$, $m(\\sphericalangle A) = 85^\\circ$, $m(\\sphericalangle B) = 95^\\circ$, iar unghiul <b>exterior</b> din vârful $D$ are $70^\\circ$. Atunci $m(\\sphericalangle C)$ este …",
+        "raspuns": "70",
+        "unitate": "°",
+        "rezolvare": "Unghiul interior din $D$: $180^\\circ - 70^\\circ = 110^\\circ$. Apoi $m(\\sphericalangle C) = 360^\\circ - 85^\\circ - 95^\\circ - 110^\\circ = 70^\\circ$."
       },
       {
         "id": "T3",
         "tip": "numeric",
         "puncte": 2,
-        "enunt": "Unghiurile unui patrulater convex sunt proporționale cu $2, 3, 4, 6$. Cel mai mic unghi are …",
-        "raspuns": "48",
+        "enunt": "Unghiurile patrulaterului convex $ABCD$ au măsurile $m(\\sphericalangle A) = x + 10^\\circ$, $m(\\sphericalangle B) = 2x$, $m(\\sphericalangle C) = 3x - 20^\\circ$ și $m(\\sphericalangle D) = 2x + 10^\\circ$. Atunci $m(\\sphericalangle C)$ este …",
+        "raspuns": "115",
         "unitate": "°",
-        "rezolvare": "$15k = 360^\\circ \\Rightarrow k = 24^\\circ$. Cel mai mic: $2k = 48^\\circ$."
+        "rezolvare": "$x + 10^\\circ + 2x + 3x - 20^\\circ + 2x + 10^\\circ = 360^\\circ \\Rightarrow 8x = 360^\\circ \\Rightarrow x = 45^\\circ$. Deci $m(\\sphericalangle C) = 3 \\cdot 45^\\circ - 20^\\circ = 115^\\circ$."
       },
       {
         "id": "T4",
-        "tip": "grila",
+        "tip": "numeric",
         "puncte": 2,
-        "enunt": "Un patrulater convex are trei unghiuri de $90^\\circ$. Al patrulea are:",
-        "variante": [
-          "$60^\\circ$",
-          "$90^\\circ$",
-          "$180^\\circ$",
-          "$270^\\circ$"
-        ],
-        "corect": 1,
-        "rezolvare": "$360^\\circ - 270^\\circ = 90^\\circ$."
+        "enunt": "În patrulaterul convex $ABCD$, $m(\\sphericalangle A) + m(\\sphericalangle B) = {{s}}^\\circ$. Bisectoarele unghiurilor $C$ și $D$ se intersectează în $P$. Atunci $m(\\sphericalangle CPD)$ este …",
+        "generator": {
+          "variabile": {
+            "s": {
+              "min": 160,
+              "max": 220,
+              "pas": 10
+            }
+          },
+          "calcule": {
+            "cd": "360 - s",
+            "j": "(360 - s) / 2",
+            "r": "s / 2"
+          }
+        },
+        "raspuns": "{{r}}",
+        "unitate": "°",
+        "indiciu": "Află întâi suma unghiurilor C și D.",
+        "rezolvare": "$m(\\sphericalangle C) + m(\\sphericalangle D) = 360^\\circ - {{s}}^\\circ = {{cd}}^\\circ$. În $\\triangle PCD$: $m(\\sphericalangle PCD) + m(\\sphericalangle PDC) = {{cd}}^\\circ : 2 = {{j}}^\\circ$, deci $m(\\sphericalangle CPD) = 180^\\circ - {{j}}^\\circ = {{r}}^\\circ$."
       },
       {
         "id": "T5",
         "tip": "numeric",
         "puncte": 2,
-        "enunt": "În patrulaterul convex $ABCD$: $m(\\sphericalangle A) = 2x$, $m(\\sphericalangle B) = 3x$, $m(\\sphericalangle C) = 4x$ și $m(\\sphericalangle D) = 90^\\circ$. Atunci $x$ este …",
-        "raspuns": "30",
+        "enunt": "Unghiurile patrulaterului convex $ABCD$ sunt proporționale cu $3, 4, 5, 6$ (în ordinea $A, B, C, D$). Bisectoarele unghiurilor $A$ și $B$ se intersectează în $P$. Atunci $m(\\sphericalangle APB)$ este …",
+        "raspuns": "110",
         "unitate": "°",
-        "rezolvare": "$9x + 90^\\circ = 360^\\circ \\Rightarrow 9x = 270^\\circ \\Rightarrow x = 30^\\circ$."
+        "rezolvare": "$18k = 360^\\circ \\Rightarrow k = 20^\\circ$: $m(\\sphericalangle A) = 60^\\circ$, $m(\\sphericalangle B) = 80^\\circ$. În $\\triangle APB$: $m(\\sphericalangle APB) = 180^\\circ - 30^\\circ - 40^\\circ = 110^\\circ$."
+      },
+      {
+        "id": "T6",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "În patrulaterul convex $ABCD$: $AB = BC$, $m(\\sphericalangle B) = 100^\\circ$, $AD = DC$ și $m(\\sphericalangle D) = 60^\\circ$. Atunci $m(\\sphericalangle BAD)$ este …",
+        "raspuns": "100",
+        "unitate": "°",
+        "indiciu": "Trasează diagonala AC.",
+        "rezolvare": "Trasăm diagonala $AC$. $\\triangle ABC$ este isoscel, deci $m(\\sphericalangle BAC) = (180^\\circ - 100^\\circ) : 2 = 40^\\circ$. $\\triangle ADC$ este isoscel cu un unghi de $60^\\circ$, deci echilateral: $m(\\sphericalangle DAC) = 60^\\circ$. Atunci $m(\\sphericalangle BAD) = 40^\\circ + 60^\\circ = 100^\\circ$."
       }
     ]
   }

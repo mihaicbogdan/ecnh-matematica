@@ -161,52 +161,69 @@
     "itemi": [
       {
         "id": "T1",
-        "tip": "numeric",
-        "puncte": 2,
-        "enunt": "$M$ și $N$ sunt mijloacele laturilor $AB$ și $AC$ ale triunghiului $ABC$, iar $BC = 20$ cm. Atunci $MN$ este …",
-        "raspuns": "10",
-        "unitate": "cm",
-        "rezolvare": "$MN = \\dfrac{20}{2} = 10$ cm."
+        "tip": "adevarat-fals",
+        "puncte": 1,
+        "enunt": "Adevărat sau fals: centrul de greutate al oricărui triunghi se află în interiorul triunghiului.",
+        "corect": true,
+        "rezolvare": "<b>Adevărat:</b> medianele sunt în interiorul triunghiului, deci și punctul lor comun."
       },
       {
         "id": "T2",
         "tip": "numeric",
-        "puncte": 2,
-        "enunt": "În triunghiul $ABC$, mediana $AD$ are $18$ cm, iar $G$ este centrul de greutate. Atunci $AG$ este …",
-        "raspuns": "12",
+        "puncte": 1,
+        "enunt": "În triunghiul $ABC$, $M$ și $N$ sunt mijloacele laturilor $AB$ și $AC$. Știind că $MN = 7$ cm, $BM = 5$ cm și $AN = 6$ cm, perimetrul triunghiului $ABC$ este …",
+        "raspuns": "36",
         "unitate": "cm",
-        "rezolvare": "$AG = \\dfrac{2}{3} \\cdot 18 = 12$ cm."
+        "rezolvare": "$BC = 2 \\cdot 7 = 14$ cm, $AB = 2 \\cdot 5 = 10$ cm, $AC = 2 \\cdot 6 = 12$ cm. Perimetrul: $36$ cm."
       },
       {
         "id": "T3",
-        "tip": "adevarat-fals",
+        "tip": "numeric",
         "puncte": 2,
-        "enunt": "Adevărat sau fals: linia mijlocie $MN$ ($M \\in AB$, $N \\in AC$) are aceeași lungime ca latura $BC$.",
-        "corect": false,
-        "rezolvare": "<b>Fals:</b> $MN = \\dfrac{BC}{2}$."
+        "enunt": "Triunghiul $ABC$ are $AB = 10$ cm, $AC = 12$ cm și $BC = 16$ cm. $M$ și $N$ sunt mijloacele laturilor $AB$ și $AC$. Perimetrul patrulaterului $BMNC$ este …",
+        "raspuns": "35",
+        "unitate": "cm",
+        "indiciu": "Laturile lui BMNC sunt BM, MN, NC și CB.",
+        "rezolvare": "$BM = 5$ cm, $MN = 16 : 2 = 8$ cm, $NC = 6$ cm, $BC = 16$ cm. $P = 5 + 8 + 6 + 16 = 35$ cm."
       },
       {
         "id": "T4",
         "tip": "numeric",
         "puncte": 2,
-        "enunt": "Un triunghi are laturile de $6$ cm, $9$ cm și $11$ cm. Perimetrul triunghiului format de liniile lui mijlocii este …",
-        "raspuns": "13",
+        "enunt": "În triunghiul $ABC$, $AD$ este mediană și $G$ este centrul de greutate. Dacă $AG - GD = {{d}}$ cm, atunci $AD$ este …",
+        "generator": {
+          "variabile": {
+            "d": {
+              "min": 2,
+              "max": 9
+            }
+          },
+          "calcule": {
+            "m": "3 * d"
+          }
+        },
+        "raspuns": "{{m}}",
         "unitate": "cm",
-        "rezolvare": "$\\dfrac{6 + 9 + 11}{2} = 13$ cm."
+        "rezolvare": "$AG = 2 \\cdot GD$, deci $AG - GD = GD = {{d}}$ cm. $AD = 3 \\cdot GD = {{m}}$ cm."
       },
       {
         "id": "T5",
-        "tip": "grila",
+        "tip": "numeric",
         "puncte": 2,
-        "enunt": "Centrul de greutate $G$ împarte mediana $AD$ astfel încât:",
-        "variante": [
-          "$AG = GD$",
-          "$AG = 2 \\cdot GD$",
-          "$GD = 2 \\cdot AG$",
-          "$AG = 3 \\cdot GD$"
-        ],
-        "corect": 1,
-        "rezolvare": "$AG = \\dfrac{2}{3}AD$ și $GD = \\dfrac{1}{3}AD$, deci $AG = 2 \\cdot GD$."
+        "enunt": "În triunghiul $ABC$, medianele $AD$ și $BE$ se intersectează în $G$. Dacă $AD = 12$ cm și $BE = 9$ cm, atunci $AG + GE$ este …",
+        "raspuns": "11",
+        "unitate": "cm",
+        "rezolvare": "$AG = \\dfrac{2}{3} \\cdot 12 = 8$ cm și $GE = \\dfrac{1}{3} \\cdot 9 = 3$ cm. Suma: $11$ cm."
+      },
+      {
+        "id": "T6",
+        "tip": "numeric",
+        "puncte": 2,
+        "enunt": "Patrulaterul convex $ABCD$ are diagonalele $AC = 10$ cm și $BD = 14$ cm. $M, N, P, Q$ sunt mijloacele laturilor $AB, BC, CD, DA$. Perimetrul patrulaterului $MNPQ$ este …",
+        "raspuns": "24",
+        "unitate": "cm",
+        "indiciu": "Diagonala AC împarte patrulaterul în două triunghiuri; caută liniile mijlocii în ele.",
+        "rezolvare": "În $\\triangle ABC$, $MN$ este linie mijlocie: $MN = \\dfrac{AC}{2} = 5$ cm. La fel $PQ = 5$ cm (în $\\triangle ACD$), iar $NP = QM = \\dfrac{BD}{2} = 7$ cm. $P = 5 + 7 + 5 + 7 = 24$ cm."
       }
     ]
   }
